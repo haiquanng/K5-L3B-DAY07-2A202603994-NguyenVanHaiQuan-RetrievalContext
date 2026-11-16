@@ -110,6 +110,29 @@ Advanced test theo nhóm (cấu hình đã chọn B1, proxy; nhóm thiếu evide
 
 B1 trên test được dựng từ trace baseline test bằng bước mở rộng citation xác định (không chạy lại model): cùng câu trả lời, so sánh theo cặp. Nhãn là proxy + LLM judge; điểm chính thức cần người chấm (`python3 benchmark/fpt_2025/tools.py review-template ...` rồi `score`).
 
+### Vòng cải thiện sau chẩn đoán (E2) — post-hoc, test KHÔNG độc lập
+
+Sau khi chốt B1 và chạy test, đã đọc 23 câu advanced test trượt để chẩn đoán: 14 câu context đủ nhưng model đọc/tính sai,
+4 câu thiếu vế multi-hop, 3 câu từ chối sai status, 2 câu citation; phát hiện lỗi index **hai bảng cạnh nhau bị gom nhầm cột**
+(17 cặp vùng chồng lấn trên 12 trang BCTC). Sửa lỗi hệ thống (không chỉnh theo câu cụ thể):
+
+1. Index: khối cột số được gán lại theo nhãn hàng cùng y gần nhất bên trái (26 khối, embed lại 21 chunk).
+2. Agent prompt v4: tool `calculate` (Decimal, số định dạng báo cáo), tự kiểm bảng/hàng/cột năm/đơn vị, kiểm status khi câu trả lời nói "không công bố";
+   tách câu hỏi thành ≤ 4 truy vấn con; mở rộng citation.
+3. Model trả lời: so E1 `gpt-5.4-mini` với E2 `gpt-5.4` trên advanced dev (tiêu chí ghi trước: chọn E2 nếu hơn ≥ 4 câu).
+
+| Cấu hình | Split | Strict pass proxy | Bảng | Ảnh/sơ đồ | Biểu đồ | Multi-hop | Text | Thiếu evidence | Chi phí | p50 / p95 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| E1 mini + sửa lỗi | adv dev | 57/70 | | | | | | 14/14 | $0.63 | 6,8 / 11,7 s |
+| **E2 gpt-5.4 + sửa lỗi** | adv dev | **62/70** | | | | | | 14/14 | $1.68 | 8,3 / 13,2 s |
+| E2 | **adv test** | **64/70 (91,4%)** | 15/16 | 7/8 | 9/10 | 10/12 | 10/10 | 13/14 | $1.87 | 9,4 / 20,9 s |
+| E2 | basic test | 47/50 (94%) | | | | | | 9/10 | $1.07 | 6,7 / 18,0 s |
+
+**Diễn giải:** E2 vượt ngưỡng 63/70 theo proxy, nhưng (a) đây là nhãn proxy + LLM judge, chưa có người chấm; (b) test đã được
+dùng để chẩn đoán trước khi sửa nên kết quả **không độc lập** — theo RULES cần bộ test mới để báo cáo độc lập.
+Kết quả chính thức của lần chốt trước test vẫn là B1: advanced 47/70, basic 44/50. Đánh đổi của E2: chi phí ~4×
+($0,027/câu so với $0,007/câu), p50 chậm ~2× (≈ 9 s/câu).
+
 ## Giới hạn
 
 - **Advanced test theo proxy là 47/70 (67,1%) < 63/70: không đạt ngưỡng 90% của thử thách nâng cao.** Yếu nhất: bảng 8/16 (chủ yếu citation nguồn tương đương/thiếu một ô), multi-hop 4/12 (thiếu vế thứ hai). Dev advanced (~76–83%) cao hơn test → dev chưa đại diện đủ; hướng tiếp: tách câu hỏi (B2, đã cài nhưng chưa đo), rerank cho câu bảng.
