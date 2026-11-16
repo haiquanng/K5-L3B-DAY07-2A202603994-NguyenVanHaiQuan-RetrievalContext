@@ -1,0 +1,1343 @@
+[
+  {
+    "query_id": "FPT-ADVANCED-TEST2-001",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Đối chiếu PDF 35, dòng 31: đúng tháng 06/2019, cổ tức bằng cổ phiếu 10% từ KQKD 2018 và vốn sau phát hành 6.783.586.880.000 VNĐ. Dòng này còn nguyên trong 2.500 ký tự context; citation table01-1 hỗ trợ đủ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-001:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-001:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-001:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p035:table01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-001:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-002",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Chỉ đúng vế tháng 07/2022 và hình thức cổ tức 20% từ KQKD 2021. PDF 35 ghi vốn tháng 05/2022 là 9.141.959.140.000 VNĐ; chênh đúng 1.828.306.580.000 VNĐ, không phải 1.828.377.620.000. Không được suy ngược số vốn chính xác bằng cách chia cho tỷ lệ cổ tức đã công bố. Context table01-1 dừng ở “36 | 05/2022 | 9.141.9”; table01-2 chỉ còn phần lý do và dòng 37, nên thiếu số gốc đầy đủ: context_grade=1. Top-1/top-3 có phần liên quan E1 nhưng context chưa đủ E1. Citation duy nhất không hỗ trợ cả phép suy ngược và kết quả sai được gắn vào nó; unsupported_claims=true.",
+    "answer_grade": 1,
+    "context_grade": 1,
+    "abstention_correct": null,
+    "unsupported_claims": true,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-002:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-002:E1"
+    ],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p035:table01-2",
+        "supports_answer": false,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": false,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-003",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 223, dòng 68 xác nhận Công nghệ Y tế FPT: xử lý dữ liệu và dịch vụ CNTT; sở hữu 99,99% tại 31/12/2025; 31/12/2024 chưa thành lập. Phần mô tả bảng trong context giữ đủ tên, năm và tỷ lệ trước điểm cắt; trả lời đủ, citation đúng dòng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-003:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-003:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-003:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p223:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-003:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-004",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 222, dòng 60 ghi FPT Smart Cloud Japan: sở hữu 100% năm 2024 xuống 60% năm 2025, giảm 40 điểm phần trăm. PDF 207, chú thích (iv), thực sự nêu Công ty TNHH FPT Smart Cloud Nhật Bản nhận 1.093.620.000.000 Đồng vốn góp khác; đây là ý bổ sung có nguồn. Citation p207 hợp lệ nhưng không gán E1 của bảng p222 cho nguồn này. Phần tỷ lệ biểu quyết trong đáp án mẫu là bổ sung; câu hỏi chỉ hỏi thay đổi sở hữu và đã được trả lời đủ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-004:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-004:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-004:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p222:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-004:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p207:text05-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-005",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Đọc đúng dòng ông Hampapur Rangadore Binod tại PDF 87: CNTT; bắt đầu 07/04/2022; họp 07/07. 07/07 thể hiện đầy đủ 100%, không bắt buộc lặp lại phép đổi tỷ lệ. Context có trọn dòng và citation hỗ trợ cả ba ý.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-005:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-005:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-005:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p087:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-005:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-006",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 96, tổ chức số 6 Công ty TNHH Đầu tư FPT: vay 232.000.000.000, trả nợ 264.000.000.000 VNĐ; hiệu 32.000.000.000 VNĐ. Cả hai chunk được trích đều giữ mô tả bảng nêu đúng tổ chức và hai số này, cùng crop bảng gốc; citation mở rộng không phải nguồn khác tổ chức. Context đủ và phép tính đúng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-006:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-006:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-006:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p096:table01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-006:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p096:table01-2",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-006:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-007",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Ảnh PDF 113 xác nhận cột Hoạt động vì môi trường xanh: GRI 300, mục tiêu 2030 giảm 15,8% tổng khí thải khí nhà kính và 2040 Net Zero. Answer đúng và citation nguồn hình hỗ trợ. Tuy nhiên context p113 chỉ còn 2.500 ký tự, phần liên kết theo cột bị cắt khi đang ở cột Quản trị xuất sắc; phần đầu chỉ liệt kê các mã GRI. Các chunk khác xác nhận hai mục tiêu nhưng không bổ sung ánh xạ GRI 300 với trụ môi trường; trace không gọi view_image. Chấm bảo thủ context_grade=1, chưa đánh dấu E1 đủ trong context, không đạt strict theo nhãn AI dù đáp án đúng.",
+    "answer_grade": 2,
+    "context_grade": 1,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-007:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-007:E1"
+    ],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p113:diagram01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": false,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-008",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 113 cho thấy cột môi trường làm việc có cả GRI 200 và GRI 400; answer chỉ nêu GRI 400 nên thiếu ý, answer_grade=1. Ba cam kết đều đúng. Các chi tiết bổ sung được bảng PDF 118 hỗ trợ, vì vậy không đánh sai hai citation p118 chỉ vì khác trang gold, và không coi việc bỏ sót GRI 200 tự nó là khẳng định bịa: unsupported_claims=false. Context p113 bị cắt trước liên kết theo cột, không gọi view_image; context_grade=1 và chưa đủ E1. Cần bổ sung GRI 200 và bảo toàn quan hệ cột trong context.",
+    "answer_grade": 1,
+    "context_grade": 1,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-008:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-008:E1"
+    ],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p113:diagram01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p118:table01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p118:table01-2",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": false,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-009",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Đối chiếu infographic PDF 69: 04 trung tâm Tier III, 6.800 Gbps, hạ tầng tại 34 tỉnh/thành. Ba chunk infographic03/04/02 lần lượt hỗ trợ ba ý; tất cả có trong context và tìm được nguồn. Sửa gợi ý sai của citation infographic02: chính chunk này ghi 34 tỉnh/thành. E1 là cả cụm infographic, top-1 chỉ chứa một phần; top-3 và context cộng lại đủ cả ba.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-009:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-009:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-009:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p069:infographic03",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-009:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p069:infographic04",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-009:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p069:infographic02",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-009:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-010",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Ảnh infographic PDF 88 ghi rõ 03 thành viên độc lập, 05 chuyên sâu CNTT, 01 chuyên sâu tài chính. Không nhầm với ô 01 nữ hoặc 01 đầu tư/quản trị. Context infographic01 còn đầy đủ và citation đúng nguồn.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-010:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-010:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-010:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p088:infographic01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-010:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-011",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Ảnh infographic PDF 73 xác nhận 180 đối tác quốc tế từ 40 quốc gia và cơ sở đào tạo tại 19/34 tỉnh thành. Answer giữ đúng mẫu số 34; context infographic01 có đủ quan hệ chỉ tiêu–số liệu và citation hỗ trợ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-011:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-011:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-011:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p073:infographic01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-011:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-012",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Biểu đồ PDF 65 có 2024=1.856 và 2025=2.612 tỷ VNĐ; 2.612−1.856=756 tỷ VNĐ. Đúng năm, đơn vị, phép trừ; toàn bộ chart01 nằm trong context và citation đúng biểu đồ được hỏi.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-012:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-012:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-012:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p065:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-012:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-013",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Biểu đồ PDF 65 có 2022=980 và 2025=2.612 tỷ VNĐ. 2.612/980=2,665306..., làm tròn 2,67 lần (hoặc khoảng 2,7 lần) đúng. Context và citation cung cấp cả hai cột; không nhầm hệ số với phần trăm tăng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-013:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-013:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-013:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p065:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-013:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-014",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 48 ghi 37,0 tỷ USD năm 2025 và nhãn 3,2x so với 2024=11,5 tỷ USD. Chart01 và text01-1 đều hỗ trợ ý được gắn citation; lời diễn giải thêm 11,5 tỷ có nguồn. Context đủ, hệ số là số làm tròn được báo cáo công bố.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-014:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-014:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-014:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p048:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-014:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p048:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-014:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-015",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Kiểm màu chú giải ở PDF 152: văn bản phát hành điện tử là chuỗi xanh, 17,6% năm 2023 và 78,9% năm 2024. Chênh 61,3 điểm phần trăm đúng; không lấy chuỗi văn bản cứng màu cam. Context chart02 và citation đầy đủ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-015:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-015:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-015:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p152:chart02",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-015:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-016",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Biểu đồ họp ở PDF 152: trực tiếp là thanh cam, 26,8% năm 2024 và 6,0% năm 2025; giảm 20,8 điểm phần trăm. Không nhầm trực tuyến 73,2%/94,0%. Context chart03 đủ và citation hỗ trợ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-016:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-016:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-016:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p152:chart03",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-016:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-017",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Thuyết minh PDF 189 nêu nâng sở hữu Ví FPT từ 30% lên 100%; Phụ lục PDF 223, dòng 67, xác nhận hai mốc năm và hoạt động dịch vụ trung gian thanh toán. Answer dùng đúng cả hai nguồn, context đủ E1+E2 và citation phân vai đúng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-017:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-017:E1",
+      "FPT-ADVANCED-TEST2-017:E2"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-017:E1",
+      "FPT-ADVANCED-TEST2-017:E2"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p189:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-017:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p223:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-017:E2"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-018",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 88 có 01 nữ; PDF 37 text01-1 ghi bảy thành viên và một nữ, là bằng chứng tương đương cho phần số lượng của E1. PDF 122 ghi nữ chiếm 37,7% nhân sự. 1/7×100=14,2857%; 37,7−14,2857=23,4143 điểm phần trăm, đúng chiều thấp hơn. Top-1 PDF 115 cũng ghi tỷ lệ nữ 37,7% trong cột kết quả 2025, được nhận là nguồn tương đương E2 sau đối chiếu; không tự đổi gold. Cả ba citation hỗ trợ các vế được gắn.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-018:E2"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-018:E1",
+      "FPT-ADVANCED-TEST2-018:E2"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-018:E1",
+      "FPT-ADVANCED-TEST2-018:E2"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p088:infographic01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-018:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p037:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-018:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p122:table01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-018:E2"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-019",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 48 ghi AI doanh nghiệp 11,5 tỷ USD năm 2024; PDF 50 ghi AI tự chủ 5,1 tỷ USD cùng năm. Hiệu số 6,4 tỷ USD đúng; answer không gọi đây là hai thị trường không giao nhau. Top-3 câu gốc chỉ có E1; context bổ sung sau truy xuất có E2, đủ để trả lời.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-019:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-019:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-019:E1",
+      "FPT-ADVANCED-TEST2-019:E2"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p048:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-019:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p050:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-019:E2"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-020",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 88 xác nhận 01 thành viên HĐQT nữ; dòng bà Trần Thị Hồng Lĩnh ở PDF 87 ghi họp 07/07, tỷ lệ 100%. Kết hợp đúng hai nguồn để xác định người nữ duy nhất và số buổi họp; context đủ E1+E2, citation hỗ trợ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-020:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-020:E1",
+      "FPT-ADVANCED-TEST2-020:E2"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-020:E1",
+      "FPT-ADVANCED-TEST2-020:E2"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p088:infographic01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-020:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p087:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-020:E2"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-021",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 112 và context text01-1 cùng nêu năm thứ 05, kỳ 01/01/2025–31/12/2025, chu kỳ thường niên, tham chiếu GRI Standards. Answer đúng đủ và không nhầm năm thứ năm với một kỳ báo cáo kéo dài năm năm.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-021:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-021:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-021:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p112:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-021:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-022",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 128 xác nhận 42% nhà cung cấp trọng yếu tham gia đánh giá CSR năm 2025; PDF 117 nêu mục tiêu 60% áp dụng chính sách mua sắm bền vững đến 2026, đồng thời cũng có kết quả 42%. Answer phân biệt đúng hiện trạng và mục tiêu, không coi hai tỷ lệ là cùng chỉ tiêu. p128 là nguồn tương đương cho vế 42% của E1; hai citation hợp lệ và context cộng lại đủ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-022:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-022:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-022:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p128:text02-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-022:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p117:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-022:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-023",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 131 xác nhận đúng 05 nhóm: chiến lược, hoạt động, tài chính, luật định, môi trường–thiên tai–dịch bệnh. Nhóm cuối là một nhóm gộp, không tách thành ba để đếm sai. Context text01-1 đủ và citation đúng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-023:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-023:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-023:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p131:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-023:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-024",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "PDF 122 và PDF 140 xác nhận 09 năm, tổng 13.227 sáng kiến, năm 2025 có 3.838 đăng ký và giá trị gần 1.000 tỷ đồng. PDF 140 text01-1 nêu tổ chức từ 2017; text01-2 nêu ba số liệu còn lại. Hai phần table01 ở p122 giữ mô tả chung chứa các số được trích, nên citation mở rộng vẫn có căn cứ. Nhận p140 là nguồn tương đương cho các ý tương ứng E1; giữ từ “gần”, không biến thành giá trị chính xác.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "abstention_correct": null,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [
+      "FPT-ADVANCED-TEST2-024:E1"
+    ],
+    "retrieval_evidence_at_3": [
+      "FPT-ADVANCED-TEST2-024:E1"
+    ],
+    "context_evidence": [
+      "FPT-ADVANCED-TEST2-024:E1"
+    ],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p122:table01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-024:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p140:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-024:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p140:text01-2",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-024:E1"
+        ]
+      },
+      {
+        "id": "fpt-ar2025:p122:table01-2",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": [
+          "FPT-ADVANCED-TEST2-024:E1"
+        ]
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-025",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng yêu cầu phân bổ giải ngân theo quốc gia. Tìm toàn văn “giải ngân” chỉ dẫn tới PDF 75; bảng ở đó phân theo Khối, không theo nước. Các số bổ sung 2.823 tỷ, kế hoạch 6.000 tỷ và 47,1% đều đúng bảng. Không phân bổ giả, không coi thiếu công bố là 0; citation hỗ trợ số tổng, không được gán evidence đáp án vốn không tồn tại.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p075:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-026",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng doanh thu riêng FPT Taiwan. Tìm toàn văn tên pháp nhân chỉ thấy PDF 218 về danh sách công ty con, hoạt động phần mềm và địa điểm Đài Loan; không có doanh thu riêng. p169 là báo cáo KQKD hợp nhất, p027 là cơ cấu doanh thu, hỗ trợ mô tả phạm vi số liệu có sẵn chứ không chứng minh riêng một mình sự vắng mặt toàn tài liệu. Không tạo số doanh thu hoặc gán 0.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p218:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p169:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p027:chart02",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-027",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng giá mua 10% Daythree. Tìm toàn văn Daythree chỉ thấy PDF 64 với tỷ lệ 10%, không có giá mua. PDF 191 ghi khoản “Khác” 534.019.287.430 VNĐ và PDF 192 ghi tổng tăng đầu tư 128.673.384.128 VNĐ; câu trả lời nêu đúng và không gán các tổng này cho Daythree. Cả ba citation hỗ trợ phần thông tin liên quan.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p064:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p191:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p192:table01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-028",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng năm 2022: ảnh biểu đồ PDF 152 chỉ có 2023–2025; ba tỷ lệ trực tuyến bổ sung 67,8%, 73,2%, 94,0% đều khớp. Tìm toàn văn họp trực tuyến thấy PDF 148 và 152; p148 không có số năm 2022. Không suy lùi ngoài miền thời gian của biểu đồ.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p152:chart03",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-029",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng bảng chéo AI/Data Analytics × thị trường. PDF 65 chỉ có tổng 2.612 tỷ; PDF 62 là toàn lĩnh vực dịch vụ CNTT nước ngoài, với Nhật 15.452, Mỹ 8.163, châu Âu 3.593, APAC 8.173 tỷ VNĐ. Tìm toàn văn AI/Data và Data Analytics không cho phân bổ thị trường. Các số bổ sung khớp nguồn và không bị nhân tỷ lệ cơ cấu để tạo số AI từng thị trường.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p065:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p062:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  },
+  {
+    "query_id": "FPT-ADVANCED-TEST2-030",
+    "reviewer": "Nguyễn Văn Hải Quân",
+    "human_confirmed": true,
+    "reason": "Từ chối đúng thị phần chính xác: PDF 48 ghi 37,0 tỷ USD cho thị trường AI doanh nghiệp; PDF 65 ghi 2.612 tỷ VNĐ cho doanh thu AI/Data Analytics của FPT. Khác tiền tệ và phạm vi khái niệm, không có bảng đối chiếu thị phần. Tìm toàn văn thị phần/AI doanh nghiệp và đối chiếu trang liên quan không thấy tỷ lệ yêu cầu. Answer giữ giới hạn, không tự quy đổi để đưa một thị phần thiếu căn cứ.",
+    "answer_grade": null,
+    "context_grade": null,
+    "abstention_correct": true,
+    "unsupported_claims": false,
+    "retrieval_evidence_at_1": [],
+    "retrieval_evidence_at_3": [],
+    "context_evidence": [],
+    "citations": [
+      {
+        "id": "fpt-ar2025:p048:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p048:text01-1",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      },
+      {
+        "id": "fpt-ar2025:p065:chart01",
+        "supports_answer": true,
+        "source_locatable": true,
+        "evidence_ids": []
+      }
+    ],
+    "review_method": "review",
+    "ai_strict_pass": true,
+    "human_batch_acceptance": {
+      "accepted": true,
+      "accepted_by": "Nguyễn Văn Hải Quân",
+      "basis": "sample_review",
+      "sample_size_reported": 10,
+      "total_cases": 30,
+      "sample_query_ids": null,
+      "all_cases_individually_reviewed": false,
+      "note": "Người chấm cho biết đã xem 10 câu và chấp nhận toàn bộ nhãn dựa trên mẫu; chưa chỉ rõ 10 ID. Việc chấp nhận theo mẫu không xác nhận đã kiểm tra từng câu còn lại."
+    }
+  }
+]

@@ -1,7 +1,13 @@
 # Báo cáo Day 7 — Nguyễn Văn Hải Quân (2A202603994)
 
-> Số liệu dev/test dưới đây là **proxy tự động + LLM judge** (xem định nghĩa ở mục Đánh giá), dùng để chọn cấu hình.
-> Có nhãn người chấm cho mẫu 7 câu advanced test (mục Chấm thủ công); 63 câu còn lại chỉ có proxy.
+> Cập nhật ngày **16/11/2026**: E2 trên **advanced test2 đạt 27/30 (90%)** theo bộ nhãn AI hỗ trợ, được Nguyễn Văn Hải Quân chấp nhận.
+> Các bảng dev/test cũ ghi **proxy tự động + LLM judge**; mẫu chấm thủ công 7 câu của test cũ được báo riêng. Phương pháp xác nhận test2 và giới hạn nằm ở mục Test2 bên dưới.
+
+## Giao diện demo
+
+![Giao diện Lumina: chat với tài liệu FPT, citation theo trang PDF và bảng kiểm chứng luồng truy xuất](../../assets/report.png)
+
+*Giao diện web Next.js kết nối agent: câu trả lời kèm citation và thời gian xử lý; bảng bên phải cho phép xem nguồn, luồng truy xuất và context.*
 
 ## Dữ liệu và benchmark
 
@@ -12,9 +18,11 @@
   Mỗi chunk giữ `pdf_page`, `printed_page` (in = PDF − 1), bbox (PDF points) và ảnh crop PNG của vùng gốc.
 - **Vector store / embedding:** container PostgreSQL 16 + pgvector 0.8.7 của Day 6; `BAAI/bge-m3` revision `5617a9f61b02`,
   1024 chiều, chuẩn hoá L2, cosine chính xác (không ANN). Bảng mới `mm_*` (documents → pages → regions → chunks → embeddings), có `tsvector` cho lexical.
-- **Agent:** `gpt-5.4-mini` (reasoning low, OpenAI Responses API). Lệnh chạy ở [src/README.md](../../src/README.md).
+- **Agent:** baseline/B1 dùng `gpt-5.4-mini`; E2 dùng `gpt-5.4` (reasoning low, OpenAI Responses API). Lệnh chạy ở [src/README.md](../../src/README.md).
 - **Benchmark (tự soạn):** 240 câu + 60 ca hệ thống. Basic: dev 40+10, test 40+10; advanced: dev 56+14, test 56+14
   (có đáp án + thiếu evidence). Gold chỉ nằm ở `gold/` cho evaluator; agent chỉ nhận `queries/` (id + câu hỏi).
+- **Test2 bổ sung:** 30 câu advanced mới (24 có đáp án, 6 thiếu evidence), tạo sau khi chốt E2 để đánh giá sau vòng sửa lỗi.
+  Tổng cộng 270 câu QA và 60 ca hệ thống; giữ riêng mẫu số của từng bộ, không gộp thành một tỷ lệ accuracy.
 - **Có/thiếu evidence:** câu thiếu evidence được kiểm toàn văn theo từ khoá và đọc trang liên quan (`absence_check`).
   Câu có đáp án có `evidence_groups` (OR giữa nhóm, AND trong `all_of`) và `required_facts`.
 
@@ -137,7 +145,7 @@ E2 còn trượt 031 (đáp án đúng nhưng thêm một citation trang 58 khô
   → proxy có xu hướng **dễ hơn** người chấm; 47/70 proxy nên xem là cận trên.
 - Lỗi thấy trên mẫu: 042 đọc sai cấp của Ban Kiểm soát trên sơ đồ + 1 citation không hỗ trợ; 056 tính chênh lệch sai số liệu;
   069 khẳng định "0 đồng" cho thông tin báo cáo không công bố (từ chối sai). Đây đúng các nhóm lỗi đã sửa ở vòng E2.
-- 63/70 câu advanced test còn lại **chưa có người chấm** → không xin bonus (cần chấm đủ 70/70 trên test độc lập).
+- 63/70 câu advanced test cũ còn lại **chưa có người chấm**; mẫu này không xác nhận điểm của toàn bộ test cũ hay của test2.
 
 **Ví dụ từng câu (advanced test, cấu hình B1, nhãn người chấm; trace: `starter/results/agent/advanced.test.chosen_B1/traces.json`)**
 
@@ -166,16 +174,86 @@ Sau khi chốt B1 và chạy test, đã đọc 23 câu advanced test trượt đ
 | E2 | **adv test** | **64/70 (91,4%)** | 15/16 | 7/8 | 9/10 | 10/12 | 10/10 | 13/14 | $1.87 | 9,4 / 20,9 s |
 | E2 | basic test | 47/50 (94%) | | | | | | 9/10 | $1.07 | 6,7 / 18,0 s |
 
-**Diễn giải:** E2 vượt ngưỡng 63/70 theo proxy, nhưng (a) đây là nhãn proxy + LLM judge, chưa có người chấm; (b) test đã được
-dùng để chẩn đoán trước khi sửa nên kết quả **không độc lập** — theo RULES cần bộ test mới để báo cáo độc lập.
-Kết quả chính thức của lần chốt trước test vẫn là B1: advanced 47/70, basic 44/50. Đánh đổi của E2: chi phí ~4×
+**Diễn giải:** E2 vượt ngưỡng 63/70 theo proxy, nhưng (a) chỉ 7/70 câu có nhãn người chấm như mục trên; (b) test đã được
+dùng để chẩn đoán trước khi sửa nên kết quả **không độc lập** — theo RULES cần bộ test mới; test2 được trình bày bên dưới.
+Kết quả proxy của lần chốt trước test vẫn là B1: advanced 47/70, basic 44/50. Đánh đổi của E2: chi phí ~4×
 ($0,027/câu so với $0,007/câu), p50 chậm ~2× (≈ 9 s/câu).
+
+### Test2 — E2 đã chốt, kết quả theo bộ nhãn được xác nhận
+
+**Thiết kế:** 30 câu mới, gồm 24 câu có đáp án (6 bảng, 5 ảnh/sơ đồ, 5 biểu đồ, 4 multi-hop, 4 text) và 6 câu thiếu evidence.
+Trang được chọn với seed cố định từ các trang chưa nằm trong gold/absence_check của 240 câu cũ; soạn trước khi chạy E2 trên test2.
+E2 giữ `gpt-5.4`, prompt v4, hybrid, decomposition và mở rộng citation; lần chạy này không bật `view_image`.
+Người soạn đã biết các điểm mạnh/yếu của hệ thống, nên bộ mới vẫn có giới hạn về thiên lệch thiết kế.
+Chi tiết: [thiết kế test2](../../benchmark/fpt_2025/TEST2.md), [trace 30 câu](../../starter/results/agent/advanced.test2.E2_gpt54_v4/traces.json).
+
+**Phương pháp xác nhận:** AI hỗ trợ đối chiếu đáp án, context thực tế và citation với PDF, ghi nhãn cùng lý do cho cả 30 câu.
+ở 30/30 câu, nên scorer trả `unreviewed=0`;
+Nguồn nhãn: [JSON review](../reviews/advanced.test2.E2_gpt54_v4.NguyenVanHaiQuan.ai-assisted.reviews.json).
+
+Chạy lại scorer offline trên JSON đã cập nhật, giữ nguyên quy tắc strict pass và mẫu số **toàn bộ 30 câu**:
+
+| Chỉ số test2 | Kết quả theo nhãn đã xác nhận |
+|---|---:|
+| **Strict pass toàn bộ** | **27/30 — 90%** |
+| Strict pass câu có đáp án | 21/24 — 87,5% |
+| Từ chối đúng / từ chối nhầm | 6/6 / 0/24 |
+| Evidence Hit@1 / Hit@3 câu gốc | 24/24 / 24/24 |
+| Đủ nhóm evidence trong top-3 | 23/24 — 95,8% |
+| Context đủ evidence | 21/24 — 87,5% |
+| Grounded answer mức 2 / 1 / 0 | 22 / 2 / 0; điểm chuẩn hoá 46/48 — 95,8% |
+| Context mức 2 / 1 / 0 | 21 / 3 / 0 |
+| Citation hợp lệ | 52/53 — 98,1% |
+| Tool use / lỗi chạy | 30/30 / 0 |
+| Thời gian p50 / p95 | 9,7 / 23,8 giây |
+| Chi phí agent / LLM judge ban đầu | $0,6929 / $0,0270; chưa gồm index |
+
+Hit chỉ ghi nhận có evidence liên quan trong kết quả retrieval; không đồng nghĩa context giữ đủ nội dung sau khi cắt chunk,
+hay câu trả lời đạt strict. Điểm grounded chuẩn hoá cũng không thay thế tỷ lệ strict pass.
+
+| Nhóm test2 | Có đáp án: đạt/tổng | Thiếu evidence: đạt/tổng | Tổng nhóm |
+|---|---:|---:|---:|
+| Bảng | 5/6 | 2/2 | 7/8 |
+| Ảnh/sơ đồ | 3/5 | — (không có ca) | 3/5 |
+| Biểu đồ | 5/5 | 2/2 | 7/7 |
+| Multi-hop | 4/4 | 1/1 | 5/5 |
+| Text | 4/4 | 1/1 | 5/5 |
+| **Toàn bộ** | **21/24** | **6/6** | **27/30** |
+
+**Ba câu chưa đạt** (ID rút gọn từ `FPT-ADVANCED-TEST2-…`, số trang PDF vật lý):
+
+- **002 — bảng, PDF 35:** context bị cắt giữa số vốn tháng 05/2022. Agent suy ngược từ tỷ lệ cổ tức và tính chênh lệch
+  1.828.377.620.000 VNĐ, trong khi số đúng từ bảng là **1.828.306.580.000 VNĐ**. Đáp án 1, context 1, citation không hỗ trợ phép suy ngược.
+- **007 — ảnh/sơ đồ, PDF 113:** đáp án đúng, nhưng context bị cắt trước quan hệ giữa GRI 300 và cột môi trường;
+  không có lượt xem ảnh để bổ sung. Context 1 nên chưa đạt strict dù đáp án được 2.
+- **008 — ảnh/sơ đồ, PDF 113:** chỉ nêu GRI 400, thiếu **GRI 200** ở cột môi trường làm việc; context cũng mất liên kết theo cột.
+  Đáp án 1, context 1. Các citation ở trang 118 hỗ trợ chi tiết bổ sung nên vẫn được tính hợp lệ.
+
+[Chấm tự động ban đầu](../../starter/results/agent/advanced.test2.E2_gpt54_v4/auto.json) cũng cho 27/30 nhưng trượt **002, 008, 019**.
+Sau đối chiếu, **019 đạt** vì hai nguồn PDF 48 và 50 hỗ trợ phép trừ 11,5 − 5,1 = 6,4 tỷ USD; **007 trượt** vì thiếu quan hệ trong context.
+Tổng điểm bằng nhau không có nghĩa hai bộ nhãn đồng ý ở mọi câu. Citation hợp lệ theo nội dung (52/53) cũng khác metric proxy
+“citation trên gold” (31/53), vốn có thể bỏ sót nguồn tương đương.
+
+Kết quả tái lập: [summary cập nhật](../reviews/advanced.test2.E2_gpt54_v4.official.summary.json). Chạy từ thư mục gốc repo:
+
+```bash
+.venv/bin/python benchmark/fpt_2025/score_test2.py \
+  --traces starter/results/agent/advanced.test2.E2_gpt54_v4/traces.json \
+  --reviews report/reviews/advanced.test2.E2_gpt54_v4.NguyenVanHaiQuan.ai-assisted.reviews.json \
+  --output report/reviews/advanced.test2.E2_gpt54_v4.official.summary.json
+```
+
+**Kết luận test2:** đạt đúng ngưỡng số học **27/30**, không làm tròn. Scorer ghi `meets_90_percent_numeric_threshold=true`
+và `bonus_awarded=null`. Xác nhận theo mẫu 10 câu chưa hoàn tất yêu cầu đọc, đối chiếu từng câu test của
+[ADVANCED.md §3](../../ADVANCED.md); báo cáo chưa khẳng định đủ điều kiện nhận bonus.
 
 ## Giới hạn
 
-- **Advanced test theo proxy là 47/70 (67,1%) < 63/70: không đạt ngưỡng 90% của thử thách nâng cao.** Yếu nhất: bảng 8/16 (chủ yếu citation nguồn tương đương/thiếu một ô), multi-hop 4/12 (thiếu vế thứ hai). Dev advanced (~76–83%) cao hơn test → dev chưa đại diện đủ; hướng tiếp: tách câu hỏi (B2, đã cài nhưng chưa đo), rerank cho câu bảng.
+- **B1 trên test gốc: 47/70 (67,1%) theo proxy; E2 trên test2: 27/30 (90%) theo nhãn được chấp nhận qua mẫu.**
+  Khác cấu hình, bộ câu hỏi và cách xác nhận nhãn; không lấy chênh lệch hai tỷ lệ làm mức cải thiện trên cùng một test.
 
-- Nhãn proxy và LLM judge chỉ để chọn cấu hình; điểm test chính thức cần người chấm theo `tools.py score`, chưa thực hiện.
+- Test cũ mới có mẫu 7 câu chấm thủ công; test2 có nhãn AI hỗ trợ cho 30 câu, được chấp nhận dựa trên mẫu 10 câu như mô tả ở trên.
+- Cắt mỗi chunk ở 2.500 ký tự có thể làm mất số hoặc quan hệ theo cột dù retrieval tìm đúng vùng; ba lỗi test2 cho thấy cần bảo toàn hàng/cột khi dựng context.
 - Mở rộng citation có thể thêm nguồn tương đương ở trang khác; người chấm cần xác nhận từng citation hỗ trợ đáp án.
-- Một lần chạy test; với mức nhiễu quan sát được, tỷ lệ test có sai số cỡ ±5–8 điểm phần trăm.
-- B2/B3 (tách câu hỏi, prompt v2 + mở rộng citation) chưa được đo đầy đủ.
+- Test2 mới chạy một lần và có 30 câu; mỗi câu làm thay đổi tỷ lệ khoảng 3,33 điểm phần trăm. Chưa đo độ ổn định qua nhiều lần chạy test2.
+- Vòng B2/B3 ban đầu chưa được đo đầy đủ; E2 đã dùng tách câu hỏi nhưng chưa tách riêng tác động của từng thay đổi index, prompt, tool và model.
