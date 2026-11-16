@@ -82,3 +82,6 @@ cần bộ test mới. Thay đổi (sửa lỗi hệ thống, không chỉnh the
 
 Chọn trên **advanced dev**: E1 = gpt-5.4-mini, E2 = gpt-5.4; cả hai: v4, cite_expand, decompose, hybrid top-5.
 Chọn E2 nếu hơn E1 ≥ 4 câu/70 (vượt nhiễu đo được), ngược lại chọn E1 (rẻ hơn ~3,3×). Ngân sách tổng ≤ $6.
+
+Kết quả advanced dev: E1 57/70, **E2 62/70** (+5 ≥ 4) → chọn **E2** (gpt-5.4, prompt v4, calculate, decompose, cite_expand).
+Manifest: `starter/results/runs/E2.test.manifest.json`. Kết quả test của E2 là post-hoc, không độc lập.
