@@ -1,0 +1,11 @@
+# Day 7 — multimodal index + agentic RAG (Python 3.12)
+# Vector store: the Day 6 PostgreSQL + pgvector container (pgvector/pgvector:0.8.7-pg16).
+psycopg[binary]==3.3.8
+python-dotenv>=1,<2
+pymupdf==1.26.5
+openai==2.8.0
+# Same local embedding model as Day 6: BAAI/bge-m3 (1024 dims), pinned revision in src/embeddings.py.
+sentence-transformers==5.7.0
+transformers==5.23.0
+torch==2.15.0
+huggingface_hub==2.4.0
