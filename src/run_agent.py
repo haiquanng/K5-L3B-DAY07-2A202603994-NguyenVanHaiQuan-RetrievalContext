@@ -120,7 +120,7 @@ def summarize(traces: list[dict], gold: dict[str, dict], retr: Retriever) -> dic
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--suite", choices=["basic", "advanced"], required=True)
-    ap.add_argument("--split", choices=["dev", "test"], required=True)
+    ap.add_argument("--split", choices=["dev", "test", "test2"], required=True)
     ap.add_argument("--name", required=True, help="configuration name (output folder)")
     ap.add_argument("--method", default="hybrid", choices=["dense", "bm25", "bm25_bigram", "hybrid", "rerank"])
     ap.add_argument("--top-k", type=int, default=5)
@@ -139,7 +139,7 @@ def main() -> None:
     ap.add_argument("--no-judge", action="store_true")
     ap.add_argument("--allow-test", action="store_true")
     a = ap.parse_args()
-    if a.split == "test" and not a.allow_test:
+    if a.split in ("test", "test2") and not a.allow_test:
         sys.exit("refusing to run test: freeze the configuration on dev first, then pass --allow-test")
     load_dotenv(ROOT / ".env")
     from openai import OpenAI
