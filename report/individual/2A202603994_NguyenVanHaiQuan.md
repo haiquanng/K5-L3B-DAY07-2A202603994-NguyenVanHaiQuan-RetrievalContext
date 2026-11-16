@@ -92,11 +92,27 @@ câu thiếu evidence: từ chối và judge xác nhận. LLM judge (gpt-5.4-min
 | Cấu hình / suite test | Strict pass proxy | Hit@1 / Hit@3 câu gốc | Context đủ | Judge 2/1/0 | Citation trên gold | Từ chối đúng | Từ chối nhầm | Lỗi | Chi phí | p50 / p95 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | baseline / basic | **43/50 (86.0%)** | 31/40 (77.5%) / 40/40 (100.0%) | 38/40 (95.0%) | 37/2/1 | 44/68 (64.7%) | 9/10 (90.0%) | 1/40 (2.5%) | 0 | $0.25 | 2.7 / 12.0 s |
-| baseline / advanced | (chưa chạy) |||||||||| 
+| baseline / advanced | **46/70 (65.7%)** | 42/56 (75.0%) / 49/56 (87.5%) | 52/56 (92.9%) | 40/12/4 | 60/113 (53.1%) | 11/14 (78.6%) | 2/56 (3.6%) | 0 | $0.47 | 4.4 / 27.1 s |
 | chosen_B1 / basic | **44/50 (88.0%)** | 31/40 (77.5%) / 40/40 (100.0%) | 38/40 (95.0%) | 37/2/1 | 46/72 (63.9%) | 9/10 (90.0%) | 1/40 (2.5%) | 0 | $0.25 | 2.7 / 12.0 s |
-| chosen_B1 / advanced | (chưa chạy) |||||||||| 
+| chosen_B1 / advanced | **47/70 (67.1%)** | 42/56 (75.0%) / 49/56 (87.5%) | 52/56 (92.9%) | 40/12/4 | 61/124 (49.2%) | 11/14 (78.6%) | 2/56 (3.6%) | 0 | $0.47 | 4.4 / 27.1 s |
+
+Advanced test theo nhóm (cấu hình đã chọn B1, proxy; nhóm thiếu evidence tách riêng):
+
+| Nhóm | Đạt / tổng |
+|---|---|
+| table | 8/16 |
+| image | 6/8 |
+| chart | 8/10 |
+| multi_hop | 4/12 |
+| text | 10/10 |
+| thiếu bằng chứng | 11/14 |
+| **toàn bộ** | **47/70 (67.1%)** (ngưỡng bonus ≥ 63/70, cần nhãn người chấm) |
+
+B1 trên test được dựng từ trace baseline test bằng bước mở rộng citation xác định (không chạy lại model): cùng câu trả lời, so sánh theo cặp. Nhãn là proxy + LLM judge; điểm chính thức cần người chấm (`python3 benchmark/fpt_2025/tools.py review-template ...` rồi `score`).
 
 ## Giới hạn
+
+- **Advanced test theo proxy là 47/70 (67,1%) < 63/70: không đạt ngưỡng 90% của thử thách nâng cao.** Yếu nhất: bảng 8/16 (chủ yếu citation nguồn tương đương/thiếu một ô), multi-hop 4/12 (thiếu vế thứ hai). Dev advanced (~76–83%) cao hơn test → dev chưa đại diện đủ; hướng tiếp: tách câu hỏi (B2, đã cài nhưng chưa đo), rerank cho câu bảng.
 
 - Nhãn proxy và LLM judge chỉ để chọn cấu hình; điểm test chính thức cần người chấm theo `tools.py score`, chưa thực hiện.
 - Mở rộng citation có thể thêm nguồn tương đương ở trang khác; người chấm cần xác nhận từng citation hỗ trợ đáp án.
