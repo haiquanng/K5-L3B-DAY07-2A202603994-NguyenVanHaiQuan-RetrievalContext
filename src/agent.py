@@ -25,6 +25,7 @@ from .retrieval import Retriever
 
 PRICES = {  # USD per 1M tokens (input, cached input, output); OpenAI pricing page, checked 2026-11-16
     "gpt-5.4-mini": (0.75, 0.075, 4.50),
+    "gpt-5.4": (2.50, 0.25, 15.00),
 }
 
 SYSTEM_V1 = """Bạn là trợ lý trả lời câu hỏi về "Báo cáo thường niên FPT 2025" chỉ dựa trên bằng chứng truy xuất được.
@@ -67,6 +68,14 @@ SYSTEM_V3 = SYSTEM_V2 + """
   Nếu câu hỏi nhắc một báo cáo/bảng/hình cụ thể mà chưa thấy chunk đó, search tên báo cáo/bảng/hình đó trước khi trả lời.
   Không trích chunk không chứa thông tin đã nêu."""
 
+SYSTEM_V4 = SYSTEM_V2 + """
+- Mọi phép tính (cộng, trừ, chia, tỷ lệ, chênh lệch) phải dùng công cụ calculate với số chép nguyên văn từ nguồn;
+  câu hỏi hỏi số chính xác thì nêu số chính xác (không làm tròn), có thể kèm số làm tròn.
+- Trước khi gọi final_answer, tự kiểm: đúng báo cáo/bảng mà câu hỏi nhắc tới, đúng hàng (mã số/tên chỉ tiêu), đúng
+  cột năm (2025 hay 2024, cuối năm hay đầu năm), đúng đơn vị và dấu (số trong ngoặc là số âm). Nếu một số lấy từ
+  bảng khác với bảng câu hỏi nêu, search bảng đó trước.
+- Nếu phần chính được hỏi không có trong tài liệu thì status="abstain" (kể cả khi có nêu thông tin liên quan)."""
+
 SYSTEM = SYSTEM_V1
 VIEW_IMAGE_RULE = """
 - Với chunk loại chart/diagram/infographic/photo/table, mô tả văn bản có thể thiếu quan hệ (nhánh nào nối hộp nào,
@@ -87,6 +96,10 @@ TOOLS = [
         "parameters": {"type": "object", "additionalProperties": False, "required": ["chunk_id"],
                        "properties": {"chunk_id": {"type": "string"}}}}},
     {"type": "function", "function": {
+        "name": "calculate", "description": "Tính chính xác biểu thức số (dùng định dạng số như báo cáo: dấu . phân nghìn, dấu , thập phân).",
+        "parameters": {"type": "object", "additionalProperties": False, "required": ["expression"],
+                       "properties": {"expression": {"type": "string"}}}}},
+    {"type": "function", "function": {
         "name": "final_answer", "description": "Câu trả lời cuối cùng.",
         "parameters": {"type": "object", "additionalProperties": False, "required": ["status", "answer", "citations"],
                        "properties": {"status": {"type": "string", "enum": ["answered", "abstain"]},
@@ -98,6 +111,39 @@ RESP_TOOLS = [{"type": "function", **t["function"], "strict": True} for t in TOO
 ROOT = __import__("pathlib").Path(__file__).resolve().parents[1]
 
 
+def calculate(expression: str) -> str:
+    """Exact arithmetic on report-formatted numbers: '.' thousands separator, ',' decimal mark, %, ( ) negatives
+    are written with '-'. Only + - * / and parentheses. Returns the exact result and Vietnamese formatting."""
+    import ast
+    from decimal import Decimal, getcontext
+    getcontext().prec = 40
+    expr = expression.replace("%", "").replace("×", "*").replace("÷", "/").replace("−", "-")
+
+    def num(m):
+        t = m.group(0)
+        return t.replace(".", "").replace(",", ".") if ("." in t and re.fullmatch(r"\d{1,3}(\.\d{3})+(,\d+)?", t)) \
+            or "," in t else t
+    expr = re.sub(r"\d[\d.,]*\d|\d", num, expr)
+    node = ast.parse(expr, mode="eval").body
+
+    def ev(n):
+        if isinstance(n, ast.BinOp) and type(n.op) in (ast.Add, ast.Sub, ast.Mult, ast.Div):
+            a, b = ev(n.left), ev(n.right)
+            return {ast.Add: a + b, ast.Sub: a - b, ast.Mult: a * b, ast.Div: a / b}[type(n.op)]
+        if isinstance(n, ast.UnaryOp) and isinstance(n.op, (ast.USub, ast.UAdd)):
+            return -ev(n.operand) if isinstance(n.op, ast.USub) else ev(n.operand)
+        if isinstance(n, ast.Constant) and isinstance(n.value, (int, float)):
+            return Decimal(str(n.value))
+        raise ValueError("chỉ hỗ trợ số, + - * / và ngoặc")
+    v = ev(node)
+    q = v.quantize(Decimal("0.0001")).normalize()
+    sign, txt = ("-" if q < 0 else ""), f"{abs(q):f}"
+    ip, _, fp = txt.partition(".")
+    vi = sign + f"{int(ip):,}".replace(",", ".") + ("," + fp if fp else "")
+    return f"{expression} = {vi} (giá trị chính xác {v.normalize():f})"
+
+
+MISSING_RE = r"không (công bố|cung cấp|có (số liệu|thông tin|dữ liệu))|không đủ (bằng chứng|dữ liệu|thông tin)|không thể (xác định|tính)"
 NUM_RE = re.compile(r"\(?\d{1,3}(?:[.,]\d{3})+(?:,\d+)?\)?|\d+,\d+%?|\d{4,}")
 
 
@@ -155,8 +201,9 @@ class Agent:
     def __init__(self, retriever: Retriever, cfg: AgentConfig, client: OpenAI | None = None) -> None:
         self.r, self.cfg = retriever, cfg
         self.client = client or OpenAI(max_retries=3, timeout=120)
-        self.instructions = {"v1": SYSTEM_V1, "v2": SYSTEM_V2, "v3": SYSTEM_V3}[cfg.prompt] + (VIEW_IMAGE_RULE if cfg.view_image else "")
-        self.tools = [t for t in RESP_TOOLS if cfg.view_image or t["name"] != "view_image"]
+        self.instructions = {"v1": SYSTEM_V1, "v2": SYSTEM_V2, "v3": SYSTEM_V3, "v4": SYSTEM_V4}[cfg.prompt] + (VIEW_IMAGE_RULE if cfg.view_image else "")
+        self.tools = [t for t in RESP_TOOLS if (cfg.view_image or t["name"] != "view_image")
+                      and (cfg.prompt == "v4" or t["name"] != "calculate")]
 
     def _format(self, hits: list[dict], seen: dict[str, dict], state: dict) -> str:
         out = []
@@ -221,7 +268,7 @@ class Agent:
                                "arguments": json.dumps({"query": sq}, ensure_ascii=False)},
                               {"type": "function_call_output", "call_id": f"call_d{j}",
                                "output": self._format(hits, seen, state)}]
-            final, repaired = None, False
+            final, repaired, abstain_checked = None, False, False
             for step in range(cfg.max_steps):
                 last = step == cfg.max_steps - 1
                 # Responses API: function tools + reasoning (Chat Completions rejects this combination)
@@ -260,9 +307,23 @@ class Agent:
                             content = [{"type": "input_text", "text": f"Ảnh vùng gốc của [{cid}] (trang PDF {seen[cid]['pdf_page']}):"},
                                        {"type": "input_image", "detail": "high",
                                         "image_url": "data:image/png;base64," + base64.b64encode(png).decode()}]
+                    elif tc.name == "calculate":
+                        try:
+                            content = calculate(args["expression"])
+                        except Exception as e:  # noqa: BLE001 - returned to the model as a tool error
+                            content = f"Lỗi biểu thức: {e}"
+                        events.append({"event": "calculate", "tool": "calculate", "expression": args["expression"],
+                                       "result": content})
                     elif tc.name == "final_answer":
                         bad = [c for c in args["citations"] if c not in seen or f"[{c}]" not in args["answer"]]
-                        if args["status"] == "answered" and (bad or not args["citations"]) and not repaired:
+                        says_missing = bool(re.search(MISSING_RE, args["answer"], re.I))
+                        if cfg.prompt == "v4" and args["status"] == "answered" and says_missing and not abstain_checked:
+                            abstain_checked = True
+                            events.append({"event": "abstain_check"})
+                            content = ("Câu trả lời nói tài liệu không có/không công bố thông tin. Nếu phần CHÍNH được hỏi "
+                                       "không có trong tài liệu, gọi lại final_answer với status=\"abstain\"; nếu phần chính "
+                                       "đã được trả lời đầy đủ bằng bằng chứng, gọi lại với status=\"answered\".")
+                        elif args["status"] == "answered" and (bad or not args["citations"]) and not repaired:
                             repaired = True
                             events.append({"event": "citation_repair", "invalid": bad})
                             content = ("Citation không hợp lệ: " + (", ".join(bad) or "không có citation") +

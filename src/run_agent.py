@@ -127,8 +127,9 @@ def main() -> None:
     ap.add_argument("--max-steps", type=int, default=6)
     ap.add_argument("--budget", type=int, default=24000)
     ap.add_argument("--model", default="gpt-5.4-mini", choices=sorted(PRICES))
+    ap.add_argument("--judge-model", default="gpt-5.4-mini")
     ap.add_argument("--reasoning", default="low")
-    ap.add_argument("--prompt", default="v1", choices=["v1", "v2", "v3"])
+    ap.add_argument("--prompt", default="v1", choices=["v1", "v2", "v3", "v4"])
     ap.add_argument("--view-image", action="store_true")
     ap.add_argument("--cite-expand", action="store_true")
     ap.add_argument("--decompose", action="store_true")
@@ -164,7 +165,7 @@ def main() -> None:
     def one(q: dict) -> dict:
         t = agent.run(q["question"], q["id"])  # agent sees only id + question
         if not a.no_judge and t["status"] in ("answered", "abstain"):
-            t["judge"] = judge(client, a.model, gold[q["id"]], t)  # gold only after the agent finished
+            t["judge"] = judge(client, a.judge_model, gold[q["id"]], t)  # gold only after the agent finished
         print(f"  {q['id']} {t['status']:8s} searches={t.get('search_calls')} {t['elapsed_ms']}ms "
               f"grade={t.get('judge', {}).get('grade')}", flush=True)
         return t

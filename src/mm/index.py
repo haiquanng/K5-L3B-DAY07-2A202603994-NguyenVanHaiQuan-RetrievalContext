@@ -19,6 +19,7 @@ No fake fallback: a model or DB error stops the run (vision results already cach
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import hashlib
 import json
 import os
@@ -104,6 +105,51 @@ def _split(items: list, size, limit: int) -> list[list]:
     return parts + ([cur] if cur else [])
 
 
+LETTER = re.compile(r"[^\W\d_]")
+
+
+def realign_table_columns(lay: PageLayout, specs: list[dict], log: dict) -> None:
+    """Side-by-side tables: the vision model sometimes groups a value column of the right table into the
+    left one. A block made only of value lines is moved to the table whose ROW LABEL lines are on the same
+    y and nearest to its left (majority over the block's lines); table bboxes are then recomputed."""
+    tables = [s for s in specs if s["reg"]["kind"] == "table"]
+    if len(tables) < 2:
+        return
+    labels = []  # (y_centre, x0, x1, spec index)
+    for k, s in enumerate(tables):
+        for bid in s["ids"]:
+            b = lay.block(bid)
+            for bx, t in zip(b.line_boxes or [b.bbox], b.lines):
+                if LETTER.search(t):
+                    labels.append(((bx[1] + bx[3]) / 2, bx[0], bx[2], k))
+    moved = []
+    for k, s in enumerate(tables):
+        for bid in list(s["ids"]):
+            b = lay.block(bid)
+            lines = [(bx, t) for bx, t in zip(b.line_boxes or [b.bbox], b.lines) if t.strip()]
+            if not lines or any(LETTER.search(t) for _, t in lines):
+                continue  # only pure value blocks are candidates
+            votes: Counter = Counter()
+            for bx, _ in lines:
+                yc = (bx[1] + bx[3]) / 2
+                left = [L for L in labels if abs(L[0] - yc) <= max(3.0, 0.5 * (bx[3] - bx[1])) and L[2] <= bx[0] + 3]
+                if left:
+                    votes[max(left, key=lambda L: L[2])[3]] += 1
+            if votes:
+                target, n = votes.most_common(1)[0]
+                if target != k and n * 2 > len(lines):
+                    s["ids"].remove(bid)
+                    tables[target]["ids"].append(bid)
+                    moved.append(f"{bid}:{s['reg']['kind']}{s['i']:02d}->{tables[target]['reg']['kind']}{tables[target]['i']:02d}")
+    if moved:
+        log["table_column_realigned"] = moved
+        for s in tables:
+            snapped = union([lay.block(i).bbox for i in s["ids"]] + [lay.objects[o] for o in s["objs"]
+                                                                       if o.startswith("t")])
+            if snapped:
+                s["bbox"] = pad(snapped, lay.width, lay.height)
+
+
 def build_page(doc_id: str, doc_title: str, lay: PageLayout, vis: dict, pdoc: pymupdf.Document,
                P: dict[str, Path], page_img: str) -> tuple[dict, list[dict], list[dict]]:
     res = vis["result"]
@@ -159,6 +205,8 @@ def build_page(doc_id: str, doc_title: str, lay: PageLayout, vis: dict, pdoc: py
             host["ids"].append(b.id)
             used.add(b.id)
             log.setdefault("assigned_by_geometry", []).append(f"{b.id}->{host['reg']['kind']}{host['i']:02d}")
+
+    realign_table_columns(lay, specs, log)
 
     for s in specs:
         reg, ids, objs, bbox, r_i = s["reg"], s["ids"], s["objs"], s["bbox"], s["i"]

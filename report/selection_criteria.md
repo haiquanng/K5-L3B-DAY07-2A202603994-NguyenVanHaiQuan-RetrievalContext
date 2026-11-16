@@ -70,3 +70,15 @@ Vòng B0–B3 bị dừng sau khi mới xong B0 basic dev (deadline). Chốt **B
 đã đo trên 3 bộ trace dev (+3, +4, +3 câu strict pass proxy), không thêm chi phí/latency. B2/B3 (decompose, prompt v2)
 chưa được đo nên không chọn. Manifest đóng băng: `starter/results/runs/*.test.manifest.json`. Test chạy baseline
 và B1 trên toàn bộ test của hai suite, một lần.
+
+## Vòng sau khi chẩn đoán lỗi test (test không còn độc lập)
+
+Kết quả chính thức của lần chốt trước: advanced test 47/70, basic test 44/50 (proxy). Sau đó đã **đọc lỗi trên test**
+để chẩn đoán, nên mọi kết quả test sau thay đổi dưới đây chỉ là **post-hoc, không độc lập**; muốn báo cáo độc lập
+cần bộ test mới. Thay đổi (sửa lỗi hệ thống, không chỉnh theo câu cụ thể):
+
+1. Index: khối cột số của hai bảng đặt cạnh nhau được gán lại theo nhãn hàng cùng y gần nhất bên trái.
+2. Agent prompt v4 = v2 + tool `calculate` (Decimal) + tự kiểm bảng/hàng/cột/đơn vị + kiểm status từ chối.
+
+Chọn trên **advanced dev**: E1 = gpt-5.4-mini, E2 = gpt-5.4; cả hai: v4, cite_expand, decompose, hybrid top-5.
+Chọn E2 nếu hơn E1 ≥ 4 câu/70 (vượt nhiễu đo được), ngược lại chọn E1 (rẻ hơn ~3,3×). Ngân sách tổng ≤ $6.

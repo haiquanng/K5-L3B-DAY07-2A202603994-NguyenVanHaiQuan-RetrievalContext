@@ -101,5 +101,14 @@ class CitationExpansionTest(unittest.TestCase):
         self.assertEqual(expand_citations("Có, theo chính sách [a]", ["a"], seen), [])
 
 
+class CalculatorTest(unittest.TestCase):
+    def test_report_number_format_exact(self):
+        from src.agent import calculate
+        self.assertIn("= -1.567.733.272.957", calculate("10.136.043.915.911 - 11.703.777.188.868"))
+        self.assertIn("= 2,05", calculate("2,5 - 0,45"))
+        with self.assertRaises(Exception):
+            calculate("__import__('os')")
+
+
 if __name__ == "__main__":
     unittest.main()
