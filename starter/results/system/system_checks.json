@@ -1,0 +1,228 @@
+{
+ "at": "2026-11-16T04:12:26+00:00",
+ "automated": [
+  {
+   "id": "SYS-001",
+   "status": "pass",
+   "evidence": {
+    "indexed_documents": [
+     "fpt-ar2025"
+    ],
+    "index_sha256": "9449a7251d126b635988974dbc72c2773c7fff39f4e5e858b5f7d3928b4e0e6c",
+    "pdf_sha256": "9449a7251d126b635988974dbc72c2773c7fff39f4e5e858b5f7d3928b4e0e6c",
+    "expected_sha256": "9449a7251d126b635988974dbc72c2773c7fff39f4e5e858b5f7d3928b4e0e6c",
+    "page_count": 232
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-002",
+   "status": "pass",
+   "evidence": {
+    "pages_in_ledger": 232,
+    "pages_with_chunks": 229,
+    "pages_without_chunks": [
+     {
+      "pdf_page": 56,
+      "has_text_layer": true,
+      "blocks_after_boilerplate": 0,
+      "skipped_regions": [
+       {
+        "kind": "photo",
+        "title": "Trang mở đầu chương",
+        "reason": "marked decorative"
+       }
+      ],
+      "reason": "trang mở chương: chữ chỉ gồm tên chương/mục đã lọc như navigation lặp; còn ảnh nền trang trí"
+     },
+     {
+      "pdf_page": 109,
+      "has_text_layer": true,
+      "blocks_after_boilerplate": 0,
+      "skipped_regions": [],
+      "reason": "trang mở chương: chữ chỉ gồm tên chương/mục đã lọc như navigation lặp; còn ảnh nền trang trí"
+     },
+     {
+      "pdf_page": 159,
+      "has_text_layer": true,
+      "blocks_after_boilerplate": 0,
+      "skipped_regions": [
+       {
+        "kind": "photo",
+        "title": "Ảnh nền minh họa tài chính",
+        "reason": "marked decorative"
+       }
+      ],
+      "reason": "trang mở chương: chữ chỉ gồm tên chương/mục đã lọc như navigation lặp; còn ảnh nền trang trí"
+     }
+    ],
+    "indexed_pages_not_in_gold": 131,
+    "gold_pages": 98
+   },
+   "human_check": "Đối chiếu ngẫu nhiên vài trang không thuộc gold với bản gốc (bảng/biểu đồ có đủ)."
+  },
+  {
+   "id": "SYS-003",
+   "status": "pass",
+   "evidence": {
+    "printed_by_pdf_page": {
+     "1": null,
+     "10": "09",
+     "31": "30",
+     "169": "168"
+    }
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-007",
+   "status": "pass",
+   "evidence": {
+    "chunks_with_>=3_sidebar_items": [],
+    "chunks_with_running_title": 2,
+    "page10_title_unit_values_kept": true
+   },
+   "human_check": "Trang mục lục (PDF 3) được phép chứa tên chương vì đó là nội dung thật."
+  },
+  {
+   "id": "SYS-008",
+   "status": "pass",
+   "evidence": {
+    "rows": {
+     "4.383": "Bảng tổng hợp lượng phát thải khí nhà kính của FPT năm 2025, đơn vị: tấn CO2 tương đương. Cột gồm: Phạm vi, Năm 2023, Năm 2024, Năm 2025. Các dòng: Phạm vi 1: 13.217; 4.826; 4.383. Phạm vi 2: 109.696; 138.748; 123.569. Phạm vi 3: Chưa triển khai; Triển khai thí điểm tại FPT Software; Triển khai tại FPT Software. Dòng tổng: 122.913; 143.574; 127.952. Dòng tổng là dòng cộng gộp, cho thấy năm 2025 giảm so với năm 2024.",
+     "123.569": "Bảng tổng hợp lượng phát thải khí nhà kính của FPT năm 2025, đơn vị: tấn CO2 tương đương. Cột gồm: Phạm vi, Năm 2023, Năm 2024, Năm 2025. Các dòng: Phạm vi 1: 13.217; 4.826; 4.383. Phạm vi 2: 109.696; 138.748; 123.569. Phạm vi 3: Chưa triển khai; Triển khai thí điểm tại FPT Software; Triển khai tại FPT Software. Dòng tổng: 122.913; 143.574; 127.952. Dòng tổng là dòng cộng gộp, cho thấy năm 2025 giảm so với năm 2024.",
+     "127.952": "Tổng | 122.913 | 143.574 | 127.952"
+    }
+   },
+   "human_check": "Đọc dòng tìm được: giá trị 2025 nằm đúng cột 2025 (thứ tự cột theo header)."
+  },
+  {
+   "id": "SYS-009",
+   "status": "pass",
+   "evidence": {
+    "chunks_containing": {
+     "(105.704.809.379)": [
+      "fpt-ar2025:p169:table01",
+      "fpt-ar2025:p210:table03"
+     ],
+     "(11.624.743.591.629)": [
+      "fpt-ar2025:p172:table01"
+     ]
+    }
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-012",
+   "status": "partial",
+   "evidence": {
+    "visual_regions": 197,
+    "missing_provenance_or_crop": [],
+    "bbox_from_pdf_objects": 197
+   },
+   "human_check": "Mô tả sơ đồ có thể thiếu quan hệ (vd PDF 31 không ghi nhánh công ty) → agent dùng view_image; người chấm mở crop kiểm tra không cắt mất nhãn/đường nối."
+  },
+  {
+   "id": "SYS-015",
+   "status": "pass",
+   "evidence": {
+    "top3": {
+     "Thu nhập thuế TNDN hoãn lại (105.704.809.379)": [
+      [
+       "fpt-ar2025:p210:table03",
+       74.7533
+      ],
+      [
+       "fpt-ar2025:p211:table01",
+       61.5288
+      ],
+      [
+       "fpt-ar2025:p187:text04-1",
+       61.2792
+      ]
+     ],
+     "doanh thu 52.618": [
+      [
+       "fpt-ar2025:p010:chart01",
+       17.0152
+      ],
+      [
+       "fpt-ar2025:p012:table01",
+       9.7739
+      ],
+      [
+       "fpt-ar2025:p209:table01",
+       9.6184
+      ]
+     ]
+    },
+    "exact_number_in_top1": true
+   },
+   "human_check": "Probe là truy vấn kiểm thử của hệ thống, không phải câu benchmark; đáp án không được đưa vào query benchmark."
+  },
+  {
+   "id": "SYS-018",
+   "status": "pass",
+   "evidence": {
+    "bm25_identical_runs": true,
+    "rrf_tiebreak_chunk_id": true,
+    "dense_sql_tiebreak_chunk_id": true
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-021",
+   "status": "pass",
+   "evidence": {
+    "formula": "score(d) = Σ_m w_m / (60 + rank_m(d)), pool 50 mỗi phương pháp, w=1",
+    "duplicates_merged_by_chunk_id": true
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-019",
+   "status": "pass",
+   "evidence": {
+    "run": "advanced.dev.hybrid_k5",
+    "original_ranking_logged_separately": true,
+    "queries_logged_per_call": true
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-026",
+   "status": "pass",
+   "evidence": {
+    "traces_with_duplicate_context_ids": [],
+    "dedup_rule": "theo chunk_id; chunk khác ID cùng trang được giữ"
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-055",
+   "status": "pass",
+   "evidence": {
+    "query_file_keys": [
+     "id",
+     "question"
+    ],
+    "trace_question_differs_from_query_file": [],
+    "runtime_modules_reference_gold_fields": false,
+    "note": "run_agent.py đọc gold chỉ sau khi agent trả kết quả (proxy/judge)"
+   },
+   "human_check": null
+  },
+  {
+   "id": "SYS-052",
+   "status": "pass",
+   "evidence": {
+    "run": "advanced.dev.hybrid_k5",
+    "retrieval_N": 56,
+    "context_N": 56,
+    "abstention_N": 14
+   },
+   "human_check": null
+  }
+ ],
+ "not_automated_here": "các ca còn lại cần chạy agent/lỗi giả lập hoặc người chấm"
+}
