@@ -98,6 +98,26 @@ RESP_TOOLS = [{"type": "function", **t["function"], "strict": True} for t in TOO
 ROOT = __import__("pathlib").Path(__file__).resolve().parents[1]
 
 
+NUM_RE = re.compile(r"\(?\d{1,3}(?:[.,]\d{3})+(?:,\d+)?\)?|\d+,\d+%?|\d{4,}")
+
+
+def distinctive_numbers(answer: str) -> set[str]:
+    """Numbers with >= 4 digits (not bare years) stated in the answer: near-unique strings in a report."""
+    out = set()
+    for t in NUM_RE.findall(answer):
+        t = t.strip("()")
+        if len(re.sub(r"\D", "", t)) >= 4 and not re.fullmatch(r"(19|20)\d\d", t):
+            out.add(t)
+    return out
+
+
+def expand_citations(answer: str, citations: list[str], seen: dict[str, dict]) -> list[str]:
+    """Deterministic citation expansion: every chunk in context that contains verbatim one of the distinctive
+    numbers of the answer is also cited (same figure in the primary statement, a note and a summary table)."""
+    nums = distinctive_numbers(answer)
+    return [cid for cid, h in seen.items() if cid not in citations and nums and any(n in h["text"] for n in nums)]
+
+
 @dataclass
 class AgentConfig:
     model: str = "gpt-5.4-mini"
@@ -110,6 +130,7 @@ class AgentConfig:
     original_k: int = 10           # ranking depth logged for the original question
     prompt: str = "v1"             # v1 baseline | v2 decomposition, units, no cross-set derivation | v3 v2 + cite all direct sources
     view_image: bool = False       # expose view_image(chunk_id): the model reads the original crop
+    cite_expand: bool = False      # add context chunks that contain the answer's distinctive numbers verbatim
 
 
 def cost_usd(model: str, usage: dict[str, int]) -> float | None:
@@ -238,6 +259,13 @@ class Agent:
             else:
                 status, answer = final["status"], final["answer"].strip()
                 cites = list(dict.fromkeys(c for c in final["citations"] if c in seen))
+                if cfg.cite_expand and status == "answered":
+                    extra = expand_citations(answer, cites, seen)
+                    if extra:
+                        events.append({"event": "citation_expansion", "added": extra,
+                                       "numbers": sorted(distinctive_numbers(answer))})
+                        answer += "\n\nNguồn có cùng số liệu: " + " ".join(f"[{c}]" for c in extra)
+                        cites += extra
             events.append({"event": "answer", "status": status})
             trace.update(status=status, answer=answer, citations=cites)
         except Exception as e:  # noqa: BLE001 - reported as error, never replaced by a fake answer

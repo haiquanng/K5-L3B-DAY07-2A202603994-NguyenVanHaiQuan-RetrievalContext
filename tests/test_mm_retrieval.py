@@ -90,5 +90,14 @@ class ProxyLabelTest(unittest.TestCase):
         self.assertTrue(complete(case, {"E3"}))
 
 
+class CitationExpansionTest(unittest.TestCase):
+    def test_only_distinctive_numbers_and_verbatim_matches(self):
+        from src.agent import distinctive_numbers, expand_citations
+        self.assertEqual(distinctive_numbers("Năm 2025 doanh thu 52.618 tỷ, tăng 11,6%, 7 công ty"), {"52.618"})
+        seen = {"a": {"text": "Doanh thu 52.618"}, "b": {"text": "thuyết minh: 52.618 tỷ"}, "c": {"text": "2025"}}
+        self.assertEqual(expand_citations("Doanh thu 52.618 tỷ [a]", ["a"], seen), ["b"])
+        self.assertEqual(expand_citations("Có, theo chính sách [a]", ["a"], seen), [])
+
+
 if __name__ == "__main__":
     unittest.main()

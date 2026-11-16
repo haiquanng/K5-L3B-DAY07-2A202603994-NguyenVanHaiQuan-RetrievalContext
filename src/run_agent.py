@@ -130,6 +130,7 @@ def main() -> None:
     ap.add_argument("--reasoning", default="low")
     ap.add_argument("--prompt", default="v1", choices=["v1", "v2", "v3"])
     ap.add_argument("--view-image", action="store_true")
+    ap.add_argument("--cite-expand", action="store_true")
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--limit", type=int)
     ap.add_argument("--ids", nargs="+", help="run only these query ids (debugging; not a reported run)")
@@ -150,7 +151,8 @@ def main() -> None:
             return orig_search(*x, **kw)
     retr.search = locked_search  # type: ignore[method-assign]
     cfg = AgentConfig(model=a.model, reasoning_effort=a.reasoning, method=a.method, top_k=a.top_k,
-                      max_steps=a.max_steps, budget_chars=a.budget, prompt=a.prompt, view_image=a.view_image)
+                      max_steps=a.max_steps, budget_chars=a.budget, prompt=a.prompt, view_image=a.view_image,
+                      cite_expand=a.cite_expand)
     agent = Agent(retr, cfg, client)
     queries, gold = load(a.suite, a.split)
     queries = [q for q in queries if not a.ids or q["id"] in a.ids]
