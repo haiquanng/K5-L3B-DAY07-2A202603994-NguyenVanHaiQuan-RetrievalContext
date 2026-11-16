@@ -60,6 +60,13 @@ Quy tắc bổ sung:
 - Nếu câu hỏi nhắc tới một biểu đồ/sơ đồ/bảng/hình (cột, đường, nhánh, bước, hộp, chú giải), trích dẫn chính
   chunk của hình/bảng đó."""
 
+SYSTEM_V3 = SYSTEM_V2 + """
+- Trích dẫn đầy đủ: với mỗi số liệu/ý trong câu trả lời, trích MỌI chunk đã truy xuất có nêu trực tiếp số liệu/ý đó
+  (vd cùng một số xuất hiện ở báo cáo tài chính chính, thuyết minh và bảng tóm tắt thì trích cả ba), ưu tiên đặt
+  trước nguồn gốc mà câu hỏi nhắc tới (bảng cân đối kế toán, báo cáo kết quả kinh doanh, bảng/biểu đồ/sơ đồ cụ thể).
+  Nếu câu hỏi nhắc một báo cáo/bảng/hình cụ thể mà chưa thấy chunk đó, search tên báo cáo/bảng/hình đó trước khi trả lời.
+  Không trích chunk không chứa thông tin đã nêu."""
+
 SYSTEM = SYSTEM_V1
 VIEW_IMAGE_RULE = """
 - Với chunk loại chart/diagram/infographic/photo/table, mô tả văn bản có thể thiếu quan hệ (nhánh nào nối hộp nào,
@@ -101,7 +108,7 @@ class AgentConfig:
     budget_chars: int = 24000      # total evidence chars sent to the model
     chunk_chars: int = 2500        # per-chunk truncation
     original_k: int = 10           # ranking depth logged for the original question
-    prompt: str = "v1"             # v1 baseline | v2 decomposition / units / no cross-set derivation
+    prompt: str = "v1"             # v1 baseline | v2 decomposition, units, no cross-set derivation | v3 v2 + cite all direct sources
     view_image: bool = False       # expose view_image(chunk_id): the model reads the original crop
 
 
@@ -117,7 +124,7 @@ class Agent:
     def __init__(self, retriever: Retriever, cfg: AgentConfig, client: OpenAI | None = None) -> None:
         self.r, self.cfg = retriever, cfg
         self.client = client or OpenAI(max_retries=3, timeout=120)
-        self.instructions = (SYSTEM_V2 if cfg.prompt == "v2" else SYSTEM_V1) + (VIEW_IMAGE_RULE if cfg.view_image else "")
+        self.instructions = {"v1": SYSTEM_V1, "v2": SYSTEM_V2, "v3": SYSTEM_V3}[cfg.prompt] + (VIEW_IMAGE_RULE if cfg.view_image else "")
         self.tools = [t for t in RESP_TOOLS if cfg.view_image or t["name"] != "view_image"]
 
     def _format(self, hits: list[dict], seen: dict[str, dict], state: dict) -> str:

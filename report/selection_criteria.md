@@ -32,3 +32,14 @@ Các tham số chung: `gpt-5.4-mini`, reasoning low, tối đa 6 bước, ngân 
 - Chạy **baseline và cấu hình đã chọn** trên toàn bộ test của cả hai suite, mỗi suite một lần; không sửa
   pipeline sau khi xem test. Nếu phải sửa, tạo test mới và ghi rõ.
 - Kết quả test báo cáo bằng **nhãn người chấm** (`tools.py score`); proxy/LLM judge chỉ là tham khảo.
+
+## Bổ sung sau khi xem C1/C2 (trước khi chạy C3)
+
+Kết quả advanced dev (proxy strict pass): baseline 53/70, C1 53/70, C2 50/70; giữa các lần chạy có nhiều câu
+đổi đạt/không đạt nên chênh lệch ±3 câu có thể là nhiễu. Lỗi chiếm đa số: đáp án đúng (judge 2/2) nhưng citation
+là nguồn tương đương khác trang gold, trong khi chunk gold đã có trong context (51–52/56).
+
+- **C3 `c3_prompt_v3`**: prompt v2 + trích mọi chunk nêu trực tiếp số liệu/ý, ưu tiên nguồn gốc câu hỏi nhắc tới.
+  Giả thuyết: tăng strict pass nhờ citation phủ evidence gold; không đổi retrieval.
+- **Đo nhiễu**: chạy lại baseline lần 2 (`hybrid_k5_r2`). Một cải tiến chỉ được coi là thật nếu vượt baseline nhiều
+  hơn mức chênh giữa hai lần chạy baseline; nếu không, giữ cấu hình đơn giản/rẻ hơn theo tiêu chí hoà.

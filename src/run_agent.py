@@ -128,7 +128,7 @@ def main() -> None:
     ap.add_argument("--budget", type=int, default=24000)
     ap.add_argument("--model", default="gpt-5.4-mini", choices=sorted(PRICES))
     ap.add_argument("--reasoning", default="low")
-    ap.add_argument("--prompt", default="v1", choices=["v1", "v2"])
+    ap.add_argument("--prompt", default="v1", choices=["v1", "v2", "v3"])
     ap.add_argument("--view-image", action="store_true")
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--limit", type=int)
