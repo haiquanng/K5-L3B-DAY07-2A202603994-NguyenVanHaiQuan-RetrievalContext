@@ -125,8 +125,14 @@ chấm bằng trang review local (`src/review_page.py --sample-only`); nhãn: [r
 |---|---|---|---|---|---|---|---|
 | Baseline | 3/7 | 4/5 · 5/5 | 5/5 | 2/3/0 (0,70) | 7/10 | 1/2 | 0/5 |
 | B1 (đã chọn) | 3/7 | 4/5 · 5/5 | 5/5 | 2/3/0 (0,70) | 7/10 | 1/2 | 0/5 |
+| E2 (post-hoc) | **5/7** | 4/5 · 5/5 | 5/5 | 5/0/0 (1,00) | 7/10 | 1/2 | 0/5 |
 
-- Hai cấu hình trùng nhau trên mẫu vì 7 câu này không có citation do bước mở rộng thêm vào.
+Người chấm: B1 — Nguyễn Văn Hải Quân; E2 — Nguyễn Bình An (khác người chấm nên so sánh B1/E2 có thể lẫn sai lệch giữa hai người).
+Trên mẫu, E2 sửa đúng 3 câu B1 sai (004 đủ ý; 042 đúng cấp ĐHĐCĐ của Ban Kiểm soát; 056 tính đúng −1.488.699.675.718 VNĐ bằng tool `calculate`).
+E2 còn trượt 031 (đáp án đúng nhưng thêm một citation trang 58 không hỗ trợ — một citation sai là trượt) và 069 (đã `abstain` nhưng vẫn nêu
+"dự phòng hoàn nguyên đã ghi nhận = 0 VNĐ" → khẳng định thiếu căn cứ). Nhãn: [E2](../reviews/advanced.test.E2_gpt54_v4.sample.reviews.json).
+
+- Baseline và B1 trùng nhau trên mẫu vì 7 câu này không có citation do bước mở rộng thêm vào.
 - **Proxy khớp người chấm 6/7**; câu lệch (004) proxy cho đạt nhưng người chấm cho đáp án 1 (thiếu ý "chưa ghi nhận ≠ bằng 0")
   → proxy có xu hướng **dễ hơn** người chấm; 47/70 proxy nên xem là cận trên.
 - Lỗi thấy trên mẫu: 042 đọc sai cấp của Ban Kiểm soát trên sơ đồ + 1 citation không hỗ trợ; 056 tính chênh lệch sai số liệu;
