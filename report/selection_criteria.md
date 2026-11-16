@@ -43,3 +43,23 @@ là nguồn tương đương khác trang gold, trong khi chunk gold đã có tro
   Giả thuyết: tăng strict pass nhờ citation phủ evidence gold; không đổi retrieval.
 - **Đo nhiễu**: chạy lại baseline lần 2 (`hybrid_k5_r2`). Một cải tiến chỉ được coi là thật nếu vượt baseline nhiều
   hơn mức chênh giữa hai lần chạy baseline; nếu không, giữ cấu hình đơn giản/rẻ hơn theo tiêu chí hoà.
+
+## Vòng chọn cuối trên 120 câu dev (ghi trước khi chạy)
+
+Kết quả trước đó: baseline chạy 2 lần 53 và 55/70 (lệch 12 câu) → nhiễu một lần chạy cỡ ±6 câu/70. Mở rộng
+citation theo số liệu (`--cite-expand`) chấm lại trên trace sẵn có: +3/+4/+3 ở ba lần chạy. Basic dev baseline 43/50.
+
+Thay đổi index trước vòng này (áp dụng cho mọi cấu hình): pass cấu trúc cho 71 vùng sơ đồ/infographic từ ảnh crop
+(`relations r2`), dòng chứa số không khớp nguyên token với text layer bị loại.
+
+Ứng viên, cùng index mới, chạy trên **basic dev + advanced dev = 120 câu** (96 có đáp án, 24 thiếu evidence):
+
+| Tên | Prompt | cite_expand | decompose |
+|---|---|---|---|
+| B0 | v1 | không | không |
+| B1 | v1 | có | không |
+| B2 | v1 | có | có |
+| B3 | v2 | có | có |
+
+Tiêu chí (giữ như trên, áp dụng cho tổng 120 câu): strict pass cao nhất; ràng buộc 0 lỗi, từ chối đúng ≥ 21/24,
+từ chối nhầm ≤ 5/96; chênh ≤ 4 câu/120 coi là hoà → chọn cấu hình rẻ hơn rồi p95 thấp hơn. Báo thêm kết quả từng suite.

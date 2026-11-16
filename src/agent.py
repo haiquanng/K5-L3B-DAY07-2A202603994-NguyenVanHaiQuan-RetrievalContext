@@ -118,6 +118,15 @@ def expand_citations(answer: str, citations: list[str], seen: dict[str, dict]) -
     return [cid for cid, h in seen.items() if cid not in citations and nums and any(n in h["text"] for n in nums)]
 
 
+DECOMPOSE = """Bạn chuẩn bị truy vấn tìm kiếm cho câu hỏi về báo cáo thường niên FPT 2025.
+Nếu câu hỏi cần nhiều thông tin riêng (nhiều vế, nhiều chỉ tiêu, nhiều năm/bảng/trang, so sánh hoặc tính toán từ
+hai nguồn), trả về tối đa 4 truy vấn ngắn, mỗi truy vấn cho MỘT thông tin cần tra, dùng thuật ngữ một báo cáo
+thường niên/báo cáo tài chính tiếng Việt hay dùng (viết đầy đủ từ viết tắt như EBITDA, BCĐKT, KQKD, LNST).
+Không thêm con số đáp án hay thông tin bạn đoán. Câu hỏi chỉ cần một thông tin: trả về danh sách rỗng."""
+DECOMPOSE_SCHEMA = {"type": "object", "additionalProperties": False, "required": ["subqueries"],
+                    "properties": {"subqueries": {"type": "array", "items": {"type": "string"}}}}
+
+
 @dataclass
 class AgentConfig:
     model: str = "gpt-5.4-mini"
@@ -131,6 +140,7 @@ class AgentConfig:
     prompt: str = "v1"             # v1 baseline | v2 decomposition, units, no cross-set derivation | v3 v2 + cite all direct sources
     view_image: bool = False       # expose view_image(chunk_id): the model reads the original crop
     cite_expand: bool = False      # add context chunks that contain the answer's distinctive numbers verbatim
+    decompose: bool = False        # one model call splits the question into sub-queries; code searches each first
 
 
 def cost_usd(model: str, usage: dict[str, int]) -> float | None:
@@ -194,6 +204,23 @@ class Agent:
                  "arguments": json.dumps({"query": question}, ensure_ascii=False)},
                 {"type": "function_call_output", "call_id": "call_0", "output": self._format(shown, seen, state)},
             ]
+            if cfg.decompose:
+                d = self.client.responses.create(
+                    model=cfg.model, instructions=DECOMPOSE, input=f"Câu hỏi: {question}",
+                    reasoning={"effort": cfg.reasoning_effort},
+                    text={"format": {"type": "json_schema", "name": "decompose", "strict": True, "schema": DECOMPOSE_SCHEMA}})
+                usage["model_calls"] += 1
+                usage["input"] += d.usage.input_tokens
+                usage["output"] += d.usage.output_tokens
+                subs = [x.strip() for x in json.loads(d.output_text)["subqueries"] if x.strip()][:4]
+                events.append({"event": "decompose", "subqueries": subs})
+                for j, sq in enumerate(subs, 1):
+                    hits, _ = do_search(sq, cfg.top_k)
+                    events[-1]["source"] = "decomposition"
+                    items += [{"type": "function_call", "call_id": f"call_d{j}", "name": "search",
+                               "arguments": json.dumps({"query": sq}, ensure_ascii=False)},
+                              {"type": "function_call_output", "call_id": f"call_d{j}",
+                               "output": self._format(hits, seen, state)}]
             final, repaired = None, False
             for step in range(cfg.max_steps):
                 last = step == cfg.max_steps - 1

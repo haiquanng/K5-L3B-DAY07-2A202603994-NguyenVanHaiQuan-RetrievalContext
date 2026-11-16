@@ -62,6 +62,8 @@ class IndexHelpersTest(unittest.TestCase):
         text = "Tổng doanh thu 70.113 Tỷ VNĐ 11,6%"
         self.assertEqual(unverified_numbers("Năm 2025: 70.113; tăng 11,6%", text), [])
         self.assertEqual(unverified_numbers("2024: 62.849", text), ["62.849"])
+        # whole-token match: a truncated number must not pass as a substring of the printed one
+        self.assertEqual(unverified_numbers("vốn 7.750.000.000", "Vốn 7.750.000.000.000 VNĐ"), ["7.750.000.000"])
 
     def test_split_respects_limit(self):
         parts = _split(["a" * 10] * 5, len, 25)

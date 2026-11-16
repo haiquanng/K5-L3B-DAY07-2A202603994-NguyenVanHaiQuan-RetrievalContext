@@ -34,7 +34,7 @@ from dotenv import load_dotenv
 
 from .layout import PageLayout, crop, doc_profile, pad, page_layout, render_page, table_rows, union
 from .store import MMStore, _vec, content_hash
-from .vision import PROMPT_VERSION, analyse_page
+from .vision import PROMPT_VERSION, RELATIONS_VERSION, analyse_page, region_relations
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL = "gpt-5.4-mini"
@@ -43,6 +43,7 @@ MAX_TEXT_CHARS = 1500      # split long sections at block boundaries
 MAX_TABLE_CHARS = 2200     # split long tables by rows, title + description repeated in each part
 KIND_VI = {"table": "Bảng", "chart": "Biểu đồ", "diagram": "Sơ đồ", "infographic": "Infographic",
            "photo": "Ảnh", "text": "Văn bản"}
+RELATION_KINDS = ("diagram", "infographic")  # structure pass on the crop (chart values are already paired)
 NUM_TOKEN = re.compile(r"\d[\d.,]*\d|\d")
 
 
@@ -70,15 +71,25 @@ def rel(p: Path) -> str:
 
 
 def unverified_numbers(description: str, page_text: str) -> list[str]:
-    """Numbers the model wrote that do not occur in the page text layer (years and 1-digit numbers ignored)."""
-    hay = re.sub(r"\s+", "", page_text)
+    """Numbers the model wrote that are not a WHOLE number token of the page text layer (substring matches do
+    not count: "7.750.000.000" must not pass because "7.750.000.000.000" is printed). Years and 1-digit ignored."""
+    page_tokens = {t.rstrip(".,") for t in NUM_TOKEN.findall(page_text)}
     out = []
     for tok in NUM_TOKEN.findall(description):
-        if len(re.sub(r"\D", "", tok)) < 2 or re.fullmatch(r"(19|20)\d\d", tok):
+        t = tok.rstrip(".,")
+        if len(re.sub(r"\D", "", t)) < 2 or re.fullmatch(r"(19|20)\d\d", t):
             continue
-        if tok not in hay and tok.rstrip(".,") not in hay:
-            out.append(tok)
+        if t not in page_tokens:
+            out.append(t)
     return sorted(set(out))
+
+
+def drop_unverified_lines(text: str, page_text: str) -> tuple[str, list[str]]:
+    """Remove lines of a model-written structure that contain a number not printed on the page."""
+    keep, dropped = [], []
+    for line in text.splitlines():
+        (dropped if unverified_numbers(line, page_text) else keep).append(line)
+    return "\n".join(keep), dropped
 
 
 def _split(items: list, size, limit: int) -> list[list]:
@@ -271,6 +282,32 @@ def cmd_index(a: argparse.Namespace) -> None:
     if len(ids) != len(set(ids)):
         sys.exit("duplicate chunk ids")
 
+    rel_usage = {"regions": 0, "input": 0, "output": 0}
+    if not a.no_relations:  # second pass: structure of diagrams / infographics read from the crop itself
+        targets = [r for r in region_rows if r["kind"] in RELATION_KINDS]
+        page_text = {p: layouts[p].text for p in pages}
+        with ThreadPoolExecutor(a.workers) as ex:
+            futs = {ex.submit(region_relations, client, a.model, ROOT / r["crop_path"], r["kind"], r["title"],
+                              P["vision"] / "relations", a.reasoning): r for r in targets}
+            for f in as_completed(futs):
+                r, res = futs[f], f.result()
+                rel_usage["regions"] += 1
+                rel_usage["input"] += res["usage"]["input"]
+                rel_usage["output"] += res["usage"]["output"]
+                text, dropped = drop_unverified_lines(res["text"], page_text[r["pdf_page"]])
+                if dropped:
+                    rel_usage.setdefault("dropped_lines", {})[r["region_id"]] = dropped
+                if not text.strip():
+                    continue
+                block = f"Cấu trúc đọc từ ảnh vùng:\n{text}"
+                r["description"] = f"{r['description']}\n{block}"
+                r["unverified_numbers"] = unverified_numbers(r["description"], page_text[r["pdf_page"]])
+                for c in chunk_rows:
+                    if c["region_id"] == r["region_id"]:
+                        cut = c["content"].find("\nNội dung trích từ PDF")
+                        c["content"] = (c["content"][:cut] + "\n" + block + c["content"][cut:]) if cut >= 0 \
+                            else c["content"] + "\n" + block
+
     W0, H0 = pdoc[0].rect.width, pdoc[0].rect.height
     sha = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
     lens = sorted(len(c["content"]) for c in chunk_rows)
@@ -288,7 +325,8 @@ def cmd_index(a: argparse.Namespace) -> None:
              "pages_with_unknown_ids": [pg["pdf_page"] for pg in page_rows if pg["log"]["unknown_ids"]],
              "regions_with_unverified_numbers": [r["region_id"] for r in region_rows if r["unverified_numbers"]],
              "regions_bbox_not_from_pdf": [r["region_id"] for r in region_rows if r["bbox_source"] != "pdf_objects"],
-             "skipped_decorative": sum(len(pg["log"]["skipped_regions"]) for pg in page_rows)}
+             "skipped_decorative": sum(len(pg["log"]["skipped_regions"]) for pg in page_rows),
+             "relations_pass": {"version": None if a.no_relations else RELATIONS_VERSION, **rel_usage}}
 
     if store:
         sys.path.insert(0, str(ROOT))
@@ -351,6 +389,7 @@ def main() -> None:
     ix.add_argument("--reasoning", default="low", choices=["none", "minimal", "low", "medium", "high"])
     ix.add_argument("--workers", type=int, default=6)
     ix.add_argument("--no-db", action="store_true", help="vision + chunk files only; no embedding / DB write")
+    ix.add_argument("--no-relations", action="store_true", help="skip the diagram/infographic structure pass")
     ix.set_defaults(fn=cmd_index)
     se = sub.add_parser("search")
     se.add_argument("query")
