@@ -98,6 +98,20 @@ def main() -> None:
                         "retrieval_evidence_at_1": ev1, "retrieval_evidence_at_3": ev3, "context_evidence": ctx_ev},
             "citations": cites,
         })
+    # Minimum sample required by BENCHMARK.md (>= 5 answerable + 2 insufficient-evidence test cases), drawn with a
+    # fixed seed and spread over categories, so the sample is reproducible and not hand-picked.
+    import random
+    rng = random.Random(f"{a.suite}.{a.split}.min-sample.v1")
+    ans = [c for c in cases if c["answerable"]]
+    by_cat: dict[str, list] = {}
+    for c in ans:
+        by_cat.setdefault(c["category"], []).append(c)
+    picked = [rng.choice(sorted(v, key=lambda x: x["query_id"])) for _, v in sorted(by_cat.items())]
+    rest = sorted((c for c in ans if c not in picked), key=lambda x: x["query_id"])
+    picked += rng.sample(rest, max(0, 5 - len(picked)))
+    picked += rng.sample(sorted((c for c in cases if not c["answerable"]), key=lambda x: x["query_id"]), 2)
+    for c in cases:
+        c["in_sample"] = c in picked
     OUT.mkdir(parents=True, exist_ok=True)
     title = f"Review {a.suite}/{a.split} · {a.run}"
     data = json.dumps({"title": title, "key": f"review:{a.suite}.{a.split}.{a.run}", "cases": cases}, ensure_ascii=False)
@@ -137,7 +151,7 @@ dialog{max-width:95vw;max-height:95vh;border:0;border-radius:12px;padding:0}dial
 </style></head><body>
 <header><h1>__TITLE__</h1>
 <label>Người chấm <input type="text" id="reviewer" placeholder="Họ tên" size="16"></label>
-<select id="filter"><option value="all">Tất cả</option><option value="todo">Chưa xác nhận</option><option value="fail">Gợi ý: có vấn đề</option></select>
+<select id="filter"><option value="sample">Mẫu tối thiểu (7 câu)</option><option value="all">Tất cả</option><option value="todo">Chưa xác nhận</option><option value="fail">Gợi ý: có vấn đề</option></select>
 <span id="progress" class="muted"></span>
 <button id="import">Nhập JSON</button><input type="file" id="file" accept=".json" hidden>
 <button class="primary" id="export">Xuất JSON</button></header>
@@ -165,7 +179,7 @@ function card(c){const r=S[c.query_id],ids=c.gold.map(g=>g.id),q=c.query_id;
   <fieldset><legend>source_locatable</legend>${radios(q,'c'+i+'.source_locatable',[[true,'có'],[false,'không']],rc.source_locatable)}</fieldset>
   <fieldset><legend>evidence_ids</legend>${chk('c'+i+'.evidence_ids',ids,rc.evidence_ids,q)||'<span class=muted>—</span>'}</fieldset></div></div>`}).join('');
  const rank=c.ranking.map((h,i)=>`<div class="rank"><span class="tag">#${i+1}</span>${esc(h.chunk_id.split(':').slice(1).join(':'))} · PDF ${h.pdf_page}<details><summary class="muted">xem</summary>${h.crop?`<img loading="lazy" src="${h.crop}" alt="">`:''}<pre>${esc(h.text)}</pre></details></div>`).join('');
- return `<section class="card ${r.human_confirmed?'confirmed':''}" id="${q}"><h2>${q.split('-').pop()} · <span class="tag">${c.category}</span>${c.answerable?'<span class="tag">có đáp án</span>':'<span class="tag">thiếu evidence</span>'}
+ return `<section class="card ${r.human_confirmed?'confirmed':''}" id="${q}"><h2>${q.split('-').pop()} · <span class="tag">${c.category}</span>${c.answerable?'<span class="tag">có đáp án</span>':'<span class="tag">thiếu evidence</span>'}${c.in_sample?'<span class="tag">mẫu tối thiểu</span>':''}
   <span class="flag ${r.human_confirmed?'done':'need'}">${r.human_confirmed?'đã xác nhận':'chưa xác nhận'}</span></h2>
  <div><b>Câu hỏi:</b> ${esc(c.question)}</div>
  <div class="row"><div><h3>Đáp án chuẩn</h3><pre>${esc(c.expected_answer)}${c.required_facts.length?'\n\nÝ bắt buộc:\n- '+c.required_facts.map(esc).join('\n- '):''}${c.missing?'\n\nThông tin thiếu: '+esc(c.missing):''}</pre>
@@ -184,8 +198,9 @@ function card(c){const r=S[c.query_id],ids=c.gold.map(g=>g.id),q=c.query_id;
  <h3>Lý do</h3><textarea data-q="${q}" data-f="reason" rows="2" style="width:100%">${esc(r.reason)}</textarea>
  <div style="margin-top:8px"><button class="primary" data-confirm="${q}">${r.human_confirmed?'Bỏ xác nhận':'Xác nhận'}</button></div></section>`}
 function render(){const f=document.getElementById('filter').value,list=document.getElementById('list');
- list.innerHTML=C.filter(c=>f==='all'||(f==='todo'&&!S[c.query_id].human_confirmed)||(f==='fail'&&problem(c))).map(card).join('');
- const n=C.filter(c=>S[c.query_id].human_confirmed).length;document.getElementById('progress').textContent=`${n}/${C.length} đã xác nhận`}
+ list.innerHTML=C.filter(c=>f==='all'||(f==='sample'&&c.in_sample)||(f==='todo'&&!S[c.query_id].human_confirmed)||(f==='fail'&&problem(c))).map(card).join('');
+ const n=C.filter(c=>S[c.query_id].human_confirmed).length,m=C.filter(c=>c.in_sample&&S[c.query_id].human_confirmed).length;
+ document.getElementById('progress').textContent=`Mẫu: ${m}/${C.filter(c=>c.in_sample).length} · Tổng: ${n}/${C.length} đã xác nhận`}
 function setPath(r,f,v){const m=f.match(/^c(\d+)\.(.+)$/);if(m){r.citations[+m[1]][m[2]]=v}else r[f]=v}
 function getPath(r,f){const m=f.match(/^c(\d+)\.(.+)$/);return m?r.citations[+m[1]][m[2]]:r[f]}
 document.addEventListener('change',e=>{const t=e.target,q=t.dataset.q,f=t.dataset.f;if(!q||!f)return;const r=S[q];
