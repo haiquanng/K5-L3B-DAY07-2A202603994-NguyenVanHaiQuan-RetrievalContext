@@ -63,3 +63,10 @@ Thay đổi index trước vòng này (áp dụng cho mọi cấu hình): pass c
 
 Tiêu chí (giữ như trên, áp dụng cho tổng 120 câu): strict pass cao nhất; ràng buộc 0 lỗi, từ chối đúng ≥ 21/24,
 từ chối nhầm ≤ 5/96; chênh ≤ 4 câu/120 coi là hoà → chọn cấu hình rẻ hơn rồi p95 thấp hơn. Báo thêm kết quả từng suite.
+
+## Chốt cấu hình (dừng vòng 120 câu vì hết thời gian)
+
+Vòng B0–B3 bị dừng sau khi mới xong B0 basic dev (deadline). Chốt **B1 = baseline + `--cite-expand`**: lợi ích
+đã đo trên 3 bộ trace dev (+3, +4, +3 câu strict pass proxy), không thêm chi phí/latency. B2/B3 (decompose, prompt v2)
+chưa được đo nên không chọn. Manifest đóng băng: `starter/results/runs/*.test.manifest.json`. Test chạy baseline
+và B1 trên toàn bộ test của hai suite, một lần.
