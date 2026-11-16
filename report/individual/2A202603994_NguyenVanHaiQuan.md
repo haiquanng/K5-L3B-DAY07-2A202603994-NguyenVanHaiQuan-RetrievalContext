@@ -85,7 +85,12 @@ câu thiếu evidence: từ chối và judge xác nhận. LLM judge (gpt-5.4-min
 - Tài liệu: như trên (232 trang ≥ 100, có bảng, biểu đồ vector, sơ đồ, ảnh).
 - Phần chưa xử lý: 3 trang mở chương (không có nội dung riêng); 12 ảnh trang trí bị bỏ có ghi log; mô tả do model viết vẫn có thể sai ở phần
   không có số (đã giảm bằng pass cấu trúc, cần người chấm kiểm).
-- Ca hệ thống: 14/60 ca chạy tự động không cần model (`src/system_checks.py`): 13 pass, SYS-012 partial (cần người xem crop).
+- **Ca hệ thống: 60/60 đã chạy** (`src/system_checks.py`, `src/system_checks_agent.py`; kết quả `starter/results/system/system_results_all.json`):
+  **44 pass, 14 partial, 1 fail, 1 không áp dụng.** Agent lỗi được kiểm bằng model client giả (vòng lặp, lỗi DB, timeout, tool sai schema,
+  độc lập giữa câu, citation ngoài context); bộ chấm kiểm bằng nhãn tổng hợp (mẫu số 70, 62/70 không đạt / 63/70 đạt, ALL-of vs OR, ID trùng);
+  prompt injection trong chunk dùng model thật (không làm theo chỉ dẫn). **Fail:** SYS-025 ngân sách context chưa tính dòng header.
+  **Partial đáng chú ý:** SYS-028 có 64 chunk > 2.500 ký tự bị cắt đuôi khi đưa vào context; SYS-029 ngân sách theo thứ tự đến trước
+  (11 chunk bị bỏ trên E2 test); SYS-033 lỗi DB báo `error` nhưng chưa retry; các ca từ chối theo từng loại và vùng ảnh cần người chấm.
 
 ### Kết quả test
 
