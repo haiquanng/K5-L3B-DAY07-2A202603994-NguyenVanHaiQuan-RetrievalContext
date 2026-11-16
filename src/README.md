@@ -76,3 +76,14 @@ python3 benchmark/fpt_2025/tools.py score --suite advanced --split test \
 ```bash
 .venv/bin/python -m unittest discover -s tests -v      # không cần model, DB hay API
 ```
+
+## 7. Chat web local
+
+```bash
+.venv/bin/python -m src.web_api  # terminal 1, loopback :8007
+cd web && npm run dev           # terminal 2, Next.js :3007
+```
+
+Adapter HTTP dùng cùng agent/index, giữ embedding model trong bộ nhớ và stream tiến trình tool.
+Xem [hướng dẫn UI](../web/README.md) để biết cấu hình, cancellation và export trace.
+Các lượt chat là `interactive`, không ghi đè hoặc tự chấm benchmark.

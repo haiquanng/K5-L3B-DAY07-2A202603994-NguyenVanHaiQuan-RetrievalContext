@@ -1,0 +1,33 @@
+{
+  "name": "lumina-retrieval-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3007",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3007",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" next.config.ts package.json tsconfig.json",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "check:api": "node scripts/check-api.mjs",
+    "predev": "python3 scripts/prepare_animation.py",
+    "prebuild": "python3 scripts/prepare_animation.py",
+    "backend": "cd .. && .venv/bin/python -m src.web_api"
+  },
+  "dependencies": {
+    "lottie-web": "^5.13.0",
+    "lucide-react": "^1.71.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3"
+  }
+}
