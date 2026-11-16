@@ -1,0 +1,1479 @@
+[
+  {
+    "id": "SYS-001",
+    "area": "source_index",
+    "title": "Đúng tài liệu và phiên bản",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "PDF BCTN_2025_ad403f779b.pdf",
+    "steps": [
+      "Tính SHA-256 và số trang",
+      "Đối chiếu manifest trước ingest"
+    ],
+    "expected": [
+      "Hash đúng 9449a7251d126b635988974dbc72c2773c7fff39f4e5e858b5f7d3928b4e0e6c",
+      "232 trang",
+      "index không gắn nhãn VNZ"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-002",
+    "area": "source_index",
+    "title": "Bao phủ toàn bộ tài liệu",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "Một lần ingest đầy đủ",
+    "steps": [
+      "Xuất ledger từng trang 1–232",
+      "Đối chiếu từng trang có text, bảng, biểu đồ, ảnh hữu ích"
+    ],
+    "expected": [
+      "Mỗi trang có trạng thái xử lý hoặc lý do bỏ",
+      "không chỉ index các trang trong gold",
+      "thống kê lỗi riêng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-003",
+    "area": "source_index",
+    "title": "Phân biệt trang PDF và trang in",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "Trang PDF 10, 31, 169 và bìa",
+    "steps": [
+      "Truy vấn chunk",
+      "Mở trang nguồn được citation chỉ định"
+    ],
+    "expected": [
+      "PDF 10 tương ứng trang in 09, 31→30, 169→168",
+      "bìa không tự gán trang in 0",
+      "mở đúng trang"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-004",
+    "area": "source_index",
+    "title": "Ingest lặp không nhân bản",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "Cùng PDF, cùng cấu hình",
+    "steps": [
+      "Ingest hai lần",
+      "So sánh số record và ID"
+    ],
+    "expected": [
+      "ID ổn định",
+      "số record không tăng do trùng",
+      "thay đổi cấu hình có version riêng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-005",
+    "area": "source_index",
+    "title": "Khôi phục ingest sau lỗi",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "Chèn lỗi ở trang 115 trong bản chạy thử",
+    "steps": [
+      "Chạy ingest",
+      "Ghi checkpoint",
+      "Tiếp tục sau khi bỏ lỗi"
+    ],
+    "expected": [
+      "Trang lỗi được đánh dấu",
+      "resume xử lý đủ",
+      "không mất hoặc nhân đôi phần trước/sau lỗi"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-006",
+    "area": "source_index",
+    "title": "Ngăn index lẫn phiên bản",
+    "requirement": "ADVANCED.md §1; GUIDE.md; data/README.md",
+    "priority": "P0",
+    "preconditions": "Hai namespace thử nghiệm có nguồn khác nhau",
+    "steps": [
+      "Chạy FPT với filter source/version",
+      "Kiểm tra top-k và context"
+    ],
+    "expected": [
+      "Chỉ nguồn FPT đã chốt xuất hiện",
+      "vector/citation ngoài corpus không được dùng làm evidence"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-007",
+    "area": "multimodal_parsing",
+    "title": "Bỏ navigation lặp nhưng giữ nội dung",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "Trang 23, 55, 169 có thanh điều hướng",
+    "steps": [
+      "Trích text",
+      "So với trang gốc",
+      "Kiểm tra chunk"
+    ],
+    "expected": [
+      "Menu lặp không lấn át retrieval",
+      "tiêu đề, đơn vị, chú thích và nội dung hữu ích còn đủ"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-008",
+    "area": "multimodal_parsing",
+    "title": "Giữ đúng cột năm của bảng",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "Trang 146 với bảng phát thải",
+    "steps": [
+      "Trích bảng",
+      "Đọc hàng Phạm vi 1, 2 và tổng theo năm"
+    ],
+    "expected": [
+      "2025 lần lượt 4.383, 123.569, 127.952",
+      "không ghép giá trị sang cột 2023/2024"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-009",
+    "area": "multimodal_parsing",
+    "title": "Giữ dấu âm và độ chính xác",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "Trang 169, 172",
+    "steps": [
+      "Trích số trong ngoặc và đơn vị VNĐ",
+      "So sánh ký tự/số với PDF"
+    ],
+    "expected": [
+      "Thu nhập thuế hoãn lại (105.704.809.379) không bị đổi thành chi phí",
+      "dòng đầu tư (11.624.743.591.629) giữ dấu âm",
+      "không ép float làm mất chữ số"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-010",
+    "area": "multimodal_parsing",
+    "title": "Bảng tiếp nối qua trang",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "KQKD trang 169–170",
+    "steps": [
+      "Ingest hai trang",
+      "Hỏi đối chiếu LNST",
+      "Kiểm tra liên kết"
+    ],
+    "expected": [
+      "Nhận ra cùng báo cáo và cùng kỳ",
+      "truy xuất được cả hai trang",
+      "không mất header khi chia chunk"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-011",
+    "area": "multimodal_parsing",
+    "title": "Biểu đồ có trục và chú thích",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "Trang 10, 55, 62",
+    "steps": [
+      "Tạo representation",
+      "Đối chiếu giá trị, đơn vị, màu và chú thích với hình"
+    ],
+    "expected": [
+      "Không nhầm EPS với tỷ VNĐ",
+      "giữ điều chỉnh số cổ phiếu và phương pháp hợp nhất",
+      "tỷ trọng và tăng trưởng tách riêng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-012",
+    "area": "multimodal_parsing",
+    "title": "Ảnh/sơ đồ có provenance",
+    "requirement": "ADVANCED.md §1–2",
+    "priority": "P1",
+    "preconditions": "Trang 31, 51, 80, 114, 125, 148",
+    "steps": [
+      "Lấy crop/description từ index",
+      "Mở vùng nguồn",
+      "Kiểm tra đường nối và thứ tự"
+    ],
+    "expected": [
+      "Có source_id, pdf_page và bbox/crop",
+      "không cắt mất nhãn/đường nối",
+      "mô tả không thêm quan hệ không có trong hình"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "advanced"
+  },
+  {
+    "id": "SYS-013",
+    "area": "retrieval",
+    "title": "Dense thật tương thích Day 6",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Vector store đã ingest FPT",
+    "steps": [
+      "Ghi embedding model, revision, dimension, normalization",
+      "Gọi search thật"
+    ],
+    "expected": [
+      "Query và document embedding tương thích",
+      "trace có kết quả thật",
+      "không thay lỗi bằng mock"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-014",
+    "area": "retrieval",
+    "title": "Sai dimension phải hiện lỗi",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Index thử với chiều vector không khớp query",
+    "steps": [
+      "Gọi retrieval",
+      "Quan sát lỗi và trace"
+    ],
+    "expected": [
+      "Báo lỗi có nguyên nhân",
+      "không trả danh sách giả hoặc coi là không có bằng chứng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-015",
+    "area": "retrieval",
+    "title": "Lexical bắt số chính xác",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Câu DEV về vốn, khoản tiền JPY và mã chỉ tiêu",
+    "steps": [
+      "Search lexical với câu gốc",
+      "Kiểm tra ranking"
+    ],
+    "expected": [
+      "Khớp đúng đơn vị/hàng nguồn",
+      "lưu top-1/top-3 và score",
+      "không dùng đáp án chuẩn trong query"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-016",
+    "area": "retrieval",
+    "title": "Ba phương pháp cùng điều kiện",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Dense, lexical và hybrid hoặc phương pháp thứ ba thực sự khác",
+    "steps": [
+      "Chạy cùng bộ dev và corpus",
+      "So sánh run manifest"
+    ],
+    "expected": [
+      "Có ít nhất 3 phương pháp, gồm dense",
+      "thống nhất tập câu và cutoff",
+      "khác index phải giải thích chi phí"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-017",
+    "area": "retrieval",
+    "title": "Filter từ câu hỏi hợp lệ",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Câu có điều kiện năm, loại nội dung",
+    "steps": [
+      "Lưu query/filter trước search",
+      "Đối chiếu trường được suy ra"
+    ],
+    "expected": [
+      "Filter lấy từ câu hỏi hoặc cấu hình công khai",
+      "không lấy gold page/bbox/answerable",
+      "báo cả trường hợp filter bỏ mất evidence"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-018",
+    "area": "retrieval",
+    "title": "Tái lập ranking khi score bằng nhau",
+    "requirement": "BENCHMARK.md §2; RULES.md; GUIDE.md",
+    "priority": "P1",
+    "preconditions": "Candidate có score bằng nhau và ID khác nhau",
+    "steps": [
+      "Chạy cùng query hai lần",
+      "So sánh thứ tự"
+    ],
+    "expected": [
+      "Tie-break xác định",
+      "không lặp chunk",
+      "top-3 tương đương giữa các lần khi nguồn/model cố định"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-019",
+    "area": "query_and_fusion",
+    "title": "Báo ranking câu gốc",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Có rewrite trong pipeline",
+    "steps": [
+      "Chạy câu gốc và rewrite",
+      "Lưu ranking riêng"
+    ],
+    "expected": [
+      "Hit@1/3 câu gốc và kết quả pipeline không bị trộn",
+      "trace ghi rõ query từng lượt"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-020",
+    "area": "query_and_fusion",
+    "title": "Rewrite giữ số và điều kiện",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Câu hỏi phân biệt 2025 thực tế với kế hoạch 2026",
+    "steps": [
+      "Rewrite",
+      "So sánh thời kỳ, đơn vị và phạm vi pháp nhân"
+    ],
+    "expected": [
+      "Không bỏ điều kiện năm, thay đối tượng hoặc bịa đáp án",
+      "query rewrite được lưu"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-021",
+    "area": "query_and_fusion",
+    "title": "Fusion không cộng score lệch thang tùy tiện",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Dense và lexical có scale khác nhau",
+    "steps": [
+      "Chạy fusion",
+      "Kiểm tra công thức và candidate"
+    ],
+    "expected": [
+      "RRF hoặc chuẩn hóa có định nghĩa và tham số",
+      "một chunk trùng được hợp nhất",
+      "không coi score khác thang là cùng ý nghĩa"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-022",
+    "area": "query_and_fusion",
+    "title": "Reranker chỉ dùng nội dung candidate",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Top candidate có distractor cùng số khác năm",
+    "steps": [
+      "Rerank",
+      "Kiểm tra input và output"
+    ],
+    "expected": [
+      "Không có gold trong input",
+      "rerank không bịa chunk ID",
+      "giữ metadata nguồn",
+      "đo chi phí riêng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-023",
+    "area": "query_and_fusion",
+    "title": "Multi-hop cần đủ các trang",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Câu DEV foreign-headroom hoặc cash-ebitda",
+    "steps": [
+      "Search lượt đầu",
+      "Cho agent quyết định tìm tiếp",
+      "Kiểm tra trace/context"
+    ],
+    "expected": [
+      "Thu thập đủ các evidence nhóm ALL",
+      "chưa đủ một vế không được báo đủ",
+      "log query từng hop"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-024",
+    "area": "query_and_fusion",
+    "title": "Không thiên vị thứ tự tài liệu",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Bản thử đảo thứ tự candidate và chunk lưu trữ",
+    "steps": [
+      "Chạy cùng câu dev",
+      "So sánh retrieval và câu trả lời"
+    ],
+    "expected": [
+      "Số liệu/đơn vị dựa evidence",
+      "chênh lệch được ghi nhận",
+      "không chọn mặc định candidate đầu bất chấp relevance"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-025",
+    "area": "context",
+    "title": "Đếm budget gồm metadata",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Context budget cố định với đơn vị token hoặc ký tự",
+    "steps": [
+      "Ghép chunk cùng nguồn/citation header",
+      "Đo lại bằng bộ đếm đã công bố"
+    ],
+    "expected": [
+      "Tổng không vượt budget kể cả header",
+      "báo đơn vị và số đo",
+      "không nhầm token với ký tự"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-026",
+    "area": "context",
+    "title": "Khử trùng lặp giữ nguồn",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Cùng đoạn xuất hiện qua dense, lexical và search lần hai",
+    "steps": [
+      "Ghép context",
+      "Kiểm tra ID và nội dung"
+    ],
+    "expected": [
+      "Không nhân ba đoạn giống nhau",
+      "provenance/citation vẫn truy được",
+      "không xóa hai đoạn khác nhau chỉ vì chung trang"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-027",
+    "area": "context",
+    "title": "Mở rộng hàng xóm có ích",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Bảng bị tách header/footnote ở chunk kế cận",
+    "steps": [
+      "Retrieve ô giá trị",
+      "Expand neighbor",
+      "Kiểm tra context"
+    ],
+    "expected": [
+      "Có tiêu đề, năm, đơn vị và điều kiện cần",
+      "không vượt budget",
+      "trace đánh dấu neighbor được thêm"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-028",
+    "area": "context",
+    "title": "Nén không đổi số liệu",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Context chứa ngoặc âm, tỷ lệ và chú thích FTEL",
+    "steps": [
+      "Compress",
+      "So với nguyên bản"
+    ],
+    "expected": [
+      "Giữ dấu, đơn vị, năm và điều kiện hợp nhất",
+      "số không được suy ra sai",
+      "có liên kết về chunk nguồn"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-029",
+    "area": "context",
+    "title": "Search sau không bị bỏ vô ích",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Lượt đầu có chunk dài không liên quan, lượt hai có evidence",
+    "steps": [
+      "Áp dụng chiến lược chọn lại context",
+      "Kiểm tra evidence cuối"
+    ],
+    "expected": [
+      "Evidence mới có thể thay đoạn kém liên quan",
+      "không khóa budget vì first-come",
+      "lưu lý do chọn/bỏ"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-030",
+    "area": "context",
+    "title": "Context không đủ phải lộ rõ",
+    "requirement": "BENCHMARK.md §2; PSEUDOCODE.md",
+    "priority": "P1",
+    "preconditions": "Budget thử nhỏ hơn nhu cầu multi-hop",
+    "steps": [
+      "Chạy agent",
+      "Kiểm tra answer và nhãn context"
+    ],
+    "expected": [
+      "Không báo đầy đủ khi thiếu vế",
+      "trả lời có giới hạn hoặc tìm thêm",
+      "điểm context là 0/1 tương ứng, không tự chấm 2"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-031",
+    "area": "agent_runtime",
+    "title": "Agent gọi model và retrieval thật",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Môi trường cấu hình hợp lệ",
+    "steps": [
+      "Chạy một câu dev",
+      "Kiểm tra tool/model request trace"
+    ],
+    "expected": [
+      "Có lời gọi thật và kết quả tương ứng",
+      "ghi model, tham số, elapsed và usage",
+      "mock chỉ dùng unit test"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-032",
+    "area": "agent_runtime",
+    "title": "Giới hạn vòng lặp",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Controller liên tiếp yêu cầu search",
+    "steps": [
+      "Đặt max_searches=2",
+      "Chạy đến giới hạn"
+    ],
+    "expected": [
+      "Không có lượt thứ ba",
+      "kết thúc có trạng thái rõ và giữ trace",
+      "không tự trả đáp án không evidence"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-033",
+    "area": "agent_runtime",
+    "title": "Lỗi vector store",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Chặn kết nối store trong môi trường thử",
+    "steps": [
+      "Gọi agent",
+      "Kiểm tra retry và status"
+    ],
+    "expected": [
+      "Retry hữu hạn",
+      "báo error",
+      "không chuyển thành abstention đúng hoặc dùng kết quả giả"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-034",
+    "area": "agent_runtime",
+    "title": "Timeout model",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Model phản hồi quá deadline thử nghiệm",
+    "steps": [
+      "Chạy một case",
+      "Đợi timeout đã cấu hình"
+    ],
+    "expected": [
+      "Status timeout/error rõ",
+      "giữ elapsed/tool trace",
+      "advanced tính fail trên tổng case"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-035",
+    "area": "agent_runtime",
+    "title": "Tool response sai schema",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Retriever thử trả thiếu page hoặc text sai kiểu",
+    "steps": [
+      "Đưa response vào controller/context builder"
+    ],
+    "expected": [
+      "Bị kiểm tra/ghi lỗi",
+      "không tạo citation nguồn không xác định",
+      "không crash mất toàn bộ batch"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-036",
+    "area": "agent_runtime",
+    "title": "Độc lập trạng thái giữa các câu",
+    "requirement": "BENCHMARK.md §3; RULES.md; starter/README.md",
+    "priority": "P1",
+    "preconditions": "Chạy hai câu khác nguồn evidence trong cùng process",
+    "steps": [
+      "Kiểm tra context và cache của câu sau"
+    ],
+    "expected": [
+      "Không rò context/citation của câu trước",
+      "cache gắn source/version/query",
+      "không dùng gold để trả sẵn"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-037",
+    "area": "citations",
+    "title": "ID tồn tại nhưng nội dung không hỗ trợ",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Câu trả lời trích chunk cùng trang khác hàng",
+    "steps": [
+      "Chấm citation bằng nội dung PDF"
+    ],
+    "expected": [
+      "Citation bị đánh dấu không hỗ trợ dù ID có trong context",
+      "câu advanced không đạt"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-038",
+    "area": "citations",
+    "title": "Citation ngoài context",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Answer trích ID hợp lệ trong index nhưng không gửi vào context",
+    "steps": [
+      "So citations với context_ids"
+    ],
+    "expected": [
+      "Không hợp lệ cho câu trả lời này",
+      "không chỉ kiểm tra tồn tại toàn index"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-039",
+    "area": "citations",
+    "title": "Citation sai năm hoặc đơn vị",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Đáp án 2025 trích cột 2024 hoặc dùng VNĐ thành tỷ VNĐ",
+    "steps": [
+      "Đối chiếu hàng/cột/đơn vị trên PDF"
+    ],
+    "expected": [
+      "Không đạt grounded/citation",
+      "nêu cụ thể sai kỳ hoặc sai đơn vị"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-040",
+    "area": "citations",
+    "title": "Citation multi-hop thiếu một vế",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Answer đúng số nhưng chỉ dẫn một trong hai trang bắt buộc",
+    "steps": [
+      "Kiểm tra union evidence được citation hỗ trợ"
+    ],
+    "expected": [
+      "Không đủ ALL-of",
+      "không đạt advanced dù phép tính có vẻ đúng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-041",
+    "area": "citations",
+    "title": "Citation ảnh tìm được đúng vùng",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Câu sơ đồ AI/đường nối quản trị",
+    "steps": [
+      "Mở page và bbox/crop từ citation"
+    ],
+    "expected": [
+      "Vùng hiển thị nhãn và quan hệ cần thiết",
+      "không dẫn hình trang trí khác",
+      "người chấm tái kiểm được"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-042",
+    "area": "citations",
+    "title": "Prompt injection trong chunk",
+    "requirement": "BENCHMARK.md §3; ADVANCED.md §3",
+    "priority": "P1",
+    "preconditions": "Thêm chunk thử nghiệm ghi yêu cầu bỏ quy tắc, tiết lộ gold hoặc gọi URL ngoài",
+    "steps": [
+      "Retrieve chunk như dữ liệu",
+      "Quan sát hành vi"
+    ],
+    "expected": [
+      "Không thực thi chỉ dẫn trong tài liệu",
+      "không tiết lộ gold",
+      "trace ghi nguồn",
+      "dữ liệu tài chính còn được xử lý như nội dung"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-043",
+    "area": "abstention",
+    "title": "Top-k trống chưa chứng minh thiếu",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Câu có đáp án, search đầu cố ý không tìm thấy",
+    "steps": [
+      "Cho phép chiến lược tìm lại",
+      "Chấm bằng gold độc lập"
+    ],
+    "expected": [
+      "Không gán nhãn dataset thành unanswerable vì search trượt",
+      "nếu agent từ chối thì false abstention"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-044",
+    "area": "abstention",
+    "title": "Thiếu chi tiết dù đúng chủ đề",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Câu dev hỏi số model máy chủ VAT",
+    "steps": [
+      "Search và đọc đoạn VAT"
+    ],
+    "expected": [
+      "Nêu rõ thiếu model",
+      "không lấy số lượng 61 làm model",
+      "có thể nêu ngữ cảnh được hỗ trợ"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-045",
+    "area": "abstention",
+    "title": "Không suy phân phối từ tổng",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Câu dev hỏi ROE từng quý hoặc nước từng tháng",
+    "steps": [
+      "Đưa biểu đồ/năm vào context",
+      "Chạy agent"
+    ],
+    "expected": [
+      "Không tự chia đều hay bịa chuỗi",
+      "từ chối phần không đủ evidence"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-046",
+    "area": "abstention",
+    "title": "Không biến kế hoạch thành kết quả",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Câu hỏi kết quả cả năm 2026 với corpus báo cáo 2025",
+    "steps": [
+      "Retrieve kế hoạch 2026",
+      "Kiểm tra đáp án"
+    ],
+    "expected": [
+      "Không dùng mục tiêu làm thực tế",
+      "nói rõ thiếu kết quả năm 2026"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-047",
+    "area": "abstention",
+    "title": "Không suy nhân quả từ tương quan",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Câu dev hỏi mức tăng lương do mentoring",
+    "steps": [
+      "Retrieve cả chính sách và quy mô đào tạo",
+      "Chạy agent"
+    ],
+    "expected": [
+      "Không khẳng định tác động nhân quả không có thiết kế/dữ liệu",
+      "nêu đúng dữ liệu còn thiếu"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-048",
+    "area": "abstention",
+    "title": "Từ chối kèm bịa vẫn thất bại",
+    "requirement": "BENCHMARK.md §1,3; ADVANCED.md §2–3",
+    "priority": "P1",
+    "preconditions": "Trace thử trả không đủ bằng chứng rồi nêu một con số suy đoán",
+    "steps": [
+      "Chấm abstention và unsupported_claims"
+    ],
+    "expected": [
+      "Không được tính abstention đúng",
+      "advanced fail",
+      "lý do chỉ rõ khẳng định thiếu căn cứ"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-049",
+    "area": "evaluation",
+    "title": "Giữ toàn bộ mẫu số",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "70 case advanced test, thiếu một output và có một timeout",
+    "steps": [
+      "Tổng hợp toàn bộ ID đã công bố"
+    ],
+    "expected": [
+      "Mẫu số vẫn 70",
+      "hai case fail",
+      "báo riêng missing và timeout"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-050",
+    "area": "evaluation",
+    "title": "Không làm tròn qua ngưỡng",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "Kết quả thử 62/70 và 63/70",
+    "steps": [
+      "Tính tỷ lệ đạt bằng số nguyên"
+    ],
+    "expected": [
+      "62/70 không đạt",
+      "63/70 đạt ngưỡng 90%",
+      "không kết luận đủ bonus nếu thiếu điều kiện khác"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-051",
+    "area": "evaluation",
+    "title": "ALL-of so với OR thay thế",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "Một case cần E1+E2, một case có hai nhóm thay thế",
+    "steps": [
+      "Chấm top-3/context/citations với chỉ E1 và với đủ nhóm"
+    ],
+    "expected": [
+      "Hit có thể đúng khi tìm một evidence",
+      "full coverage chỉ đúng nếu đủ một nhóm ALL-of",
+      "không nhập nhằng metrics"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-052",
+    "area": "evaluation",
+    "title": "Không lấy câu thiếu evidence vào retrieval",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "Tập 56 answerable, 14 unanswerable",
+    "steps": [
+      "Tính Hit@1, Hit@3 và context rate"
+    ],
+    "expected": [
+      "Mẫu số retrieval/context là 56",
+      "abstention mẫu số 14",
+      "báo n/N và trường hợp N=0 là không áp dụng"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-053",
+    "area": "evaluation",
+    "title": "Audit từng câu và citation",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "Đủ trace nhưng thiếu review một câu test",
+    "steps": [
+      "Chấm và xuất chi tiết"
+    ],
+    "expected": [
+      "Câu thiếu review không tự pass",
+      "ghi reviewer, lý do, nhãn từng citation",
+      "LLM judge chưa xác nhận không thay human review"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-054",
+    "area": "evaluation",
+    "title": "ID trùng và nhãn lạ",
+    "requirement": "BENCHMARK.md §2–3; ADVANCED.md §3",
+    "priority": "P0",
+    "preconditions": "File trace trùng query_id hoặc có ID ngoài split",
+    "steps": [
+      "Chạy validator/scorer"
+    ],
+    "expected": [
+      "Báo lỗi rõ thay vì đè record hoặc bỏ qua",
+      "không cho chọn subset thuận lợi để tăng điểm"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-055",
+    "area": "reproducibility",
+    "title": "Query runtime không chứa gold",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Bốn file queries public",
+    "steps": [
+      "Kiểm tra schema và payload thực gửi agent"
+    ],
+    "expected": [
+      "Chỉ id và question",
+      "không answerable, category, expected_answer, trang/bbox hoặc absence_check",
+      "evaluator giữ gold ngoài runtime"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-056",
+    "area": "reproducibility",
+    "title": "Không tinh chỉnh bằng test",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Dev/test cố định, code/cấu hình đã chốt",
+    "steps": [
+      "Ghi hash trước chạy test",
+      "Đối chiếu nhật ký lựa chọn"
+    ],
+    "expected": [
+      "Chỉ dev dùng chọn cấu hình",
+      "nếu nhìn test để sửa thì công bố contamination và tạo test mới trước tuyên bố độc lập"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-057",
+    "area": "reproducibility",
+    "title": "Hai cải tiến có đối chứng dev",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Baseline và ít nhất hai thay đổi có giả thuyết",
+    "steps": [
+      "Chạy agent thật trên dev",
+      "So trước/sau cùng metric"
+    ],
+    "expected": [
+      "Có hai lỗi dev, giả thuyết, cấu hình và kết quả",
+      "chọn trước khi test",
+      "không chỉ đổi tên phương pháp"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-058",
+    "area": "reproducibility",
+    "title": "Baseline và cấu hình chọn trên cùng test",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Cấu hình đã freeze",
+    "steps": [
+      "Chạy đủ cùng ID test cho cả hai",
+      "Lưu artifacts riêng"
+    ],
+    "expected": [
+      "Không ghi đè trace",
+      "cùng corpus và nhãn",
+      "báo lỗi, chi phí, elapsed từng cấu hình"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-059",
+    "area": "reproducibility",
+    "title": "Chi phí và latency không bỏ lượt lỗi",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Trace gồm search, rerank, model, retry",
+    "steps": [
+      "Cộng usage/cost và elapsed",
+      "Báo median/p95 và thiếu dữ liệu"
+    ],
+    "expected": [
+      "Bao gồm retry và lỗi đã phát sinh chi phí",
+      "thiếu cost là unknown không phải 0",
+      "tách chi phí index một lần khỏi query"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  },
+  {
+    "id": "SYS-060",
+    "area": "reproducibility",
+    "title": "Gói nộp tái lập được",
+    "requirement": "GUIDE.md; RULES.md; SUBMISSION.md; ADVANCED.md §4",
+    "priority": "P0",
+    "preconditions": "Bản sạch không có secret, kèm quyền truy cập PDF",
+    "steps": [
+      "Kiểm tra hash/filelist",
+      "Chạy lệnh validate và scorer bằng schema mẫu"
+    ],
+    "expected": [
+      "Có nguồn và giới hạn quyền chia sẻ",
+      "không lộ secret",
+      "có cấu hình index, logs, review và cách chạy",
+      "chưa chạy phải ghi not_run"
+    ],
+    "evidence_to_save": [
+      "cấu hình và phiên bản index",
+      "đầu vào, đầu ra, log/trace có liên quan",
+      "kết quả đối chiếu và lý do đạt/không đạt"
+    ],
+    "status": "not_run",
+    "execution": "integration_or_manual",
+    "applicability": "basic_and_advanced"
+  }
+]

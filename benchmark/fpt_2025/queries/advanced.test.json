@@ -1,0 +1,282 @@
+[
+  {
+    "id": "FPT-ADVANCED-TEST-001",
+    "question": "Thuyết minh 2.30 mô tả thuế suất tối thiểu toàn cầu và ngày hiệu lực nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-002",
+    "question": "Xác định bên liên quan dựa bản chất hay chỉ hình thức pháp lý?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-003",
+    "question": "Báo cáo bộ phận chính yếu chia theo hoạt động hay địa lý?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-004",
+    "question": "Vì sao chưa ghi nhận dự phòng hoàn nguyên đất thuê cuối 2025?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-005",
+    "question": "Tiêu chí năng lượng và thân thiện môi trường chiếm tối đa bao nhiêu điểm khi mua thiết bị tiêu thụ điện?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-006",
+    "question": "Hai mức ứng phó sự cố bảo mật là gì, mỗi mức làm gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-007",
+    "question": "Biện pháp phòng ngừa vay ngoại tệ được nêu là gì, đặc biệt lưu ý đồng tiền nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-008",
+    "question": "Phạm vi 3 được mô tả ra sao, có thể coi tổng trong bảng là kiểm kê đầy đủ Phạm vi 3 toàn Tập đoàn không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-009",
+    "question": "Hai hệ thống điện mặt trời mái nhà vận hành năm 2025 nằm ở đâu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-010",
+    "question": "Thu hẹp khoảng cách điều kiện học tập tham chiếu ba SDG nào, ý nghĩa gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-011",
+    "question": "Vốn điều lệ sau phát hành 07/2025 tăng bao nhiêu VNĐ so 05/2025?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-012",
+    "question": "Tổng tài sản cuối 2025 tăng chính xác bao nhiêu so cuối 2024?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-013",
+    "question": "Vì sao mã 400 và 410 vốn chủ sở hữu 2025 chênh 2.750.000.000 VNĐ?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-014",
+    "question": "Dòng tiền HĐKD 2025 so 2024 tăng hay giảm bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-015",
+    "question": "Xây dựng cơ bản dở dang FPT Complex 3 cuối 2025 bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-016",
+    "question": "Doanh thu chưa thực hiện dài hạn phần mềm 2025 khác tổng dài hạn thế nào về số tiền?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-017",
+    "question": "Phải trả người lao động cuối 2025 tăng bao nhiêu so 2024?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-018",
+    "question": "Tiền lương ông Nguyễn Văn Khoa 2025 trong bảng liên quan có đổi so 2024 không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-019",
+    "question": "Lãi tiền gửi/cho vay 2025 bao nhiêu, khác lãi tiền vay thế nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-020",
+    "question": "Chỉ trừ hai dòng lãi/lỗ tỷ giá 2025, chênh dương bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-021",
+    "question": "Cam kết thuê hoạt động 2025 theo ba kỳ hạn có giá trị bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-022",
+    "question": "Đối chiếu số dư lợi thế thương mại cuối 2025 từ đầu năm, tăng và hai khoản giảm."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-023",
+    "question": "Vay và nợ thuê tài chính dài hạn cuối 2025 tăng bao nhiêu so 2024?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-024",
+    "question": "Kiểm tra tổng 2025 bằng Scope 1+Scope 2, nêu đúng đơn vị và phạm vi."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-025",
+    "question": "TSS nước thải 2025 bao nhiêu mg/l, thấp hơn ngưỡng bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-026",
+    "question": "Theo bảng ESG, thực tế nghỉ việc 2025 có đạt cam kết dưới 14% không, cam kết 2026 là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-027",
+    "question": "Donut chi tiêu CNTT 2026: phân khúc lớn nhất và nhỏ nhất, số tiền/tỷ trọng từng nhóm?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-028",
+    "question": "Phần mềm và dịch vụ viễn thông chênh bao nhiêu tỷ USD trong donut CNTT 2026?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-029",
+    "question": "So hai donut theo khối 2025, khối nào có tỷ trọng LNTT lớn hơn tỷ trọng doanh thu nhiều nhất, chênh bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-030",
+    "question": "Từ giá trị tuyệt đối hai donut theo khối, tính biên LNTT Công nghệ 2025."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-031",
+    "question": "Trong donut CNTT nước ngoài, Nhật Bản có doanh thu, tỷ trọng, tăng trưởng bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-032",
+    "question": "Theo các mũi tên tăng trưởng trên donut CNTT nước ngoài, thị trường nào nhanh nhất?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-033",
+    "question": "Biểu đồ Made by FPT 2021–2025: giai đoạn tăng tuyệt đối lớn nhất là khi nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-034",
+    "question": "Biểu đồ nữ 2024→2025 tăng bao nhiêu người, có phải tăng 37,7% không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-035",
+    "question": "Biểu đồ giờ đào tạo 2021–2025: bước tăng tuyệt đối lớn nhất là năm nào, bao nhiêu giờ?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-036",
+    "question": "Biểu đồ kế hoạch 2026 ghi doanh thu bao nhiêu, vì sao không so trực tiếp tăng trưởng với 70.113 tỷ của 2025?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-037",
+    "question": "Đọc hình AI có chủ quyền: ba tầng chính từ dưới lên là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-038",
+    "question": "AI STUDIO và AI INFERENCING trên hình thuộc tầng nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-039",
+    "question": "Data In nằm gần tầng nào, Intelligence Out nằm về phía nào trên hình AI?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-040",
+    "question": "Đường nối Ủy ban Chính sách phát triển dẫn tới cấp nào trong sơ đồ quản trị?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-041",
+    "question": "Kiểm toán nội bộ trực thuộc HĐQT hay TGĐ theo đường nối sơ đồ?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-042",
+    "question": "Ban Kiểm soát gắn với cấp nào và giám sát ai theo sơ đồ cùng ô giải thích?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-043",
+    "question": "Dải hình biện pháp Scope 3: ô ngoài cùng trái và phải là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-044",
+    "question": "Ô Nghiên cứu tín chỉ carbon rừng nằm trước hay sau Trồng rừng; giữa hai ô là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-045",
+    "question": "Vốn chủ sở hữu 2025 ở bảng tóm tắt tỷ VNĐ và BCĐKT VNĐ là bao nhiêu, có mâu thuẫn chỉ vì độ chính xác không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-046",
+    "question": "Cộng hai khối để suy doanh thu 2025 đã điều chỉnh trong kế hoạch 2026; chênh bao nhiêu với 2025 toàn Tập đoàn, tại sao?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-047",
+    "question": "Định nghĩa riêng: tiền+tương đương+đầu tư tài chính ngắn hạn trừ vay/nợ thuê tài chính ngắn và dài hạn. Số cuối 2025 bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-048",
+    "question": "Đối chiếu hai trang KQKD, tính LNST 2025 từ LNTT, thuế hiện hành và thu nhập thuế hoãn lại."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-049",
+    "question": "Có cộng 40.636 tỷ ký mới CNTT nước ngoài và 16.751 tỷ doanh thu Chuyển đổi số để báo tổng 2025 không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-050",
+    "question": "Tỷ lệ nữ quản lý 36,4% có chứng minh mỗi nữ quản lý được tăng lương 2025 không nếu đối chiếu chính sách thu nhập?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-051",
+    "question": "Điện tái tạo thực tế 2025 cách mục tiêu 2026 bao nhiêu điểm phần trăm?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-052",
+    "question": "Tính giảm phát thải 2025 so 2024; có quy trực tiếp thành tiến độ mục tiêu giảm 15,8% năm 2030 không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-053",
+    "question": "Có đủ căn cứ coi 4.420.000.000 VNĐ lương TGĐ là toàn bộ đãi ngộ gồm phúc lợi không?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-054",
+    "question": "Nhấn mạnh về FTEL có đổi ý kiến kiểm toán 2025 không, kế hoạch 2026 dùng phương pháp hợp nhất nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-055",
+    "question": "Tính hệ số thanh toán ngắn hạn 2025 từ hai trang BCĐKT, đối chiếu mức công bố 1,40 lần."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-056",
+    "question": "Dòng tiền HĐKD 2025 đủ bù dòng tiền đầu tư thuần không, chênh bao nhiêu trước tài chính?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-057",
+    "question": "Nội dung đầy đủ các thỏa thuận riêng không công bố giữa các bên liên quan là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-058",
+    "question": "Tổng phát thải Phạm vi 3 đã kiểm toán của toàn Tập đoàn năm 2025 là chính xác bao nhiêu tấn CO2e?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-059",
+    "question": "Trong chi phí dở dang FPT Complex 3, từng thiết bị có dự toán hoàn thành và mã hợp đồng nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-060",
+    "question": "Lãi suất ngầm định của từng hợp đồng thuê hoạt động trong bảng cam kết thuê là bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-061",
+    "question": "Tiền lương TGĐ năm 2025 được phân bổ chính xác theo từng tháng và từng khoản thưởng như thế nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-062",
+    "question": "Lãi và lỗ tỷ giá năm 2025 phát sinh theo từng ngày, từng giao dịch USD là bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-063",
+    "question": "Từ biểu đồ dự báo chi tiêu CNTT năm 2026, cho biết chi tiêu thực tế năm 2035 của từng phân khúc."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-064",
+    "question": "Từ biểu đồ CNTT nước ngoài, cho biết biên lợi nhuận sau thuế từng tháng của thị trường Nhật Bản năm 2025."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-065",
+    "question": "Tính phân vị 90% số giờ đào tạo trên mỗi nhân viên năm 2025 từ biểu đồ tổng số giờ đào tạo."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-066",
+    "question": "Từ sơ đồ AI Stack, xuất toàn bộ mã nguồn và phiên bản triển khai của từng thành phần."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-067",
+    "question": "Sơ đồ quản trị cho biết nội dung chi tiết từng lần Kiểm toán nội bộ trao đổi riêng với Ủy ban Kiểm toán không? Hãy trích biên bản."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-068",
+    "question": "Kết hợp vốn đầu tư và sản lượng điện mặt trời, tính IRR chính xác cho riêng từng hệ thống tại Đà Nẵng và TP.HCM."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-069",
+    "question": "Đối chiếu chính sách dự phòng và thuyết minh hoàn nguyên đất, tính chính xác nghĩa vụ hoàn nguyên tại 31/12/2025."
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-070",
+    "question": "So sánh kế hoạch 2026 và kết quả kinh doanh để tính tỷ lệ hoàn thành kế hoạch thực tế cả năm 2026."
+  }
+]

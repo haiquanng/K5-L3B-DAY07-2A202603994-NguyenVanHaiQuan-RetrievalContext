@@ -1,0 +1,4233 @@
+[
+  {
+    "id": "FPT-ADVANCED-TEST-001",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "global-minimum-tax",
+    "question": "Thuyết minh 2.30 mô tả thuế suất tối thiểu toàn cầu và ngày hiệu lực nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "15%; từ 01/01/2024 theo nội dung thuyết minh.",
+    "required_facts": [
+      "15%",
+      "từ 01/01/2024 theo nội dung thuyết minh."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-001:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-001:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 187,
+        "printed_page": "186",
+        "locator": "Thuyết minh 2.30, phạm vi nội dung báo cáo",
+        "quotes": [
+          "15%",
+          "1 tháng 1 năm 2024"
+        ],
+        "bbox_pt": [
+          639.57,
+          307.59,
+          869.91,
+          381.46
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-002",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "related-party-substance",
+    "question": "Xác định bên liên quan dựa bản chất hay chỉ hình thức pháp lý?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Bản chất mối quan hệ, không chỉ hình thức pháp lý.",
+    "required_facts": [
+      "Bản chất mối quan hệ, không chỉ hình thức pháp lý."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-002:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-002:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 187,
+        "printed_page": "186",
+        "locator": "Thuyết minh 2.31",
+        "quotes": [
+          "bản chất của mối quan hệ"
+        ],
+        "bbox_pt": [
+          639.66,
+          510.75,
+          1030.04,
+          560.62
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-003",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "segment-primary",
+    "question": "Báo cáo bộ phận chính yếu chia theo hoạt động hay địa lý?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Theo hoạt động kinh doanh.",
+    "required_facts": [
+      "Theo hoạt động kinh doanh."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-003:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-003:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 188,
+        "printed_page": "187",
+        "locator": "Thuyết minh 2.32",
+        "quotes": [
+          "Báo cáo bộ phận chính yếu"
+        ],
+        "bbox_pt": [
+          369.5,
+          190.26,
+          516.84,
+          228.13
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-004",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "land-restoration",
+    "question": "Vì sao chưa ghi nhận dự phòng hoàn nguyên đất thuê cuối 2025?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nghĩa vụ cần sự kiện tương lai như trao đổi bên cho thuê hoặc văn bản làm rõ; chưa đủ cơ sở ghi nhận, không đồng nghĩa nghĩa vụ bằng 0.",
+    "required_facts": [
+      "Nghĩa vụ cần sự kiện tương lai như trao đổi bên cho thuê hoặc văn bản làm rõ",
+      "chưa đủ cơ sở ghi nhận, không đồng nghĩa nghĩa vụ bằng 0."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-004:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-004:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 217,
+        "printed_page": "216",
+        "locator": "Thuyết minh 38",
+        "quotes": [
+          "Nghĩa vụ này chỉ có thể",
+          "không ghi nhận khoản dự phòng"
+        ],
+        "bbox_pt": [
+          445.9,
+          375.27,
+          634.66,
+          461.14
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-005",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "supplier-green-score",
+    "question": "Tiêu chí năng lượng và thân thiện môi trường chiếm tối đa bao nhiêu điểm khi mua thiết bị tiêu thụ điện?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Tối đa 5% tổng điểm.",
+    "required_facts": [
+      "Tối đa 5% tổng điểm."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-005:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-005:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 128,
+        "printed_page": "127",
+        "locator": "Mua sắm bền vững: tiêu chí thiết bị điện",
+        "quotes": [
+          "tối đa 5%"
+        ],
+        "bbox_pt": [
+          317.71,
+          394.93,
+          384.37,
+          432.8
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-006",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "data-response-levels",
+    "question": "Hai mức ứng phó sự cố bảo mật là gì, mỗi mức làm gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Khắc phục: ngăn vi phạm, sửa lỗ hổng, đánh giá vùng dữ liệu tránh lan; phòng ngừa: tìm nguyên nhân gốc rễ, thực thi kế hoạch ngăn tái diễn.",
+    "required_facts": [
+      "Khắc phục: ngăn vi phạm, sửa lỗ hổng, đánh giá vùng dữ liệu tránh lan",
+      "phòng ngừa: tìm nguyên nhân gốc rễ, thực thi kế hoạch ngăn tái diễn."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-006:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-006:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 130,
+        "printed_page": "129",
+        "locator": "Kế hoạch ứng phó dữ liệu",
+        "quotes": [
+          "Khắc phục:",
+          "Phòng ngừa:"
+        ],
+        "bbox_pt": [
+          648.63,
+          86.95,
+          731.21,
+          185.14
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-007",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "fx-hedging",
+    "question": "Biện pháp phòng ngừa vay ngoại tệ được nêu là gì, đặc biệt lưu ý đồng tiền nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Hợp đồng hoán đổi tiền tệ; đặc biệt Yên Nhật.",
+    "required_facts": [
+      "Hợp đồng hoán đổi tiền tệ",
+      "đặc biệt Yên Nhật."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-007:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-007:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 133,
+        "printed_page": "132",
+        "locator": "Rủi ro tỷ giá",
+        "quotes": [
+          "Yên Nhật",
+          "hợp đồng hoán đổi tiền tệ"
+        ],
+        "bbox_pt": [
+          580.25,
+          119.52,
+          828.7,
+          181.39
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-008",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "scope3-status",
+    "question": "Phạm vi 3 được mô tả ra sao, có thể coi tổng trong bảng là kiểm kê đầy đủ Phạm vi 3 toàn Tập đoàn không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Phát thải gián tiếp khác từ nguồn không do FPT sở hữu; đang nghiên cứu/triển khai tại FPT Software; không phải tổng kiểm kê đầy đủ Phạm vi 3 toàn Tập đoàn.",
+    "required_facts": [
+      "Phát thải gián tiếp khác từ nguồn không do FPT sở hữu",
+      "đang nghiên cứu/triển khai tại FPT Software",
+      "không phải tổng kiểm kê đầy đủ Phạm vi 3 toàn Tập đoàn."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-008:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-008:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 146,
+        "printed_page": "145",
+        "locator": "Phạm vi thu thập và dòng Scope 3",
+        "quotes": [
+          "Phạm vi 3 (đang nghiên cứu)",
+          "Triển khai tại"
+        ],
+        "bbox_pt": [
+          255.21,
+          256.96,
+          1016.43,
+          435.84
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-009",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "solar-sites",
+    "question": "Hai hệ thống điện mặt trời mái nhà vận hành năm 2025 nằm ở đâu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "F-Complex Đà Nẵng; Data Center Tp.Hồ Chí Minh.",
+    "required_facts": [
+      "F-Complex Đà Nẵng",
+      "Data Center Tp.Hồ Chí Minh."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-009:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-009:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 147,
+        "printed_page": "146",
+        "locator": "Điện mặt trời: hai địa điểm",
+        "quotes": [
+          "F-Complex (Đà Nẵng)",
+          "Data Center (Tp.Hồ Chí Minh)"
+        ],
+        "bbox_pt": [
+          336.11,
+          276.81,
+          989.85,
+          369.0
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-010",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "csr-sdg",
+    "question": "Thu hẹp khoảng cách điều kiện học tập tham chiếu ba SDG nào, ý nghĩa gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "SDG4 Giáo dục chất lượng; SDG6 Nước sạch và vệ sinh; SDG10 Giảm bất bình đẳng.",
+    "required_facts": [
+      "SDG4 Giáo dục chất lượng",
+      "SDG6 Nước sạch và vệ sinh",
+      "SDG10 Giảm bất bình đẳng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-010:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-010:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 156,
+        "printed_page": "155",
+        "locator": "Thu hẹp khoảng cách học tập",
+        "quotes": [
+          "SDG 4",
+          "SDG 6",
+          "SDG 10"
+        ],
+        "bbox_pt": [
+          260.1,
+          495.65,
+          534.76,
+          545.52
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-011",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "capital-july-increase",
+    "question": "Vốn điều lệ sau phát hành 07/2025 tăng bao nhiêu VNĐ so 05/2025?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2.221.769.990.000 VNĐ; từ 14.813.301.220.000 lên 17.035.071.210.000.",
+    "required_facts": [
+      "2.221.769.990.000 VNĐ",
+      "từ 14.813.301.220.000 lên 17.035.071.210.000."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-011:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-011:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 36,
+        "printed_page": "35",
+        "locator": "Thay đổi vốn: lần 42–43",
+        "quotes": [
+          "14.813.301.220.000",
+          "17.035.071.210.000"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "17035071210000-14813301220000",
+        "result": 2221769990000,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-012",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "assets-exact-increase",
+    "question": "Tổng tài sản cuối 2025 tăng chính xác bao nhiêu so cuối 2024?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "16.141.995.956.005 VNĐ; 88.141.991.634.625−71.999.995.678.620.",
+    "required_facts": [
+      "16.141.995.956.005 VNĐ",
+      "88.141.991.634.625−71.999.995.678.620."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-012:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-012:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 166,
+        "printed_page": "165",
+        "locator": "BCĐKT mã 270,2025/2024",
+        "quotes": [
+          "88.141.991.634.625",
+          "71.999.995.678.620"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "88141991634625-71999995678620",
+        "result": 16141995956005,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-013",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "equity-row-hierarchy",
+    "question": "Vì sao mã 400 và 410 vốn chủ sở hữu 2025 chênh 2.750.000.000 VNĐ?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Mã 400 tổng 43.748.040.747.539 gồm mã 410 là 43.745.290.747.539 và nguồn kinh phí/quỹ khác mã 430 là 2.750.000.000 VNĐ.",
+    "required_facts": [
+      "Mã 400 tổng 43.748.040.747.539 gồm mã 410 là 43.745.290.747.539 và nguồn kinh phí/quỹ khác mã 430 là 2.750.000.000 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-013:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-013:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 168,
+        "printed_page": "167",
+        "locator": "BCĐKT mã 400/410/430,2025",
+        "quotes": [
+          "43.748.040.747.539",
+          "43.745.290.747.539",
+          "2.750.000.000"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "43748040747539-43745290747539",
+        "result": 2750000000,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-014",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "operating-cashflow",
+    "question": "Dòng tiền HĐKD 2025 so 2024 tăng hay giảm bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Giảm 1.567.733.272.957 VNĐ; từ 11.703.777.188.868 xuống 10.136.043.915.911.",
+    "required_facts": [
+      "Giảm 1.567.733.272.957 VNĐ",
+      "từ 11.703.777.188.868 xuống 10.136.043.915.911."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-014:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-014:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 171,
+        "printed_page": "170",
+        "locator": "BCLCTT mã 20,2025/2024",
+        "quotes": [
+          "10.136.043.915.911",
+          "11.703.777.188.868"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "11703777188868-10136043915911",
+        "result": 1567733272957,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-015",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "complex3-cip",
+    "question": "Xây dựng cơ bản dở dang FPT Complex 3 cuối 2025 bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "257.007.246.197 VNĐ.",
+    "required_facts": [
+      "257.007.246.197 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-015:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-015:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 199,
+        "printed_page": "198",
+        "locator": "Thuyết minh 15: FPT Complex 3,2025",
+        "quotes": [
+          "FPT Complex 3",
+          "257.007.246.197"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-016",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "unearned-software",
+    "question": "Doanh thu chưa thực hiện dài hạn phần mềm 2025 khác tổng dài hạn thế nào về số tiền?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Phần mềm 120.857.773.033 VNĐ; tổng dài hạn 152.241.175.129 VNĐ.",
+    "required_facts": [
+      "Phần mềm 120.857.773.033 VNĐ",
+      "tổng dài hạn 152.241.175.129 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-016:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-016:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 201,
+        "printed_page": "200",
+        "locator": "Thuyết minh 20(b),2025: phần mềm/tổng",
+        "quotes": [
+          "120.857.773.033",
+          "152.241.175.129"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-017",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "employee-payables",
+    "question": "Phải trả người lao động cuối 2025 tăng bao nhiêu so 2024?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.383.797.579.500 VNĐ; 5.724.811.126.353−4.341.013.546.853.",
+    "required_facts": [
+      "1.383.797.579.500 VNĐ",
+      "5.724.811.126.353−4.341.013.546.853."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-017:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-017:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "BCĐKT mã 314,2025/2024",
+        "quotes": [
+          "5.724.811.126.353",
+          "4.341.013.546.853"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "5724811126353-4341013546853",
+        "result": 1383797579500,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-018",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "ceo-salary",
+    "question": "Tiền lương ông Nguyễn Văn Khoa 2025 trong bảng liên quan có đổi so 2024 không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Không đổi, cùng 4.420.000.000 VNĐ.",
+    "required_facts": [
+      "Không đổi, cùng 4.420.000.000 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-018:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-018:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 215,
+        "printed_page": "214",
+        "locator": "Thuyết minh 35(a)(vii): lươngTGĐ,2025/2024",
+        "quotes": [
+          "Ông Nguyễn Văn Khoa",
+          "4.420.000.000"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-019",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "interest-income-cost",
+    "question": "Lãi tiền gửi/cho vay 2025 bao nhiêu, khác lãi tiền vay thế nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Thu nhập 1.717.721.035.751 VNĐ; lãi tiền vay là chi phí 809.759.601.156 VNĐ.",
+    "required_facts": [
+      "Thu nhập 1.717.721.035.751 VNĐ",
+      "lãi tiền vay là chi phí 809.759.601.156 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-019:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-019:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 209,
+        "printed_page": "208",
+        "locator": "Thuyết minh 28/29: lãi thu/lãi vay,2025",
+        "quotes": [
+          "1.717.721.035.751",
+          "809.759.601.156"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-020",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "fx-gain-minus-loss",
+    "question": "Chỉ trừ hai dòng lãi/lỗ tỷ giá 2025, chênh dương bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "477.990.659.249 VNĐ; 952.791.248.844−474.800.589.595, chỉ theo hai dòng được hỏi.",
+    "required_facts": [
+      "477.990.659.249 VNĐ",
+      "952.791.248.844−474.800.589.595, chỉ theo hai dòng được hỏi."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-020:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-020:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 209,
+        "printed_page": "208",
+        "locator": "Thuyết minh 28/29: tỷ giá,2025",
+        "quotes": [
+          "952.791.248.844",
+          "474.800.589.595"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "952791248844-474800589595",
+        "result": 477990659249,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-021",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "lease-maturity",
+    "question": "Cam kết thuê hoạt động 2025 theo ba kỳ hạn có giá trị bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Dưới 1 năm 1.003.048.814.934 VNĐ; 1–5 năm 1.921.066.175.567; trên 5 năm 770.608.131.792 VNĐ.",
+    "required_facts": [
+      "Dưới 1 năm 1.003.048.814.934 VNĐ",
+      "1–5 năm 1.921.066.175.567",
+      "trên 5 năm 770.608.131.792 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-021:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-021:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 216,
+        "printed_page": "215",
+        "locator": "Thuyết minh 36(a): kỳ hạn/cột 2025",
+        "quotes": [
+          "1.003.048.814.934",
+          "1.921.066.175.567",
+          "770.608.131.792"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-022",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "goodwill-reconcile",
+    "question": "Đối chiếu số dư lợi thế thương mại cuối 2025 từ đầu năm, tăng và hai khoản giảm.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.097.458.206.678+190.164.264.770−215.789.551.218−56.102.654.069=1.015.730.266.161 VNĐ.",
+    "required_facts": [
+      "1.097.458.206.678+190.164.264.770−215.789.551.218−56.102.654.069=1.015.730.266.161 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-022:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-022:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 199,
+        "printed_page": "198",
+        "locator": "Thuyết minh 16: biến động 2025",
+        "quotes": [
+          "1.097.458.206.678",
+          "190.164.264.770",
+          "(215.789.551.218)",
+          "(56.102.654.069)",
+          "1.015.730.266.161"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "1097458206678+190164264770-215789551218-56102654069",
+        "result": 1015730266161,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-023",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "longterm-borrowings",
+    "question": "Vay và nợ thuê tài chính dài hạn cuối 2025 tăng bao nhiêu so 2024?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.402.674.451.109 VNĐ; 1.903.789.988.184−501.115.537.075.",
+    "required_facts": [
+      "1.402.674.451.109 VNĐ",
+      "1.903.789.988.184−501.115.537.075."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-023:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-023:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "BCĐKT mã 338,2025/2024",
+        "quotes": [
+          "1.903.789.988.184",
+          "501.115.537.075"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "1903789988184-501115537075",
+        "result": 1402674451109,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-024",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "ghg-scope-sum",
+    "question": "Kiểm tra tổng 2025 bằng Scope 1+Scope 2, nêu đúng đơn vị và phạm vi.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "4.383+123.569=127.952 tấn CO2 tương đương; không cộng một số Scope 3 chưa có trong bảng.",
+    "required_facts": [
+      "4.383+123.569=127.952 tấn CO2 tương đương",
+      "không cộng một số Scope 3 chưa có trong bảng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-024:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-024:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 146,
+        "printed_page": "145",
+        "locator": "Bảng phát thải cột 2025",
+        "quotes": [
+          "4.383",
+          "123.569",
+          "127.952",
+          "tấn CO2 tương đương"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "4383+123569",
+        "result": 127952,
+        "unit": "tấn CO2 tương đương",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-025",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "water-tss-limit",
+    "question": "TSS nước thải 2025 bao nhiêu mg/l, thấp hơn ngưỡng bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "46 mg/l; thấp hơn ngưỡng 100 mg/l là 54 mg/l.",
+    "required_facts": [
+      "46 mg/l",
+      "thấp hơn ngưỡng 100 mg/l là 54 mg/l."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-025:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-025:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 150,
+        "printed_page": "149",
+        "locator": "Bảng nước thải: hàng 3 TSS, kết quả/quy chuẩn",
+        "quotes": [
+          "Tổng chất rắn lơ lửng (TSS)",
+          "46",
+          "100"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "100-46",
+        "result": 54,
+        "unit": "mg/l",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-026",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "turnover-target",
+    "question": "Theo bảng ESG, thực tế nghỉ việc 2025 có đạt cam kết dưới 14% không, cam kết 2026 là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "15,4% nên không đạt dưới 14%; cam kết 2026 dưới 15%.",
+    "required_facts": [
+      "15,4% nên không đạt dưới 14%",
+      "cam kết 2026 dưới 15%."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-026:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-026:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 115,
+        "printed_page": "114",
+        "locator": "Bảng ESG: Khối Công nghệ, cam kết 2025/kết quả/cam kết 2026",
+        "quotes": [
+          "Dưới 14%",
+          "15,4%",
+          "Dưới 15%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-027",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "global-it-extremes",
+    "question": "Donut chi tiêu CNTT 2026: phân khúc lớn nhất và nhỏ nhất, số tiền/tỷ trọng từng nhóm?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Lớn nhất Dịch vụ CNTT1.867 tỷ USD,30,3%; nhỏ nhất Phần cứng 653 tỷ USD,10,6%.",
+    "required_facts": [
+      "Lớn nhất Dịch vụ CNTT1.867 tỷ USD,30,3%",
+      "nhỏ nhất Phần cứng 653 tỷ USD,10,6%."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-027:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-027:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 46,
+        "printed_page": "45",
+        "locator": "Donut CNTT2026: chú giải, giá trị và tỷ trọng",
+        "quotes": [
+          "1.867 30,3%",
+          "653 10,6%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-028",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "global-software-telco",
+    "question": "Phần mềm và dịch vụ viễn thông chênh bao nhiêu tỷ USD trong donut CNTT 2026?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "69 tỷ USD; 1.434−1.365.",
+    "required_facts": [
+      "69 tỷ USD",
+      "1.434−1.365."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-028:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-028:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 46,
+        "printed_page": "45",
+        "locator": "Donut: màu phần mềm/viễn thông",
+        "quotes": [
+          "1.434 23,3%",
+          "1.365 22,2%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "1434-1365",
+        "result": 69,
+        "unit": "tỷ USD",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-029",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "block-share-mismatch",
+    "question": "So hai donut theo khối 2025, khối nào có tỷ trọng LNTT lớn hơn tỷ trọng doanh thu nhiều nhất, chênh bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Giáo dục, Đầu tư và Khác; 21,2% LNTT so 8,8% doanh thu, chênh 12,4 điểm phần trăm.",
+    "required_facts": [
+      "Giáo dục, Đầu tư và Khác",
+      "21,2% LNTT so 8,8% doanh thu, chênh 12,4 điểm phần trăm."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-029:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-029:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 60,
+        "printed_page": "59",
+        "locator": "Hai donut doanh thu/LNTT và chú giải",
+        "quotes": [
+          "21,2%",
+          "8,8%",
+          "Khối Giáo dục"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "21.2-8.8",
+        "result": 12.4,
+        "unit": "điểm phần trăm",
+        "absolute_tolerance": 1e-05
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-030",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "technology-profit-margin",
+    "question": "Từ giá trị tuyệt đối hai donut theo khối, tính biên LNTT Công nghệ 2025.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Khoảng 13,28%; 5.907/44.475× 100, không lấy tỷ trọng 45,3% chia 63,4% làm biên.",
+    "required_facts": [
+      "Khoảng 13,28%",
+      "5.907/44.475× 100, không lấy tỷ trọng 45,3% chia 63,4% làm biên."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-030:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-030:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 60,
+        "printed_page": "59",
+        "locator": "Hai donut: số tuyệt đối khối Công nghệ",
+        "quotes": [
+          "5.907",
+          "44.475"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "5907/44475*100",
+        "result": 13.28,
+        "unit": "%",
+        "absolute_tolerance": 0.01
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-031",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "japan-overseas",
+    "question": "Trong donut CNTT nước ngoài, Nhật Bản có doanh thu, tỷ trọng, tăng trưởng bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "15.452 tỷ VNĐ; 43,7%; tăng 25,4%.",
+    "required_facts": [
+      "15.452 tỷ VNĐ",
+      "43,7%",
+      "tăng 25,4%."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-031:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-031:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 62,
+        "printed_page": "61",
+        "locator": "Donut thị trường: Nhật Bản",
+        "quotes": [
+          "15.452 43,7%",
+          "25,4%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-032",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "overseas-fastest",
+    "question": "Theo các mũi tên tăng trưởng trên donut CNTT nước ngoài, thị trường nào nhanh nhất?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Châu Âu,36,3%.",
+    "required_facts": [
+      "Châu Âu,36,3%."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-032:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-032:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 62,
+        "printed_page": "61",
+        "locator": "Donut: mũi tên tăng trưởng/chú giải",
+        "quotes": [
+          "36,3%",
+          "Châu Âu"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-033",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "madeby-biggest-step",
+    "question": "Biểu đồ Made by FPT 2021–2025: giai đoạn tăng tuyệt đối lớn nhất là khi nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2023→2024; tăng 607 tỷ VNĐ từ 1.637 lên 2.244.",
+    "required_facts": [
+      "2023→2024",
+      "tăng 607 tỷ VNĐ từ 1.637 lên 2.244."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-033:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-033:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 67,
+        "printed_page": "66",
+        "locator": "Biểu đồ 5 cột Made by FPT",
+        "quotes": [
+          "746",
+          "1.150",
+          "1.637",
+          "2.244",
+          "2.672"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "2244-1637",
+        "result": 607,
+        "unit": "tỷ VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-034",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "women-count-share",
+    "question": "Biểu đồ nữ 2024→2025 tăng bao nhiêu người, có phải tăng 37,7% không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Tăng 103 người,20.280→20.383; 37,7% là tỷ trọng lao động nữ, không phải tăng trưởng hai cột.",
+    "required_facts": [
+      "Tăng 103 người,20.280→20.383",
+      "37,7% là tỷ trọng lao động nữ, không phải tăng trưởng hai cột."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-034:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-034:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 137,
+        "printed_page": "136",
+        "locator": "Biểu đồ nhân sự nữ và đoạn tỷ trọng",
+        "quotes": [
+          "20.280",
+          "20.383",
+          "37,7%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "20383-20280",
+        "result": 103,
+        "unit": "người",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-035",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "training-biggest-step",
+    "question": "Biểu đồ giờ đào tạo 2021–2025: bước tăng tuyệt đối lớn nhất là năm nào, bao nhiêu giờ?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2023 so 2022; tăng 1.785.746 giờ,3.803.220→5.588.966.",
+    "required_facts": [
+      "2023 so 2022",
+      "tăng 1.785.746 giờ,3.803.220→5.588.966."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-035:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-035:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 138,
+        "printed_page": "137",
+        "locator": "Biểu đồ tổng giờ đào tạo nội bộ",
+        "quotes": [
+          "3.414.168",
+          "3.803.220",
+          "5.588.966",
+          "6.365.814",
+          "7.121.722"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "5588966-3803220",
+        "result": 1785746,
+        "unit": "giờ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-036",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "plan-comparable-base",
+    "question": "Biểu đồ kế hoạch 2026 ghi doanh thu bao nhiêu, vì sao không so trực tiếp tăng trưởng với 70.113 tỷ của 2025?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "58.580 tỷ VNĐ, tăng 15,8% trên cơ sở điều chỉnh; FPT Telecom hợp nhất theo vốn chủ sở hữu,2025 trong biểu đồ điều chỉnh cùng phương pháp.",
+    "required_facts": [
+      "58.580 tỷ VNĐ, tăng 15,8% trên cơ sở điều chỉnh",
+      "FPT Telecom hợp nhất theo vốn chủ sở hữu,2025 trong biểu đồ điều chỉnh cùng phương pháp."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-036:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-036:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 55,
+        "printed_page": "54",
+        "locator": "Biểu đồ kế hoạch và chú thích phương pháp",
+        "quotes": [
+          "58.580",
+          "15,8%",
+          "phương pháp vốn chủ sở hữu"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "chart"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-037",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "ai-stack-order",
+    "question": "Đọc hình AI có chủ quyền: ba tầng chính từ dưới lên là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "AI Infrastructure → AI Platform → AI Agent x Human Economy.",
+    "required_facts": [
+      "AI Infrastructure → AI Platform → AI Agent x Human Economy."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-037:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-037:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 51,
+        "printed_page": "50",
+        "locator": "Hình nền tảng AI có chủ quyền",
+        "quotes": [],
+        "bbox_pt": [
+          640,
+          40,
+          1035,
+          280
+        ],
+        "visual_description": "Nhãn tầng bên phải: AI Infrastructure ở đáy, AI Platform ở giữa, AI Agent x Human Economy phía trên.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-038",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "ai-stack-tools",
+    "question": "AI STUDIO và AI INFERENCING trên hình thuộc tầng nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "AI Platform.",
+    "required_facts": [
+      "AI Platform."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-038:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-038:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 51,
+        "printed_page": "50",
+        "locator": "Hình AI: hai hộp cam tầng giữa",
+        "quotes": [],
+        "bbox_pt": [
+          640,
+          40,
+          1035,
+          280
+        ],
+        "visual_description": "Hai hộp AI STUDIO, AI INFERENCING nằm cùng lớp AI Platform.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-039",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "ai-stack-dataflow",
+    "question": "Data In nằm gần tầng nào, Intelligence Out nằm về phía nào trên hình AI?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Data In ở đáy gần AI Infrastructure; Intelligence Out phía trên hướng tới các tác nhân và ứng dụng.",
+    "required_facts": [
+      "Data In ở đáy gần AI Infrastructure",
+      "Intelligence Out phía trên hướng tới các tác nhân và ứng dụng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-039:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-039:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 51,
+        "printed_page": "50",
+        "locator": "Hình AI: nhãn luồng dữ liệu bên trái",
+        "quotes": [],
+        "bbox_pt": [
+          640,
+          40,
+          1035,
+          280
+        ],
+        "visual_description": "Hình đặt Data In tại đáy, Intelligence Out ở phía trên; không tự thêm mô tả luồng không thể hiện.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-040",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "governance-policy-line",
+    "question": "Đường nối Ủy ban Chính sách phát triển dẫn tới cấp nào trong sơ đồ quản trị?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Hội đồng quản trị.",
+    "required_facts": [
+      "Hội đồng quản trị."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-040:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-040:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 80,
+        "printed_page": "79",
+        "locator": "Sơ đồ: nhánh Ủy ban Chính sách phát triển",
+        "quotes": [],
+        "bbox_pt": [
+          240,
+          110,
+          1035,
+          565
+        ],
+        "visual_description": "Ô Ủy ban Chính sách phát triển nối vào HĐQT.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-041",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "governance-audit-line",
+    "question": "Kiểm toán nội bộ trực thuộc HĐQT hay TGĐ theo đường nối sơ đồ?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "HĐQT.",
+    "required_facts": [
+      "HĐQT."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-041:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-041:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 80,
+        "printed_page": "79",
+        "locator": "Sơ đồ: nhánh Kiểm toán nội bộ",
+        "quotes": [],
+        "bbox_pt": [
+          240,
+          110,
+          1035,
+          565
+        ],
+        "visual_description": "Nhánh Kiểm toán nội bộ nối trục HĐQT, không dưới Ban Điều hành.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-042",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "governance-bks-line",
+    "question": "Ban Kiểm soát gắn với cấp nào và giám sát ai theo sơ đồ cùng ô giải thích?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Chịu trách nhiệm trước ĐHĐCĐ; giám sát HĐQT và TGĐ.",
+    "required_facts": [
+      "Chịu trách nhiệm trước ĐHĐCĐ",
+      "giám sát HĐQT và TGĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-042:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-042:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 80,
+        "printed_page": "79",
+        "locator": "Sơ đồ: Ban Kiểm soát và ô giải thích",
+        "quotes": [],
+        "bbox_pt": [
+          240,
+          110,
+          1035,
+          565
+        ],
+        "visual_description": "Ban Kiểm soát trên nhánh ĐHĐCĐ, mô tả giám sát HĐQT/TGĐ.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-043",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "scope3-end-panels",
+    "question": "Dải hình biện pháp Scope 3: ô ngoài cùng trái và phải là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Trái: phương tiện công cộng/phương tiện sử dụng điện; phải: làm việc từ xa.",
+    "required_facts": [
+      "Trái: phương tiện công cộng/phương tiện sử dụng điện",
+      "phải: làm việc từ xa."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-043:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-043:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 148,
+        "printed_page": "147",
+        "locator": "Dải 5 hình: ô 1 vàô 5",
+        "quotes": [],
+        "bbox_pt": [
+          250,
+          185,
+          1035,
+          560
+        ],
+        "visual_description": "Năm ô hình với tiêu đề riêng; ô1 phương tiện điện, ô5 làm việc từ xa.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-044",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "scope3-spatial-order",
+    "question": "Ô Nghiên cứu tín chỉ carbon rừng nằm trước hay sau Trồng rừng; giữa hai ô là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nằm trước Trồng rừng; ở giữa là Giảm thiểu tác động từ các chuyến công tác.",
+    "required_facts": [
+      "Nằm trước Trồng rừng",
+      "ở giữa là Giảm thiểu tác động từ các chuyến công tác."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-044:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-044:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 148,
+        "printed_page": "147",
+        "locator": "Dải 5 hình: ô 2–4",
+        "quotes": [],
+        "bbox_pt": [
+          250,
+          185,
+          1035,
+          560
+        ],
+        "visual_description": "Thứ tự trái→phải: tín chỉ carbon rừng, chuyến công tác, trồng rừng.",
+        "verification": "visual_author_checked"
+      }
+    ],
+    "tags": [
+      "diagram",
+      "visual_grounding",
+      "image"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-045",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "equity-rounded-exact",
+    "question": "Vốn chủ sở hữu 2025 ở bảng tóm tắt tỷ VNĐ và BCĐKT VNĐ là bao nhiêu, có mâu thuẫn chỉ vì độ chính xác không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "43.748 tỷ VNĐ và 43.748.040.747.539 VNĐ; khớp sau quy đổi và làm tròn.",
+    "required_facts": [
+      "43.748 tỷ VNĐ và 43.748.040.747.539 VNĐ",
+      "khớp sau quy đổi và làm tròn."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-045:E1",
+          "FPT-ADVANCED-TEST-045:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-045:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 12,
+        "printed_page": "11",
+        "locator": "Bảng nổi bật: VCSH2025",
+        "quotes": [
+          "43.748"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-045:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 168,
+        "printed_page": "167",
+        "locator": "BCĐKT mã 400",
+        "quotes": [
+          "43.748.040.747.539"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-046",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "revenue-restated-base",
+    "question": "Cộng hai khối để suy doanh thu 2025 đã điều chỉnh trong kế hoạch 2026; chênh bao nhiêu với 2025 toàn Tập đoàn, tại sao?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "44.475+6.132=50.607 tỷ VNĐ; thấp hơn 70.113 là 19.506 tỷ VNĐ; do FTEL theo vốn chủ sở hữu, không phải suy giảm cùng cơ sở.",
+    "required_facts": [
+      "44.475+6.132=50.607 tỷ VNĐ",
+      "thấp hơn 70.113 là 19.506 tỷ VNĐ",
+      "do FTEL theo vốn chủ sở hữu, không phải suy giảm cùng cơ sở."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-046:E1",
+          "FPT-ADVANCED-TEST-046:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-046:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 55,
+        "printed_page": "54",
+        "locator": "Biểu đồ kế hoạch,2025 điều chỉnh",
+        "quotes": [
+          "44.475",
+          "6.132",
+          "phương pháp vốn chủ sở hữu"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-046:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 57,
+        "printed_page": "56",
+        "locator": "Doanh thu 2025 toàn Tập đoàn",
+        "quotes": [
+          "70.113"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "70113-(44475+6132)",
+        "result": 19506,
+        "unit": "tỷ VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-047",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "cash-after-borrowings",
+    "question": "Định nghĩa riêng: tiền+tương đương+đầu tư tài chính ngắn hạn trừ vay/nợ thuê tài chính ngắn và dài hạn. Số cuối 2025 bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "19.079.604.981.293 VNĐ; chỉ theo định nghĩa câu hỏi, không coi là chỉ tiêu báo cáo có sẵn.",
+    "required_facts": [
+      "19.079.604.981.293 VNĐ",
+      "chỉ theo định nghĩa câu hỏi, không coi là chỉ tiêu báo cáo có sẵn."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-047:E1",
+          "FPT-ADVANCED-TEST-047:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-047:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 165,
+        "printed_page": "164",
+        "locator": "BCĐKT mã 110/120",
+        "quotes": [
+          "10.522.105.729.992",
+          "29.630.986.737.440"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-047:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "BCĐKT mã 320/338",
+        "quotes": [
+          "19.169.697.497.955",
+          "1.903.789.988.184"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "10522105729992+29630986737440-19169697497955-1903789988184",
+        "result": 19079604981293,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-048",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "pat-reconciliation",
+    "question": "Đối chiếu hai trang KQKD, tính LNST 2025 từ LNTT, thuế hiện hành và thu nhập thuế hoãn lại.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "13.043.632.833.797−1.916.998.192.442+105.704.809.379=11.232.339.450.734 VNĐ; khớp dòng 60.",
+    "required_facts": [
+      "13.043.632.833.797−1.916.998.192.442+105.704.809.379=11.232.339.450.734 VNĐ",
+      "khớp dòng 60."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-048:E1",
+          "FPT-ADVANCED-TEST-048:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-048:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 169,
+        "printed_page": "168",
+        "locator": "KQKD dòng 50/51/52",
+        "quotes": [
+          "13.043.632.833.797",
+          "1.916.998.192.442",
+          "(105.704.809.379)"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-048:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 170,
+        "printed_page": "169",
+        "locator": "KQKD dòng 60",
+        "quotes": [
+          "11.232.339.450.734"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "13043632833797-1916998192442+105704809379",
+        "result": 11232339450734,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-049",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "bookings-not-revenue",
+    "question": "Có cộng 40.636 tỷ ký mới CNTT nước ngoài và 16.751 tỷ doanh thu Chuyển đổi số để báo tổng 2025 không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Không; một số là ký mới/hợp đồng, một số là doanh thu trong kỳ; khác ghi nhận và không chứng minh rời nhau.",
+    "required_facts": [
+      "Không",
+      "một số là ký mới/hợp đồng, một số là doanh thu trong kỳ",
+      "khác ghi nhận và không chứng minh rời nhau."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-049:E1",
+          "FPT-ADVANCED-TEST-049:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-049:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 62,
+        "printed_page": "61",
+        "locator": "Hợp đồng CNTT nước ngoài",
+        "quotes": [
+          "Doanh thu ký mới",
+          "40.636"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-049:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 63,
+        "printed_page": "62",
+        "locator": "Doanh thu Chuyển đổi số",
+        "quotes": [
+          "16.751",
+          "47,3%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-050",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "gender-policy-inference",
+    "question": "Tỷ lệ nữ quản lý 36,4% có chứng minh mỗi nữ quản lý được tăng lương 2025 không nếu đối chiếu chính sách thu nhập?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Không; 36,4% là cơ cấu quản lý; thu nhập dựa vị trí/kết quả/đóng góp, không phân biệt giới tính; thiếu lịch sử từng người.",
+    "required_facts": [
+      "Không",
+      "36,4% là cơ cấu quản lý",
+      "thu nhập dựa vị trí/kết quả/đóng góp, không phân biệt giới tính",
+      "thiếu lịch sử từng người."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-050:E1",
+          "FPT-ADVANCED-TEST-050:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-050:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 137,
+        "printed_page": "136",
+        "locator": "Nữ quản lý và nguyên tắc thu nhập",
+        "quotes": [
+          "36,4%",
+          "không phân biệt giới tính"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-050:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 141,
+        "printed_page": "140",
+        "locator": "Chính sách đãi ngộ",
+        "quotes": [
+          "kết quả công việc",
+          "giá trị đóng góp"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-051",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "renewable-target-gap",
+    "question": "Điện tái tạo thực tế 2025 cách mục tiêu 2026 bao nhiêu điểm phần trăm?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2,05 điểm phần trăm; 2,5%−0,45%; không coi mục tiêu là kết quả.",
+    "required_facts": [
+      "2,05 điểm phần trăm",
+      "2,5%−0,45%",
+      "không coi mục tiêu là kết quả."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-051:E1",
+          "FPT-ADVANCED-TEST-051:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-051:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 147,
+        "printed_page": "146",
+        "locator": "Bảng điện: tỷ lệ 2025",
+        "quotes": [
+          "0,45%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-051:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 144,
+        "printed_page": "143",
+        "locator": "Mục tiêu 2026",
+        "quotes": [
+          "2,5%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "2.5-0.45",
+        "result": 2.05,
+        "unit": "điểm phần trăm",
+        "absolute_tolerance": 1e-05
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-052",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "ghg-baseline",
+    "question": "Tính giảm phát thải 2025 so 2024; có quy trực tiếp thành tiến độ mục tiêu giảm 15,8% năm 2030 không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Khoảng 10,88%,143.574→127.952 tấn CO2 tương đương; không nếu chưa xác nhận cùng năm cơ sở và phạm vi đường cơ sở.",
+    "required_facts": [
+      "Khoảng 10,88%,143.574→127.952 tấn CO2 tương đương",
+      "không nếu chưa xác nhận cùng năm cơ sở và phạm vi đường cơ sở."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-052:E1",
+          "FPT-ADVANCED-TEST-052:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-052:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 146,
+        "printed_page": "145",
+        "locator": "Tổng phát thải 2024/2025",
+        "quotes": [
+          "143.574",
+          "127.952"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-052:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 114,
+        "printed_page": "113",
+        "locator": "Lộ trình mục tiêu 2030",
+        "quotes": [
+          "đường cơ sở phát thải",
+          "15,8%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "(143574-127952)/143574*100",
+        "result": 10.88,
+        "unit": "%",
+        "absolute_tolerance": 0.01
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-053",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "salary-not-total-comp",
+    "question": "Có đủ căn cứ coi 4.420.000.000 VNĐ lương TGĐ là toàn bộ đãi ngộ gồm phúc lợi không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Không; bảng là tiền lương, chính sách còn hỗ trợ/FPT Care; không có tổng tất cả quyền lợi cá nhân để đồng nhất.",
+    "required_facts": [
+      "Không",
+      "bảng là tiền lương, chính sách còn hỗ trợ/FPT Care",
+      "không có tổng tất cả quyền lợi cá nhân để đồng nhất."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-053:E1",
+          "FPT-ADVANCED-TEST-053:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-053:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 215,
+        "printed_page": "214",
+        "locator": "Thuyết minh 35: lươngTGĐ",
+        "quotes": [
+          "4.420.000.000",
+          "Tiền lương"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-053:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 141,
+        "printed_page": "140",
+        "locator": "Chính sách đãi ngộ và phúc lợi",
+        "quotes": [
+          "FPT Care",
+          "Chi phí hỗ trợ"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-054",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "audit-and-2026-plan",
+    "question": "Nhấn mạnh về FTEL có đổi ý kiến kiểm toán 2025 không, kế hoạch 2026 dùng phương pháp hợp nhất nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Ý kiến 2025 không bị ảnh hưởng; 2026 dùng vốn chủ sở hữu và điều chỉnh 2025 cùng phương pháp.",
+    "required_facts": [
+      "Ý kiến 2025 không bị ảnh hưởng",
+      "2026 dùng vốn chủ sở hữu và điều chỉnh 2025 cùng phương pháp."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-054:E1",
+          "FPT-ADVANCED-TEST-054:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-054:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 164,
+        "printed_page": "163",
+        "locator": "Vấn đề cần nhấn mạnh",
+        "quotes": [
+          "Ý kiến kiểm toán của chúng tôi không bị ảnh"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-054:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 55,
+        "printed_page": "54",
+        "locator": "Chú thích kế hoạch 2026",
+        "quotes": [
+          "phương pháp vốn chủ sở hữu"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-055",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "liquidity-recompute",
+    "question": "Tính hệ số thanh toán ngắn hạn 2025 từ hai trang BCĐKT, đối chiếu mức công bố 1,40 lần.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "58.137.438.254.908/41.524.928.721.230≈1,40006 lần; làm tròn 1,40, khớp.",
+    "required_facts": [
+      "58.137.438.254.908/41.524.928.721.230≈1,40006 lần",
+      "làm tròn 1,40, khớp."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-055:E1",
+          "FPT-ADVANCED-TEST-055:E2",
+          "FPT-ADVANCED-TEST-055:E3"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-055:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 165,
+        "printed_page": "164",
+        "locator": "BCĐKT mã 100",
+        "quotes": [
+          "58.137.438.254.908"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-055:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "BCĐKT mã 310",
+        "quotes": [
+          "41.524.928.721.230"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-055:E3",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 58,
+        "printed_page": "57",
+        "locator": "Hệ số công bố",
+        "quotes": [
+          "1,40 lần"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "58137438254908/41524928721230",
+        "result": 1.40006,
+        "unit": "lần",
+        "absolute_tolerance": 1e-05
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-056",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "cashflow-funding-gap",
+    "question": "Dòng tiền HĐKD 2025 đủ bù dòng tiền đầu tư thuần không, chênh bao nhiêu trước tài chính?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Không; 10.136.043.915.911−11.624.743.591.629=−1.488.699.675.718 VNĐ.",
+    "required_facts": [
+      "Không",
+      "10.136.043.915.911−11.624.743.591.629=−1.488.699.675.718 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-ADVANCED-TEST-056:E1",
+          "FPT-ADVANCED-TEST-056:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-ADVANCED-TEST-056:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 171,
+        "printed_page": "170",
+        "locator": "BCLCTT mã 20",
+        "quotes": [
+          "10.136.043.915.911"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-ADVANCED-TEST-056:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 172,
+        "printed_page": "171",
+        "locator": "BCLCTT mã 30",
+        "quotes": [
+          "(11.624.743.591.629)"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "calculations": [
+      {
+        "expression": "10136043915911-11624743591629",
+        "result": -1488699675718,
+        "unit": "VNĐ",
+        "absolute_tolerance": 0
+      }
+    ],
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-057",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-related-party-sideletters",
+    "question": "Nội dung đầy đủ các thỏa thuận riêng không công bố giữa các bên liên quan là gì?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định nội dung thỏa thuận riêng không công bố giữa các bên liên quan.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "nội dung thỏa thuận riêng không công bố giữa các bên liên quan",
+      "related_pdf_pages": [
+        187,
+        213
+      ],
+      "full_document_search_terms": [
+        "bên liên quan",
+        "thỏa thuận"
+      ],
+      "search_hits": {
+        "bên liên quan": [
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          110,
+          113,
+          116,
+          120,
+          121,
+          125,
+          126,
+          129,
+          132,
+          135,
+          136,
+          145,
+          149,
+          187,
+          192,
+          199,
+          202,
+          214,
+          215,
+          216
+        ],
+        "thỏa thuận": [
+          14,
+          64,
+          178
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-058",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-scope3-final-total",
+    "question": "Tổng phát thải Phạm vi 3 đã kiểm toán của toàn Tập đoàn năm 2025 là chính xác bao nhiêu tấn CO2e?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định tổng Phạm vi 3 đã kiểm toán cho toàn Tập đoàn năm 2025.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "tổng Phạm vi 3 đã kiểm toán cho toàn Tập đoàn năm 2025",
+      "related_pdf_pages": [
+        146,
+        148
+      ],
+      "full_document_search_terms": [
+        "Phạm vi 3",
+        "phát thải"
+      ],
+      "search_hits": {
+        "Phạm vi 3": [
+          146,
+          148
+        ],
+        "phát thải": [
+          75,
+          111,
+          114,
+          116,
+          119,
+          144,
+          146,
+          147,
+          148,
+          149,
+          152,
+          158
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-059",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-complex3-item-budget",
+    "question": "Trong chi phí dở dang FPT Complex 3, từng thiết bị có dự toán hoàn thành và mã hợp đồng nào?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định dự toán hoàn thành và mã hợp đồng cho từng thiết bị Complex 3.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "dự toán hoàn thành và mã hợp đồng cho từng thiết bị Complex 3",
+      "related_pdf_pages": [
+        199
+      ],
+      "full_document_search_terms": [
+        "Complex 3",
+        "dở dang"
+      ],
+      "search_hits": {
+        "Complex 3": [
+          199
+        ],
+        "dở dang": [
+          166,
+          182,
+          193,
+          195,
+          199
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-060",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-lease-rate-contract",
+    "question": "Lãi suất ngầm định của từng hợp đồng thuê hoạt động trong bảng cam kết thuê là bao nhiêu?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định lãi suất ngầm định theo từng hợp đồng thuê hoạt động.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "lãi suất ngầm định theo từng hợp đồng thuê hoạt động",
+      "related_pdf_pages": [
+        216
+      ],
+      "full_document_search_terms": [
+        "thuê hoạt động",
+        "lãi suất"
+      ],
+      "search_hits": {
+        "thuê hoạt động": [
+          182,
+          216
+        ],
+        "lãi suất": [
+          182,
+          183,
+          186,
+          189,
+          190,
+          202
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-061",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-salary-month-bonus",
+    "question": "Tiền lương TGĐ năm 2025 được phân bổ chính xác theo từng tháng và từng khoản thưởng như thế nào?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định bảng phân bổ tiền lương TGĐ theo tháng và khoản thưởng.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "bảng phân bổ tiền lương TGĐ theo tháng và khoản thưởng",
+      "related_pdf_pages": [
+        215
+      ],
+      "full_document_search_terms": [
+        "Tiền lương",
+        "4.420.000.000"
+      ],
+      "search_hits": {
+        "Tiền lương": [
+          215
+        ],
+        "4.420.000.000": [
+          215
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-062",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-fx-daily-currency",
+    "question": "Lãi và lỗ tỷ giá năm 2025 phát sinh theo từng ngày, từng giao dịch USD là bao nhiêu?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định sổ lãi lỗ tỷ giá từng ngày và từng giao dịch USD.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "sổ lãi lỗ tỷ giá từng ngày và từng giao dịch USD",
+      "related_pdf_pages": [
+        209
+      ],
+      "full_document_search_terms": [
+        "lãi chênh lệch tỷ giá",
+        "lỗ chênh lệch tỷ giá"
+      ],
+      "search_hits": {
+        "lãi chênh lệch tỷ giá": [
+          209
+        ],
+        "lỗ chênh lệch tỷ giá": [
+          171,
+          209
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-063",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "abs-it-spend-2035",
+    "question": "Từ biểu đồ dự báo chi tiêu CNTT năm 2026, cho biết chi tiêu thực tế năm 2035 của từng phân khúc.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định chi tiêu thực tế năm 2035 theo phân khúc CNTT.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "chart"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "chi tiêu thực tế năm 2035 theo phân khúc CNTT",
+      "related_pdf_pages": [
+        46
+      ],
+      "full_document_search_terms": [
+        "6.155",
+        "2035"
+      ],
+      "search_hits": {
+        "6.155": [
+          46,
+          137
+        ],
+        "2035": []
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-064",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "abs-japan-month-margin",
+    "question": "Từ biểu đồ CNTT nước ngoài, cho biết biên lợi nhuận sau thuế từng tháng của thị trường Nhật Bản năm 2025.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định biên lợi nhuận sau thuế theo tháng tại Nhật Bản.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "chart"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "biên lợi nhuận sau thuế theo tháng tại Nhật Bản",
+      "related_pdf_pages": [
+        62
+      ],
+      "full_document_search_terms": [
+        "Nhật Bản",
+        "15.452"
+      ],
+      "search_hits": {
+        "Nhật Bản": [
+          5,
+          14,
+          17,
+          20,
+          27,
+          28,
+          30,
+          37,
+          38,
+          39,
+          41,
+          48,
+          50,
+          52,
+          58,
+          62,
+          64,
+          67,
+          68,
+          77,
+          89,
+          101,
+          102,
+          122,
+          123,
+          137,
+          190,
+          203,
+          207,
+          218,
+          222,
+          226,
+          228
+        ],
+        "15.452": [
+          62
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-065",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "chart",
+    "fact_key": "abs-training-p90",
+    "question": "Tính phân vị 90% số giờ đào tạo trên mỗi nhân viên năm 2025 từ biểu đồ tổng số giờ đào tạo.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định phân phối giờ học cá nhân để tính phân vị 90%.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "chart"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "phân phối giờ học cá nhân để tính phân vị 90%",
+      "related_pdf_pages": [
+        138
+      ],
+      "full_document_search_terms": [
+        "7.121.722",
+        "đào tạo"
+      ],
+      "search_hits": {
+        "7.121.722": [
+          138
+        ],
+        "đào tạo": [
+          4,
+          5,
+          7,
+          8,
+          16,
+          19,
+          27,
+          38,
+          39,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          58,
+          63,
+          65,
+          68,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          88,
+          89,
+          90,
+          95,
+          98,
+          101,
+          113,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          122,
+          127,
+          130,
+          131,
+          132,
+          133,
+          138,
+          139,
+          141,
+          143,
+          144,
+          147,
+          148,
+          153,
+          173,
+          174,
+          185,
+          188,
+          210,
+          223,
+          224
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-066",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "abs-ai-stack-source-code",
+    "question": "Từ sơ đồ AI Stack, xuất toàn bộ mã nguồn và phiên bản triển khai của từng thành phần.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định mã nguồn và phiên bản triển khai từng thành phần AI Stack.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "image"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "mã nguồn và phiên bản triển khai từng thành phần AI Stack",
+      "related_pdf_pages": [
+        51
+      ],
+      "full_document_search_terms": [
+        "AI Stack",
+        "mã nguồn"
+      ],
+      "search_hits": {
+        "AI Stack": [],
+        "mã nguồn": [
+          20,
+          46,
+          47,
+          50
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-067",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "image",
+    "fact_key": "abs-audit-private-log",
+    "question": "Sơ đồ quản trị cho biết nội dung chi tiết từng lần Kiểm toán nội bộ trao đổi riêng với Ủy ban Kiểm toán không? Hãy trích biên bản.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định biên bản trao đổi riêng theo từng lần giữa các bộ phận kiểm toán.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "image"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "biên bản trao đổi riêng theo từng lần giữa các bộ phận kiểm toán",
+      "related_pdf_pages": [
+        80
+      ],
+      "full_document_search_terms": [
+        "Kiểm toán nội bộ",
+        "Ủy ban"
+      ],
+      "search_hits": {
+        "Kiểm toán nội bộ": [
+          31,
+          80,
+          82,
+          89,
+          90
+        ],
+        "Ủy ban": [
+          31,
+          37,
+          38,
+          39,
+          77,
+          88,
+          89,
+          90,
+          100,
+          101,
+          132
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-068",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "abs-solar-project-irr",
+    "question": "Kết hợp vốn đầu tư và sản lượng điện mặt trời, tính IRR chính xác cho riêng từng hệ thống tại Đà Nẵng và TP.HCM.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định dòng tiền, vốn đầu tư và tuổi thọ theo từng hệ thống điện mặt trời.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "multi_hop"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "dòng tiền, vốn đầu tư và tuổi thọ theo từng hệ thống điện mặt trời",
+      "related_pdf_pages": [
+        147,
+        216
+      ],
+      "full_document_search_terms": [
+        "điện mặt trời",
+        "F-Complex"
+      ],
+      "search_hits": {
+        "điện mặt trời": [
+          110,
+          111,
+          119,
+          147
+        ],
+        "F-Complex": [
+          147
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-069",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "abs-restoration-exact-liability",
+    "question": "Đối chiếu chính sách dự phòng và thuyết minh hoàn nguyên đất, tính chính xác nghĩa vụ hoàn nguyên tại 31/12/2025.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định số tiền nghĩa vụ hoàn nguyên đất chưa được xác định trong báo cáo.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "multi_hop"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "số tiền nghĩa vụ hoàn nguyên đất chưa được xác định trong báo cáo",
+      "related_pdf_pages": [
+        184,
+        217
+      ],
+      "full_document_search_terms": [
+        "hoàn nguyên",
+        "dự phòng"
+      ],
+      "search_hits": {
+        "hoàn nguyên": [
+          217
+        ],
+        "dự phòng": [
+          70,
+          127,
+          165,
+          166,
+          167,
+          171,
+          179,
+          180,
+          184,
+          186,
+          188,
+          191,
+          194,
+          195,
+          209,
+          210,
+          217
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-ADVANCED-TEST-070",
+    "suite": "advanced",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "abs-2026-plan-achievement",
+    "question": "So sánh kế hoạch 2026 và kết quả kinh doanh để tính tỷ lệ hoàn thành kế hoạch thực tế cả năm 2026.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định kết quả thực tế đầy đủ cả năm 2026.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "multi_hop"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "kết quả thực tế đầy đủ cả năm 2026",
+      "related_pdf_pages": [
+        55,
+        57
+      ],
+      "full_document_search_terms": [
+        "58.580",
+        "2026"
+      ],
+      "search_hits": {
+        "58.580": [
+          55
+        ],
+        "2026": [
+          5,
+          8,
+          17,
+          42,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          83,
+          100,
+          103,
+          108,
+          115,
+          117,
+          144,
+          162,
+          163,
+          164,
+          168,
+          170,
+          172,
+          175,
+          176,
+          217
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  }
+]

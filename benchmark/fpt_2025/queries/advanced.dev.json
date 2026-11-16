@@ -1,0 +1,282 @@
+[
+  {
+    "id": "FPT-ADVANCED-DEV-001",
+    "question": "BCTC hợp nhất theo chuẩn mực nào, có nhằm trình bày theo thông lệ kế toán ngoài Việt Nam không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-002",
+    "question": "Theo thuyết minh, FPT bắt đầu áp dụng Thông tư 99 năm tài chính nào, thay thông tư nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-003",
+    "question": "Lỗ công ty con vượt phần sở hữu trong tài sản thuần có tiếp tục phân bổ cho cổ đông không kiểm soát không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-004",
+    "question": "Công ty liên kết có mức ảnh hưởng và khoảng quyền biểu quyết thường gặp thế nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-005",
+    "question": "So sánh xử lý lợi thế thương mại khi mua công ty con với đầu tư liên doanh/liên kết."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-006",
+    "question": "Điều kiện thời hạn ban đầu để khoản đầu tư là tương đương tiền là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-007",
+    "question": "Hàng tồn kho định giá theo nguyên tắc nào, giá gốc dùng phương pháp gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-008",
+    "question": "Có lập dự phòng cho lỗ hoạt động tương lai không; điều kiện cốt lõi để lập dự phòng là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-009",
+    "question": "Vì sao tiền nhận trước không tự động là doanh thu trong kỳ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-010",
+    "question": "Kết quả hợp đồng phần mềm không ước tính đáng tin cậy thì doanh thu được ghi nhận đến mức nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-011",
+    "question": "Phân biệt giá gốc, dự phòng và tính giá trị thuần hàng tồn kho cuối 2025."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-012",
+    "question": "Hai thành phần tiền và tương đương tiền cuối 2025 có giá trị và tổng bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-013",
+    "question": "Dự phòng phải thu ngắn hạn khó đòi cuối 2025/2024 bao nhiêu, quy mô tăng hay giảm?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-014",
+    "question": "Đầu tư nắm giữ đến đáo hạn ngắn hạn 2025 có giá gốc, giá trị ghi sổ và chênh lệch bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-015",
+    "question": "Tiền gửi có kỳ hạn ngắn hạn bằng JPY 2025 có bao nhiêu nguyên tệ, tương đương bao nhiêu VNĐ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-016",
+    "question": "Thuế TNDN hoãn lại trên KQKD 2025 là thu nhập hay chi phí, số bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-017",
+    "question": "Chi phí bán hàng 2025 lớn hơn chi phí quản lý doanh nghiệp bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-018",
+    "question": "EBITDA 2025 và mức tăng so 2024 trong bảng nổi bật là bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-019",
+    "question": "Tổng ngân sách BKS 2025 chưa chi bao nhiêu so với ngân sách trong bảng?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-020",
+    "question": "Bảng ghi CO tại KX01,KX02,KX03 thế nào; có khẳng định chính xác 0 được không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-021",
+    "question": "Tổng Coliforms 2025 tại FPT Tower bao nhiêu, ngưỡng bao nhiêu, chiếm bao nhiêu phần trăm ngưỡng?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-022",
+    "question": "Từ 2023 đến 2025 tiêu thụ nước tăng bao nhiêu m³ và khoảng bao nhiêu phần trăm?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-023",
+    "question": "Nhóm sở hữu từ 1.000.001 cổ phiếu có bao nhiêu cổ đông, nắm tỷ lệ cổ phiếu bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-024",
+    "question": "SCIC đứng thứ mấy Top 10 và nắm bao nhiêu cổ phần?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-025",
+    "question": "EPS 2024 trước và sau điều chỉnh ở thuyết minh 25 bao nhiêu, giảm bao nhiêu VNĐ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-026",
+    "question": "Thặng dư vốn cổ phần cuối 2025 và 2024 có thay đổi không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-027",
+    "question": "Đọc biểu đồ doanh thu 2021–2025: tăng liên tục không và 2025 gấp khoảng mấy lần 2021?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-028",
+    "question": "Cột LNST 2025 tăng tuyệt đối bao nhiêu so 2024?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-029",
+    "question": "LNST cổ đông mẹ từ 2021 đến 2023 tăng bao nhiêu theo biểu đồ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-030",
+    "question": "Biểu đồ EPS có đơn vị gì,2022–2023 tăng bao nhiêu theo số đã hồi tố?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-031",
+    "question": "Trong đường ROE 2021–2025, năm nào đạt đỉnh, mức bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-032",
+    "question": "Đường ROA 2024–2025 thay đổi mấy điểm phần trăm, khác phần trăm tương đối ra sao?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-033",
+    "question": "Cổ tức tiền mặt 2025 cao hơn 2021 bao nhiêu theo biểu đồ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-034",
+    "question": "Đóng góp NSNN tăng bao nhiêu từ 2023 sang 2024 theo biểu đồ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-035",
+    "question": "Donut địa lý ghi tỷ trọng Việt Nam bao nhiêu, nước ngoài còn lại bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-036",
+    "question": "Nhật Bản và châu Mỹ chiếm tỷ trọng bao nhiêu, chênh mấy điểm phần trăm theo donut?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-037",
+    "question": "Theo các nhánh sơ đồ, bốn công ty con Khối Công nghệ là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-038",
+    "question": "Nhánh Khối Giáo dục, Đầu tư và Khác nối với hai công ty con nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-039",
+    "question": "Hai hộp công ty thuộc nhánh Công ty liên kết trong sơ đồ là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-040",
+    "question": "Đọc ô FPT Telecom trên sơ đồ: vốn điều lệ và tỷ lệ sở hữu bao nhiêu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-041",
+    "question": "Sơ đồ Net Zero có mấy bước, đầu và cuối là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-042",
+    "question": "Các biện pháp LED/cảm biến và Liquid Cooling nằm ở bước nào, bước liền trước làm gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-043",
+    "question": "Sau bước xác định vấn đề chính, hai bước tiếp theo trong sơ đồ trọng yếu là gì theo thứ tự?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-044",
+    "question": "Xây dựng ma trận và lựa chọn vấn đề trọng yếu thuộc bước mấy trong sơ đồ?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-045",
+    "question": "Kết hợp trần sở hữu nước ngoài và cơ cấu quốc tịch: còn bao nhiêu điểm phần trăm so trần?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-046",
+    "question": "Tính tiền+tương đương tiền cuối 2025/EBITDA 2025, nêu đổi đơn vị."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-047",
+    "question": "Có thể lấy mục tiêu 10.000 nhân sự bán dẫn 2030 trừ hơn 3.700 sinh viên hiện tại để nói còn thiếu 6.300 không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-048",
+    "question": "Chỉ lấy số CBNV hiến máu chia tổng nhân sự công bố thì tỷ lệ khoảng bao nhiêu, giới hạn gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-049",
+    "question": "Đơn vị FPT Digital trong sơ đồ có tên pháp lý và hoạt động chính gì theo thuyết minh công ty con?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-050",
+    "question": "Mục tiêu Net Zero 2040 cách năm thành lập FPT bao nhiêu năm?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-051",
+    "question": "Đối chiếu sơ đồ Net Zero và kết quả điện: một ưu tiên cho trung tâm dữ liệu là gì, tổng điện 2025 đổi thế nào, có quy hết cho ưu tiên đó không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-052",
+    "question": "Vì sao quản trị dữ liệu không kết thúc sau huấn luyện nếu đối chiếu dịch vụ AI Factory và chính sách chất lượng dữ liệu?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-053",
+    "question": "ALC trong xây dựng dở dang là gì, số 2025 bao nhiêu, liên hệ nhóm dịch vụ Viễn thông nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-054",
+    "question": "Tỷ lệ đào tạo AI nền tảng và hoàn thành mô phỏng phishing 2025 bao nhiêu, có phải cùng chỉ tiêu không?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-055",
+    "question": "Đối chiếu quy mô và ESG, người nước ngoài chiếm khoảng bao nhiêu tổng nhân sự?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-056",
+    "question": "xMainframe giải quyết công việc gì, còn mục tiêu làm chủ chuỗi giá trị AI bao gồm những lớp nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-057",
+    "question": "Lịch kiểm tra suy giảm lợi thế thương mại theo từng tháng và từng đơn vị tạo tiền năm 2026 là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-058",
+    "question": "Liệt kê chi phí dự toán còn lại cho từng hợp đồng phần mềm chưa thể ước tính đáng tin cậy."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-059",
+    "question": "Khoản tiền gửi JPY 6 tỷ được chia cho từng ngân hàng đối tác theo số tài khoản nào?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-060",
+    "question": "Từ giá trị tồn kho cuối năm 2025, xuất số lượng và đơn giá của từng SKU còn lại."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-061",
+    "question": "Dự phòng phải thu cuối năm 2025 tương ứng bao nhiêu cho từng hóa đơn của từng khách hàng?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-062",
+    "question": "Khoản thù lao Ban kiểm soát thực chi có số chứng từ chuyển khoản nào cho từng lần thanh toán?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-063",
+    "question": "Từ biểu đồ doanh thu 2021–2025, xác định doanh thu năm 2020 chính xác tới VNĐ mà không dùng nguồn khác."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-064",
+    "question": "Cho biết ROE từng quý trong năm 2025 từ biểu đồ ROE theo năm."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-065",
+    "question": "Từ biểu đồ thị trường, tính doanh thu riêng từng thành phố của Nhật Bản năm 2025."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-066",
+    "question": "Sơ đồ cơ cấu cho biết ai là quản lý trực tiếp của từng kỹ sư FPT Software không? Hãy liệt kê danh sách."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-067",
+    "question": "Trong sơ đồ Net Zero, ngày bắt đầu và kết thúc cụ thể của từng dự án thuộc từng giai đoạn là gì?"
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-068",
+    "question": "Ghép danh sách nhân sự với hoạt động hiến máu để nêu số đơn vị máu của từng nhân viên tham gia."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-069",
+    "question": "Từ tỷ lệ nữ và tổng số nhân sự nước ngoài, tính chính xác số nữ người nước ngoài giữ chức quản lý."
+  },
+  {
+    "id": "FPT-ADVANCED-DEV-070",
+    "question": "Tính phần doanh thu giáo dục tăng thêm năm 2025 chỉ do việc triển khai lớp học AI gây ra."
+  }
+]

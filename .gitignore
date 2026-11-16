@@ -9,3 +9,8 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+.DS_Store
+
+# Source PDFs: public annual reports, but redistribution is not granted (see benchmark/fpt_2025/source.json).
+# Reproduce by downloading from the official page and checking the sha256 recorded there.
+pdf/

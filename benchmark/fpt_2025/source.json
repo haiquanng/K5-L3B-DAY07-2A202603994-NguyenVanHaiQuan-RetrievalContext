@@ -1,0 +1,12 @@
+{
+  "source_id": "fpt-ar2025-9449a725",
+  "title": "FPT – Báo cáo thường niên 2025",
+  "path": "pdf/BCTN_2025_ad403f779b.pdf",
+  "sha256": "9449a7251d126b635988974dbc72c2773c7fff39f4e5e858b5f7d3928b4e0e6c",
+  "physical_pages": 232,
+  "provenance": "Tệp do người dùng cung cấp trong workspace; không khẳng định hash này được tải từ website.",
+  "official_reference": "https://fpt.com/vi/nha-dau-tu/bao-cao-thuong-nien",
+  "rights": "Dùng bản local cho lab; public access không tự động cho phép tái phân phối PDF.",
+  "coordinates": "PDF points, origin top-left; bbox là vùng điều hướng, locator xác định ô/nhánh cần đọc.",
+  "page_numbering": "pdf_page bắt đầu từ 1; trang in = pdf_page - 1 cho trang PDF 2–231; bìa không có số in."
+}

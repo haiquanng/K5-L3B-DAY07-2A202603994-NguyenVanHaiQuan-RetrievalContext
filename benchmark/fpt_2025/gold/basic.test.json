@@ -1,0 +1,2824 @@
+[
+  {
+    "id": "FPT-BASIC-TEST-001",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "ai-survival",
+    "question": "Ba bài toán sống còn trong kỷ nguyên AI theo thông điệp Chủ tịch là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Thời gian; chi phí; năng suất lao động.",
+    "required_facts": [
+      "Thời gian",
+      "chi phí",
+      "năng suất lao động."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-001:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-001:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 4,
+        "printed_page": "03",
+        "locator": "Ba yếu tố sống còn",
+        "quotes": [
+          "thời gian, chi phí và năng suất lao động"
+        ],
+        "bbox_pt": [
+          411.75,
+          63.59,
+          612.21,
+          101.78
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-002",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "ai-native-role",
+    "question": "Trong mô hình AI-Native được Chủ tịch mô tả, AI giữ vai trò gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nền tảng vận hành cốt lõi của tổ chức.",
+    "required_facts": [
+      "Nền tảng vận hành cốt lõi của tổ chức."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-002:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-002:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 4,
+        "printed_page": "03",
+        "locator": "Kết luận về AI-Native",
+        "quotes": [
+          "nền tảng vận hành cốt lõi"
+        ],
+        "bbox_pt": [
+          399.17,
+          435.67,
+          535.9,
+          473.54
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-003",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "follow-the-sun",
+    "question": "Hiện diện mọi múi giờ giúp FPT triển khai mô hình làm việc nào, lợi ích gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Follow the sun, phối hợp liên tục 24/24; rút ngắn thời gian phát triển và triển khai dự án.",
+    "required_facts": [
+      "Follow the sun, phối hợp liên tục 24/24",
+      "rút ngắn thời gian phát triển và triển khai dự án."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-003:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-003:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 5,
+        "printed_page": "04",
+        "locator": "Lợi thế toàn cầu",
+        "quotes": [
+          "24/24",
+          "follow"
+        ],
+        "bbox_pt": [
+          486.05,
+          37.13,
+          635.21,
+          75.0
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-004",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "aisteering-five",
+    "question": "Nêu năm đơn vị thuộc Ban Chỉ đạo Công nghệ chiến lược.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Viện Quantum AI và Cybersecurity; FPT UAV; Công nghệ Đường sắt FPT; FPT Cybersecurity; DC5.",
+    "required_facts": [
+      "Viện Quantum AI và Cybersecurity",
+      "FPT UAV",
+      "Công nghệ Đường sắt FPT",
+      "FPT Cybersecurity",
+      "DC5."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-004:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-004:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 14,
+        "printed_page": "13",
+        "locator": "Ban Chỉ đạo Công nghệ chiến lược",
+        "quotes": [
+          "05",
+          "DC5"
+        ],
+        "bbox_pt": [
+          13.47,
+          265.96,
+          504.69,
+          474.51
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-005",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "au-lac-language",
+    "question": "LLM của Liên minh AI Âu Lạc đặt ra yêu cầu gì với tiếng Việt?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Xử lý tiếng Việt chính xác, tự nhiên, phù hợp văn hóa và bản sắc Việt Nam.",
+    "required_facts": [
+      "Xử lý tiếng Việt chính xác, tự nhiên, phù hợp văn hóa và bản sắc Việt Nam."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-005:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-005:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 16,
+        "printed_page": "15",
+        "locator": "Liên minh AI Âu Lạc",
+        "quotes": [
+          "xử lý tiếng Việt chính xác, tự nhiên"
+        ],
+        "bbox_pt": [
+          848.55,
+          124.82,
+          1025.56,
+          162.69
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-006",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "chip-export",
+    "question": "Lô chip nguồn đầu tiên trong hoạt động nổi bật được xuất sang thị trường nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nhật Bản.",
+    "required_facts": [
+      "Nhật Bản."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-006:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-006:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 17,
+        "printed_page": "16",
+        "locator": "Xuất khẩu lô chip nguồn",
+        "quotes": [
+          "Xuất khẩu lô chip nguồn đầu tiên",
+          "Nhật Bản"
+        ],
+        "bbox_pt": [
+          508.71,
+          23.64,
+          769.35,
+          177.3
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-007",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "au-lac-prize",
+    "question": "Âu Lạc Grand Prize dự kiến trao bao nhiêu năm, bắt đầu khi nào, tiền thưởng bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "03 năm liên tiếp; từ 2026; 01 triệu USD.",
+    "required_facts": [
+      "03 năm liên tiếp",
+      "từ 2026",
+      "01 triệu USD."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-007:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-007:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 17,
+        "printed_page": "16",
+        "locator": "Giải thưởng AI",
+        "quotes": [
+          "03 năm liên tiếp",
+          "bắt đầu từ năm 2026",
+          "01 triệu USD"
+        ],
+        "bbox_pt": [
+          770.53,
+          284.9,
+          1029.84,
+          448.9
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-008",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "energy-contract",
+    "question": "Hợp đồng AI với tập đoàn năng lượng châu Á có giá trị và thời hạn bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "256 triệu USD; 05 năm.",
+    "required_facts": [
+      "256 triệu USD",
+      "05 năm."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-008:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-008:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 18,
+        "printed_page": "17",
+        "locator": "Hợp đồng năng lượng tích hợp AI",
+        "quotes": [
+          "05 năm với giá trị 256 triệu USD"
+        ],
+        "bbox_pt": [
+          695.85,
+          136.82,
+          866.48,
+          174.69
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-009",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "navisoft-purpose",
+    "question": "FPT đầu tư Navisoft nhằm giải bài toán cho các lĩnh vực nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Chứng khoán, tài chính-ngân hàng, kinh tế số tại Việt Nam và quốc tế.",
+    "required_facts": [
+      "Chứng khoán, tài chính-ngân hàng, kinh tế số tại Việt Nam và quốc tế."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-009:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-009:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 19,
+        "printed_page": "18",
+        "locator": "Đầu tư Navisoft",
+        "quotes": [
+          "Navisoft",
+          "chứng khoán, tài chính-ngân hàng, kinh tế số"
+        ],
+        "bbox_pt": [
+          249.88,
+          205.17,
+          505.01,
+          406.54
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-010",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "xmainframe-reverse",
+    "question": "xMainframe tái dựng logic bằng kỹ thuật nào, nhận diện điều gì giữa các ứng dụng?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Reverse engineering/kỹ thuật đảo ngược; quan hệ phụ thuộc giữa các ứng dụng.",
+    "required_facts": [
+      "Reverse engineering/kỹ thuật đảo ngược",
+      "quan hệ phụ thuộc giữa các ứng dụng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-010:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-010:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 20,
+        "printed_page": "19",
+        "locator": "Mô tả xMainframe",
+        "quotes": [
+          "Reverse engineering",
+          "phụ thuộc giữa các ứng dụng"
+        ],
+        "bbox_pt": [
+          509.21,
+          213.29,
+          678.82,
+          263.16
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-011",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "isuite-claim",
+    "question": "Mô-đun iSuite nào xử lý bồi thường và phát hiện gian lận bằng AI?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "AI Claim.",
+    "required_facts": [
+      "AI Claim."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-011:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-011:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 21,
+        "printed_page": "20",
+        "locator": "Danh sách mô-đun iSuite",
+        "quotes": [
+          "AI Claim",
+          "phát hiện gian lận"
+        ],
+        "bbox_pt": [
+          450.73,
+          227.49,
+          821.91,
+          424.52
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-012",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "pricing-change",
+    "question": "AI gây áp lực lên Time & Material thế nào, hai mô hình thay thế được nêu là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "AI giảm số giờ công; định giá theo kết quả đầu ra hoặc thuê bao.",
+    "required_facts": [
+      "AI giảm số giờ công",
+      "định giá theo kết quả đầu ra hoặc thuê bao."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-012:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-012:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 47,
+        "printed_page": "46",
+        "locator": "Rủi ro mô hình định giá CNTT",
+        "quotes": [
+          "Time &",
+          "outcome-based",
+          "subscription"
+        ],
+        "bbox_pt": [
+          682.45,
+          147.01,
+          1027.39,
+          244.88
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-013",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "quantum-goals",
+    "question": "Mục tiêu Viện Quantum AI & Cybersecurity về tiến sĩ, chuyên gia và công trình là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "100 tiến sĩ; 2.000 chuyên gia; 500 công trình khoa học, bằng sáng chế và tài sản sở hữu trí tuệ có giá trị.",
+    "required_facts": [
+      "100 tiến sĩ",
+      "2.000 chuyên gia",
+      "500 công trình khoa học, bằng sáng chế và tài sản sở hữu trí tuệ có giá trị."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-013:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-013:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 52,
+        "printed_page": "51",
+        "locator": "Mục tiêu công nghệ lượng tử 2026–2030",
+        "quotes": [
+          "100 tiến sĩ",
+          "2.000",
+          "500"
+        ],
+        "bbox_pt": [
+          276.73,
+          279.52,
+          588.25,
+          532.91
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-014",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "semiconductor-goal",
+    "question": "FPT đặt mục tiêu đào tạo bao nhiêu nhân sự bán dẫn vào 2030?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "10.000 nhân sự chuyên ngành bán dẫn.",
+    "required_facts": [
+      "10.000 nhân sự chuyên ngành bán dẫn."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-014:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-014:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 52,
+        "printed_page": "51",
+        "locator": "Chip và thiết kế sản phẩm",
+        "quotes": [
+          "10.000 nhân sự chuyên ngành bán dẫn"
+        ],
+        "bbox_pt": [
+          806.3,
+          94.36,
+          1007.96,
+          132.23
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-015",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "independent-board",
+    "question": "Ba thành viên HĐQT độc lập trong báo cáo quản trị là ai?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Jean-Charles Belliol; Hiroshi Yokotsuka; Hampapur Rangadore Binod.",
+    "required_facts": [
+      "Jean-Charles Belliol",
+      "Hiroshi Yokotsuka",
+      "Hampapur Rangadore Binod."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-015:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-015:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 89,
+        "printed_page": "88",
+        "locator": "Nguyên tắc 03: HĐQT độc lập",
+        "quotes": [
+          "Jean-Charles Belliol",
+          "Hiroshi",
+          "Hampapur Rangadore Binod"
+        ],
+        "bbox_pt": [
+          276.62,
+          83.25,
+          635.34,
+          417.36
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-016",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "board-separation",
+    "question": "FPT tách vai trò Chủ tịch HĐQT và TGĐ từ năm nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "2013.",
+    "required_facts": [
+      "2013."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-016:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-016:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 89,
+        "printed_page": "88",
+        "locator": "Nguyên tắc 03: phân chia trách nhiệm",
+        "quotes": [
+          "Từ năm 2013"
+        ],
+        "bbox_pt": [
+          246.9,
+          450.25,
+          328.95,
+          488.12
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-017",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "materiality-four",
+    "question": "Bốn vấn đề trọng yếu ESG được lựa chọn là gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Quản trị phát triển bền vững; nơi làm việc đẳng cấp, hạnh phúc; môi trường xanh; phát triển cộng đồng.",
+    "required_facts": [
+      "Quản trị phát triển bền vững",
+      "nơi làm việc đẳng cấp, hạnh phúc",
+      "môi trường xanh",
+      "phát triển cộng đồng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-017:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-017:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 125,
+        "printed_page": "124",
+        "locator": "Kết luận lựa chọn vấn đề trọng yếu",
+        "quotes": [
+          "04 vấn đề trọng yếu"
+        ],
+        "bbox_pt": [
+          664.5,
+          499.76,
+          777.5,
+          537.63
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-018",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "innovation-start",
+    "question": "iKhiến tổ chức thường niên từ năm nào, bao phủ ba nhóm sáng kiến nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Từ 2017; cải thiện sản phẩm/giải pháp/dịch vụ; cải tiến quy trình/phương tiện/công cụ; gắn kết nhân viên và văn hóa.",
+    "required_facts": [
+      "Từ 2017",
+      "cải thiện sản phẩm/giải pháp/dịch vụ",
+      "cải tiến quy trình/phương tiện/công cụ",
+      "gắn kết nhân viên và văn hóa."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-018:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-018:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 140,
+        "printed_page": "139",
+        "locator": "Văn hóa sáng tạo",
+        "quotes": [
+          "từ năm 2017",
+          "ba nhóm"
+        ],
+        "bbox_pt": [
+          318.13,
+          168.67,
+          520.55,
+          242.54
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-019",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "renewable-led-targets",
+    "question": "Đến 2026, tỷ lệ điện tái tạo và chiếu sáng LED mục tiêu là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Điện tái tạo 2,5%; 100% chiếu sáng LED.",
+    "required_facts": [
+      "Điện tái tạo 2,5%",
+      "100% chiếu sáng LED."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-019:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-019:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 144,
+        "printed_page": "143",
+        "locator": "Chính sách môi trường: mục tiêu 2026",
+        "quotes": [
+          "2,5%",
+          "100% hệ thống chiếu sáng"
+        ],
+        "bbox_pt": [
+          640.09,
+          185.26,
+          1026.65,
+          223.13
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-020",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "water-monitor-cycles",
+    "question": "Quan trắc nước sinh hoạt và nước thải theo chu kỳ nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nước sinh hoạt 1 tháng/lần; nước thải 3 tháng/lần.",
+    "required_facts": [
+      "Nước sinh hoạt 1 tháng/lần",
+      "nước thải 3 tháng/lần."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-020:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-020:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 149,
+        "printed_page": "148",
+        "locator": "Biện pháp quản lý nước",
+        "quotes": [
+          "1 tháng/lần",
+          "3 tháng/lần"
+        ],
+        "bbox_pt": [
+          851.94,
+          338.78,
+          1027.56,
+          376.65
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-021",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "waste-three-r",
+    "question": "Nguyên tắc 3R trong quản lý chất thải gồm những gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Giảm thiểu (Reduce); Tái sử dụng (Reuse); Tái chế (Recycle).",
+    "required_facts": [
+      "Giảm thiểu (Reduce)",
+      "Tái sử dụng (Reuse)",
+      "Tái chế (Recycle)."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-021:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-021:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 150,
+        "printed_page": "149",
+        "locator": "Quản lý chất thải",
+        "quotes": [
+          "3R",
+          "Reduce",
+          "Reuse",
+          "Recycle"
+        ],
+        "bbox_pt": [
+          643.74,
+          50.21,
+          969.26,
+          100.08
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-022",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "community-day",
+    "question": "Ngày FPT Vì Cộng đồng là ngày nào, Quỹ Người FPT Vì Cộng đồng ra đời năm nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "13/3; Quỹ ra đời năm 2014.",
+    "required_facts": [
+      "13/3",
+      "Quỹ ra đời năm 2014."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-022:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-022:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 154,
+        "printed_page": "153",
+        "locator": "Ngày FPT Vì Cộng đồng",
+        "quotes": [
+          "13/3",
+          "năm 2014"
+        ],
+        "bbox_pt": [
+          401.63,
+          315.79,
+          527.3,
+          377.66
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-023",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "hope-school",
+    "question": "Trường Hy Vọng hoàn thành năm 2025 có diện tích và quy mô học sinh thế nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "6.500 m²; hơn 300 học sinh thuộc 13 dân tộc.",
+    "required_facts": [
+      "6.500 m²",
+      "hơn 300 học sinh thuộc 13 dân tộc."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-023:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-023:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 156,
+        "printed_page": "155",
+        "locator": "Trường Hy Vọng",
+        "quotes": [
+          "6.500 m²",
+          "300 học sinh thuộc 13 dân tộc"
+        ],
+        "bbox_pt": [
+          265.36,
+          340.82,
+          416.75,
+          390.69
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-024",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "subsequent-event",
+    "question": "Sự kiện được phê duyệt 27/01/2026 sau ngày báo cáo là gì, vốn ban đầu bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Công ty TNHH Hạ tầng Công nghệ số FPT; vốn điều lệ góp lần đầu 1.000 tỷ đồng.",
+    "required_facts": [
+      "Công ty TNHH Hạ tầng Công nghệ số FPT",
+      "vốn điều lệ góp lần đầu 1.000 tỷ đồng."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-024:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-024:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 217,
+        "printed_page": "216",
+        "locator": "Thuyết minh 39",
+        "quotes": [
+          "27/01/2026",
+          "Công ty TNHH Hạ tầng",
+          "1.000 tỷ đồng"
+        ],
+        "bbox_pt": [
+          639.99,
+          173.92,
+          1028.3,
+          235.79
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "text"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-025",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "stock-high-low",
+    "question": "Giá cao nhất và thấp nhất cổ phiếu FPT năm 2025 trong bảng là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "131.708 và 86.104 VNĐ/cổ phiếu.",
+    "required_facts": [
+      "131.708 và 86.104 VNĐ/cổ phiếu."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-025:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-025:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 36,
+        "printed_page": "35",
+        "locator": "Thống kê giá: cao nhất/thấp nhất",
+        "quotes": [
+          "131.708",
+          "86.104"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-026",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "stock-volume",
+    "question": "Khối lượng giao dịch ngày nhiều nhất và ít nhất 2025 là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "23.514.300 và 1.005.400 cổ phiếu.",
+    "required_facts": [
+      "23.514.300 và 1.005.400 cổ phiếu."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-026:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-026:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 36,
+        "printed_page": "35",
+        "locator": "Thống kê giao dịch: nhiều nhất/ít nhất",
+        "quotes": [
+          "23.514.300",
+          "1.005.400"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-027",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "liquidity-reported",
+    "question": "Hệ số thanh toán ngắn hạn và nhanh 2025 lần lượt là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1,40 lần và 1,35 lần.",
+    "required_facts": [
+      "1,40 lần và 1,35 lần."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-027:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-027:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 58,
+        "printed_page": "57",
+        "locator": "Chỉ tiêu khả năng thanh toán",
+        "quotes": [
+          "1,40 lần và 1,35 lần"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-028",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "learning-hours-target",
+    "question": "Theo bảng ESG, giờ học trung bình thực đạt 2025 và cam kết 2026 bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "151 giờ/CBNV/năm thực tế 2025; cam kết 2026 là 162 giờ/CBNV/năm.",
+    "required_facts": [
+      "151 giờ/CBNV/năm thực tế 2025",
+      "cam kết 2026 là 162 giờ/CBNV/năm."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-028:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-028:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 115,
+        "printed_page": "114",
+        "locator": "ESG: học tập suốt đời, cột kết quả 2025/cam kết 2026",
+        "quotes": [
+          "151",
+          "162",
+          "số giờ học trung bình"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-029",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "longterm-assets",
+    "question": "Tài sản dài hạn tại 31/12/2025 và 31/12/2024 là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "30.004.553.379.717 và 26.464.052.832.167 VNĐ.",
+    "required_facts": [
+      "30.004.553.379.717 và 26.464.052.832.167 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-029:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-029:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 166,
+        "printed_page": "165",
+        "locator": "BCĐKT mã 200, cột 2025/2024",
+        "quotes": [
+          "TÀI SẢN DÀI HẠN",
+          "30.004.553.379.717",
+          "26.464.052.832.167"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-030",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "liabilities-total",
+    "question": "Phân biệt tổng nợ phải trả với nợ ngắn hạn cuối 2025: mỗi số bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Tổng nợ phải trả 44.393.950.887.086 VNĐ; nợ ngắn hạn 41.524.928.721.230 VNĐ.",
+    "required_facts": [
+      "Tổng nợ phải trả 44.393.950.887.086 VNĐ",
+      "nợ ngắn hạn 41.524.928.721.230 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-030:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-030:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "BCĐKT mã 300/310,2025",
+        "quotes": [
+          "NỢ PHẢI TRẢ",
+          "44.393.950.887.086",
+          "41.524.928.721.230"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-031",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "unearned-education",
+    "question": "Doanh thu chưa thực hiện ngắn hạn giáo dục cuối 2025 bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.992.198.592.236 VNĐ.",
+    "required_facts": [
+      "1.992.198.592.236 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-031:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-031:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 201,
+        "printed_page": "200",
+        "locator": "Thuyết minh 20(a): giáo dục,2025",
+        "quotes": [
+          "Dịch vụ giáo dục",
+          "1.992.198.592.236"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-032",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "capital-commitment",
+    "question": "Cam kết vốn chưa hạch toán cuối 2025 theo thuyết minh 36 bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.788.310.602.983 VNĐ.",
+    "required_facts": [
+      "1.788.310.602.983 VNĐ."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-032:E1"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-032:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 216,
+        "printed_page": "215",
+        "locator": "Thuyết minh 36(b): cam kết vốn,2025",
+        "quotes": [
+          "Cam kết vốn",
+          "1.788.310.602.983"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "table"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-033",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "semiconductor-milestone",
+    "question": "FPT Semiconductor ra đời năm nào, đến xuất khẩu lô chip Nhật năm 2025 là mấy năm?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Năm 2022; chênh 3 năm tới 2025.",
+    "required_facts": [
+      "Năm 2022",
+      "chênh 3 năm tới 2025."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-033:E1",
+          "FPT-BASIC-TEST-033:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-033:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 30,
+        "printed_page": "29",
+        "locator": "Mốc 2022",
+        "quotes": [
+          "2022",
+          "Thành lập công ty FPT Semiconductor"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-033:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 17,
+        "printed_page": "16",
+        "locator": "Xuất khẩu chip trong 2025",
+        "quotes": [
+          "Xuất khẩu lô chip nguồn đầu tiên"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-034",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "cloud-quantum-ratio",
+    "question": "So sánh mục tiêu kỹ sư Cloud và tiến sĩ QACI: số lượng và tỷ lệ là bao nhiêu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "1.500 kỹ sư Cloud; 100 tiến sĩ; tỷ lệ 15 lần, hai nhóm trình độ khác nhau.",
+    "required_facts": [
+      "1.500 kỹ sư Cloud",
+      "100 tiến sĩ",
+      "tỷ lệ 15 lần, hai nhóm trình độ khác nhau."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-034:E1",
+          "FPT-BASIC-TEST-034:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-034:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 4,
+        "printed_page": "03",
+        "locator": "Nhân lực Cloud",
+        "quotes": [
+          "1.500 kỹ sư Cloud"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-034:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 52,
+        "printed_page": "51",
+        "locator": "Mục tiêu lượng tử",
+        "quotes": [
+          "100 tiến sĩ"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-035",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "ai-education-language",
+    "question": "Liên minh AI Âu Lạc yêu cầu gì về văn hóa ngôn ngữ, và lớp học AI theo thông điệp Chủ tịch đổi vai trò người học ra sao?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "LLM phù hợp văn hóa và bản sắc Việt Nam; người học tiếp cận kiến thức trước, dùng giờ trên lớp giải bài toán thực tế.",
+    "required_facts": [
+      "LLM phù hợp văn hóa và bản sắc Việt Nam",
+      "người học tiếp cận kiến thức trước, dùng giờ trên lớp giải bài toán thực tế."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-035:E1",
+          "FPT-BASIC-TEST-035:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-035:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 16,
+        "printed_page": "15",
+        "locator": "Liên minh AI Âu Lạc",
+        "quotes": [
+          "phù hợp với văn hóa và bản sắc Việt Nam"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-035:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 5,
+        "printed_page": "04",
+        "locator": "Lớp học đảo ngược",
+        "quotes": [
+          "chủ động tiếp cận trước kiến"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-036",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "csr-funding-partner",
+    "question": "Nêu đóng góp CBNV 2025 qua quỹ nội bộ và một ví dụ hợp tác NGO về bếp sạch.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Đóng góp CBNV25,6 tỷ đồng; hợp tác World Vision triển khai Bếp Xanh – Sống Lành tại Sín Chải, Điện Biên.",
+    "required_facts": [
+      "Đóng góp CBNV25,6 tỷ đồng",
+      "hợp tác World Vision triển khai Bếp Xanh – Sống Lành tại Sín Chải, Điện Biên."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-036:E1",
+          "FPT-BASIC-TEST-036:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-036:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 154,
+        "printed_page": "153",
+        "locator": "Quỹ Người FPT",
+        "quotes": [
+          "25,6 tỷ đồng"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-036:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 158,
+        "printed_page": "157",
+        "locator": "Bếp Xanh – Sống Lành",
+        "quotes": [
+          "World Vision",
+          "xã Sín Chải"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-037",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "asset-noncurrent-ratio",
+    "question": "Từ tổng tài sản và tài sản ngắn hạn, tính tỷ trọng tài sản dài hạn cuối 2025.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Khoảng 34,04%; (88.141.991.634.625−58.137.438.254.908)/88.141.991.634.625× 100.",
+    "required_facts": [
+      "Khoảng 34,04%",
+      "(88.141.991.634.625−58.137.438.254.908)/88.141.991.634.625× 100."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-037:E1",
+          "FPT-BASIC-TEST-037:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-037:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 166,
+        "printed_page": "165",
+        "locator": "Tổng tài sản mã 270",
+        "quotes": [
+          "88.141.991.634.625"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-037:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 165,
+        "printed_page": "164",
+        "locator": "Tài sản ngắn hạn mã 100",
+        "quotes": [
+          "58.137.438.254.908"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-038",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "liabilities-not-borrowings",
+    "question": "Tính tổng nợ phải trả/tổng tài sản 2025; có đồng nhất với Nợ/Tổng tài sản 23,9% không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Khoảng 50,37%; không, tổng nợ phải trả khác chỉ tiêu nợ vay của tỷ lệ 23,9%.",
+    "required_facts": [
+      "Khoảng 50,37%",
+      "không, tổng nợ phải trả khác chỉ tiêu nợ vay của tỷ lệ 23,9%."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-038:E1",
+          "FPT-BASIC-TEST-038:E2",
+          "FPT-BASIC-TEST-038:E3"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-038:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 167,
+        "printed_page": "166",
+        "locator": "Tổng nợ phải trả",
+        "quotes": [
+          "44.393.950.887.086"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-038:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 166,
+        "printed_page": "165",
+        "locator": "Tổng tài sản",
+        "quotes": [
+          "88.141.991.634.625"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-038:E3",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 59,
+        "printed_page": "58",
+        "locator": "Cơ cấu vốn",
+        "quotes": [
+          "23,9%"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-039",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "uav-policy-goal",
+    "question": "Liên minh Kinh tế tầm thấp hợp tác hiệp hội Nhật nào, mục tiêu UAV 2028 gồm khâu quản lý gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "JUIDA; thử nghiệm quản lý bay, đăng kiểm, cấp phép, giám sát để vận hành UAV an toàn quy mô hệ thống.",
+    "required_facts": [
+      "JUIDA",
+      "thử nghiệm quản lý bay, đăng kiểm, cấp phép, giám sát để vận hành UAV an toàn quy mô hệ thống."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-039:E1",
+          "FPT-BASIC-TEST-039:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-039:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 14,
+        "printed_page": "13",
+        "locator": "Liên minh Kinh tế tầm thấp",
+        "quotes": [
+          "JUIDA"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-039:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 52,
+        "printed_page": "51",
+        "locator": "Mục tiêu UAV2028",
+        "quotes": [
+          "quản lý bay, đăng kiểm, cấp phép, giám sát"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-040",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "subsequent-versus-cutoff",
+    "question": "Vì sao không hồi gán công ty Hạ tầng Công nghệ số theo nghị quyết 27/01/2026 vào số công ty con chốt 31/12/2025?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Ngày nghị quyết sau ngày chốt; đó là sự kiện sau báo cáo, không phải căn cứ thêm pháp nhân thành lập sau kỳ vào cuối 2025.",
+    "required_facts": [
+      "Ngày nghị quyết sau ngày chốt",
+      "đó là sự kiện sau báo cáo, không phải căn cứ thêm pháp nhân thành lập sau kỳ vào cuối 2025."
+    ],
+    "evidence_groups": [
+      {
+        "all_of": [
+          "FPT-BASIC-TEST-040:E1",
+          "FPT-BASIC-TEST-040:E2"
+        ]
+      }
+    ],
+    "gold": [
+      {
+        "id": "FPT-BASIC-TEST-040:E1",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 217,
+        "printed_page": "216",
+        "locator": "Thuyết minh 39",
+        "quotes": [
+          "27/01/2026",
+          "Các sự kiện phát sinh sau"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      },
+      {
+        "id": "FPT-BASIC-TEST-040:E2",
+        "source_id": "fpt-ar2025-9449a725",
+        "pdf_page": 31,
+        "printed_page": "30",
+        "locator": "Cơ cấu chốt cuối 2025",
+        "quotes": [
+          "31/12/2025",
+          "08 công"
+        ],
+        "bbox_pt": [
+          220,
+          30,
+          1050,
+          575
+        ],
+        "verification": "text_anchor_checked"
+      }
+    ],
+    "tags": [
+      "multi_hop"
+    ],
+    "grading": {
+      "require_all_facts": true,
+      "require_supported_citations": true,
+      "allow_equivalent_wording": true,
+      "require_units_and_period": true
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-041",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-chip-design-file",
+    "question": "Báo cáo cung cấp ở trang nào toàn bộ bản vẽ mạch transistor của chip FPT xuất khẩu năm 2025?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định bản vẽ transistor đầy đủ của chip xuất khẩu.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "bản vẽ transistor đầy đủ của chip xuất khẩu",
+      "related_pdf_pages": [
+        17
+      ],
+      "full_document_search_terms": [
+        "chip",
+        "transistor"
+      ],
+      "search_hits": {
+        "chip": [
+          17,
+          25,
+          30,
+          48,
+          52,
+          54,
+          68,
+          132,
+          138
+        ],
+        "transistor": []
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-042",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-au-lac-weights",
+    "question": "Trọng số đầy đủ và checksum của mô hình ngôn ngữ do Liên minh AI Âu Lạc phát triển là gì?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định tệp trọng số và checksum mô hình Âu Lạc.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "tệp trọng số và checksum mô hình Âu Lạc",
+      "related_pdf_pages": [
+        16,
+        17
+      ],
+      "full_document_search_terms": [
+        "Âu Lạc",
+        "checksum"
+      ],
+      "search_hits": {
+        "Âu Lạc": [
+          16,
+          17,
+          18,
+          37,
+          74,
+          77,
+          122,
+          123,
+          142
+        ],
+        "checksum": []
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-043",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-energy-customer",
+    "question": "Hãy nêu tên pháp nhân khách hàng Mỹ của hợp đồng năng lượng 256 triệu USD, chỉ dựa trên báo cáo.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định tên pháp nhân khách hàng năng lượng Mỹ được mô tả ẩn danh.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "tên pháp nhân khách hàng năng lượng Mỹ được mô tả ẩn danh",
+      "related_pdf_pages": [
+        18
+      ],
+      "full_document_search_terms": [
+        "256",
+        "khách hàng"
+      ],
+      "search_hits": {
+        "256": [
+          18,
+          30,
+          62,
+          77,
+          123,
+          165,
+          169,
+          172,
+          192,
+          193,
+          194,
+          200
+        ],
+        "khách hàng": [
+          3,
+          4,
+          5,
+          6,
+          8,
+          20,
+          21,
+          24,
+          25,
+          26,
+          41,
+          42,
+          47,
+          50,
+          51,
+          58,
+          61,
+          62,
+          63,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          75,
+          99,
+          110,
+          116,
+          120,
+          125,
+          127,
+          129,
+          130,
+          132,
+          133,
+          135,
+          140,
+          143,
+          165,
+          179,
+          181,
+          182,
+          186,
+          188,
+          192,
+          200,
+          216,
+          217
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-044",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-navisoft-customer-password",
+    "question": "Mật khẩu đăng nhập hệ thống chứng khoán Navisoft của khách hàng được công bố là gì?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định mật khẩu đăng nhập khách hàng Navisoft.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "mật khẩu đăng nhập khách hàng Navisoft",
+      "related_pdf_pages": [
+        19
+      ],
+      "full_document_search_terms": [
+        "Navisoft",
+        "mật khẩu"
+      ],
+      "search_hits": {
+        "Navisoft": [
+          19
+        ],
+        "mật khẩu": []
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-045",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-hope-2026-graduation",
+    "question": "Đến hết năm 2026 có chính xác bao nhiêu học sinh Trường Hy Vọng tốt nghiệp?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định kết quả tốt nghiệp thực tế cả năm 2026.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "kết quả tốt nghiệp thực tế cả năm 2026",
+      "related_pdf_pages": [
+        156
+      ],
+      "full_document_search_terms": [
+        "Hy Vọng",
+        "tốt nghiệp"
+      ],
+      "search_hits": {
+        "Hy Vọng": [
+          13,
+          111,
+          119,
+          124,
+          156,
+          157
+        ],
+        "tốt nghiệp": [
+          44,
+          138
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-046",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "text",
+    "fact_key": "abs-board-votes-individual",
+    "question": "Từng thành viên HĐQT đã bỏ phiếu kín thế nào cho từng nghị quyết năm 2025?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định lá phiếu kín của từng cá nhân cho từng nghị quyết.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "text"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "lá phiếu kín của từng cá nhân cho từng nghị quyết",
+      "related_pdf_pages": [
+        89,
+        90,
+        91
+      ],
+      "full_document_search_terms": [
+        "bỏ phiếu",
+        "nghị quyết"
+      ],
+      "search_hits": {
+        "bỏ phiếu": [
+          92
+        ],
+        "nghị quyết": [
+          6,
+          7,
+          14,
+          15,
+          16,
+          19,
+          25,
+          37,
+          49,
+          51,
+          53,
+          57,
+          67,
+          68,
+          74,
+          77,
+          78,
+          80,
+          82,
+          83,
+          84,
+          85,
+          90,
+          91,
+          92,
+          94,
+          95,
+          96,
+          97,
+          99,
+          100,
+          101,
+          102,
+          104,
+          106,
+          107,
+          108,
+          123,
+          133,
+          187,
+          207,
+          217
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-047",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-intraday-price",
+    "question": "Giá FPT lúc 10:17:23 ngày 15/09/2025 là bao nhiêu VNĐ/cổ phiếu?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định giá giao dịch theo giây vào thời điểm chỉ định.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "giá giao dịch theo giây vào thời điểm chỉ định",
+      "related_pdf_pages": [
+        36
+      ],
+      "full_document_search_terms": [
+        "giá cổ phiếu",
+        "15/09/2025"
+      ],
+      "search_hits": {
+        "giá cổ phiếu": [
+          32,
+          36,
+          184,
+          205
+        ],
+        "15/09/2025": []
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-048",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "table",
+    "fact_key": "abs-payables-employee",
+    "question": "Trong khoản phải trả người lao động cuối năm 2025, số tiền của từng nhân viên là bao nhiêu?",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định phân bổ khoản phải trả theo từng nhân viên.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "table"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "phân bổ khoản phải trả theo từng nhân viên",
+      "related_pdf_pages": [
+        167
+      ],
+      "full_document_search_terms": [
+        "Phải trả người lao động",
+        "5.724.811"
+      ],
+      "search_hits": {
+        "Phải trả người lao động": [
+          167
+        ],
+        "5.724.811": [
+          167
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-049",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "abs-quantum-graduate-employment",
+    "question": "Kết hợp đầu tư lượng tử và giáo dục, tính tỷ lệ sinh viên tốt nghiệp được tuyển vào từng dự án lượng tử năm 2025.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định số liệu ghép nối sinh viên tốt nghiệp với từng dự án lượng tử.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "multi_hop"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "số liệu ghép nối sinh viên tốt nghiệp với từng dự án lượng tử",
+      "related_pdf_pages": [
+        52,
+        74
+      ],
+      "full_document_search_terms": [
+        "lượng tử",
+        "tốt nghiệp"
+      ],
+      "search_hits": {
+        "lượng tử": [
+          4,
+          48,
+          52,
+          54,
+          103
+        ],
+        "tốt nghiệp": [
+          44,
+          138
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  },
+  {
+    "id": "FPT-BASIC-TEST-050",
+    "suite": "basic",
+    "split": "test",
+    "primary_category": "multi_hop",
+    "fact_key": "abs-infra-2026-revenue",
+    "question": "Kết hợp sự kiện lập công ty hạ tầng số tháng 01/2026 với bảng doanh thu, cho biết doanh thu thực tế riêng công ty mới trong quý II/2026.",
+    "answerable": false,
+    "expected_behavior": "search_then_abstain",
+    "expected_answer": "Báo cáo không cung cấp đủ dữ liệu để xác định doanh thu thực tế quý II/2026 của công ty hạ tầng số mới.",
+    "required_facts": [],
+    "gold": [],
+    "evidence_groups": [],
+    "tags": [
+      "insufficient_evidence",
+      "near_domain",
+      "multi_hop"
+    ],
+    "grading": {
+      "must_explicitly_state_missing_information": true,
+      "must_not_invent_requested_fact": true,
+      "partial_context_allowed_if_supported": true
+    },
+    "absence_check": {
+      "missing_information": "doanh thu thực tế quý II/2026 của công ty hạ tầng số mới",
+      "related_pdf_pages": [
+        217,
+        57
+      ],
+      "full_document_search_terms": [
+        "hạ tầng số",
+        "27/01/2026"
+      ],
+      "search_hits": {
+        "hạ tầng số": [
+          7,
+          51,
+          52,
+          57,
+          70,
+          103
+        ],
+        "27/01/2026": [
+          217
+        ]
+      },
+      "method": "Kiểm tra toàn văn 232 trang theo từ khóa và đọc các trang liên quan; từ khóa xuất hiện không có nghĩa trường thông tin yêu cầu được công bố. Không dùng top-k trống để gán nhãn thiếu evidence.",
+      "status": "author_checked; independent_reviewer_pending"
+    },
+    "gold_review_status": "author_checked; independent_reviewer_pending"
+  }
+]

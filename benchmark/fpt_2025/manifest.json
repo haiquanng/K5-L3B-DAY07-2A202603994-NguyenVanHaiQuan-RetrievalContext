@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "status": "authored; no agent runs; independent review pending",
+  "frozen_files": {
+    "cases.json": "bf58f581dd2f4a7d45b5c47b25c092b729803101ba174bbc5d6571d5d318664e",
+    "system_cases.json": "681cc986364e809a0af72b58b43fbc80474ac720774b98e1341b93d0ba17ba5f",
+    "source.json": "b7f912042dab872eee85c3d8920997bb4cb51a85b342fffbf4e84258bf089cdb",
+    "QUESTION_CASEBOOK.md": "6c2d52fdbb9d637dc8b417f1606153d073436ab82f9253bc0c9fb7fba6fe8ca0",
+    "SYSTEM_CASEBOOK.md": "705aface1df3b4d9dd2c10853ecc70ca5628e5c61cab847cf27f98a6ee1a0ff6",
+    "queries/advanced.dev.json": "26ca9a29be1fab58794c170292dc09e720786bdd193cec7b1a9353a2d1080881",
+    "queries/advanced.test.json": "26b28141156fdb7dabfeddc27fb04f2ade9d09e488b707422d5d439a49074848",
+    "queries/basic.dev.json": "d8c7d9752d527296e7e66a2196da3a8491ddc6b9ebc42ba84f0a68f8283e4d3b",
+    "queries/basic.test.json": "fb3a14e90c057d4bf2c661c6eb47f256a8b94ced38cf51863a8d0b491950f3ba",
+    "gold/advanced.dev.json": "10fa1c17550b452a2bd95157c1269c8d18cff6804b11e7a0e693bc341def281a",
+    "gold/advanced.test.json": "1284cf03e9c9a32d6c7f31e95ea555aa9497955ab5dbef44684080f42a6c82ee",
+    "gold/basic.dev.json": "c5a0d29451999f186b522089b1ff633c281bb44a7dcd50144a6dddea3704c944",
+    "gold/basic.test.json": "26f88ef5fd81d6236ee55aca7ef56df75c72f4af3e41127ad9c708589b1de053"
+  },
+  "note": "Record code commit, model, index version/hash, settings and this manifest hash BEFORE test. Rebuild requires a new published benchmark version."
+}
