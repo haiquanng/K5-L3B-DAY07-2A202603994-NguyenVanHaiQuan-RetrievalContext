@@ -1,0 +1,206 @@
+[
+ {
+  "query_id": "FPT-ADVANCED-TEST-004",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Trả lời nêu đúng các ý bắt buộc: nghĩa vụ chỉ có thể xác định khi có sự kiện tương lai như trao đổi với bên cho thuê hoặc văn bản/pháp luật làm rõ; hiện chưa đủ cơ sở để ghi nhận dự phòng. Nội dung cũng phù hợp với ý rằng việc chưa ghi nhận không có nghĩa nghĩa vụ bằng 0, dù không nói thẳng.",
+  "answer_grade": 1,
+  "context_grade": 1,
+  "abstention_correct": null,
+  "unsupported_claims": false,
+  "retrieval_evidence_at_1": [
+   "FPT-ADVANCED-TEST-004:E1"
+  ],
+  "retrieval_evidence_at_3": [
+   "FPT-ADVANCED-TEST-004:E1"
+  ],
+  "context_evidence": [
+   "FPT-ADVANCED-TEST-004:E1"
+  ],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p217:text03-1",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": [
+     "FPT-ADVANCED-TEST-004:E1"
+    ]
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-011",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Câu trả lời nêu đúng mức tăng 2.221.769.990.000 VNĐ và đúng số liệu từ 14.813.301.220.000 lên 17.035.071.210.000.",
+  "answer_grade": 2,
+  "context_grade": 2,
+  "abstention_correct": null,
+  "unsupported_claims": false,
+  "retrieval_evidence_at_1": [
+   "FPT-ADVANCED-TEST-011:E1"
+  ],
+  "retrieval_evidence_at_3": [
+   "FPT-ADVANCED-TEST-011:E1"
+  ],
+  "context_evidence": [
+   "FPT-ADVANCED-TEST-011:E1"
+  ],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p036:table01",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": [
+     "FPT-ADVANCED-TEST-011:E1"
+    ]
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-031",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Câu trả lời khớp đầy đủ với đáp án chuẩn: doanh thu 15.452 tỷ VNĐ, tỷ trọng 43,7% và tăng trưởng 25,4%.",
+  "answer_grade": 2,
+  "context_grade": 2,
+  "abstention_correct": null,
+  "unsupported_claims": false,
+  "retrieval_evidence_at_1": [
+   "FPT-ADVANCED-TEST-031:E1"
+  ],
+  "retrieval_evidence_at_3": [
+   "FPT-ADVANCED-TEST-031:E1"
+  ],
+  "context_evidence": [
+   "FPT-ADVANCED-TEST-031:E1"
+  ],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p062:chart01",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": [
+     "FPT-ADVANCED-TEST-031:E1"
+    ]
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-042",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Trả lời đúng ý Ban Kiểm soát giám sát HĐQT và TGĐ/Ban điều hành, nhưng sai/mất ý quan trọng về cấp gắn với nó: đáp án chuẩn là chịu trách nhiệm trước ĐHĐCĐ, không phải gắn với HĐQT. Vì vậy chỉ đúng một phần.",
+  "answer_grade": 1,
+  "context_grade": 2,
+  "abstention_correct": null,
+  "unsupported_claims": true,
+  "retrieval_evidence_at_1": [],
+  "retrieval_evidence_at_3": [
+   "FPT-ADVANCED-TEST-042:E1"
+  ],
+  "context_evidence": [
+   "FPT-ADVANCED-TEST-042:E1"
+  ],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p080:diagram01",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": [
+     "FPT-ADVANCED-TEST-042:E1"
+    ]
+   },
+   {
+    "id": "fpt-ar2025:p104:infographic01",
+    "supports_answer": false,
+    "source_locatable": true,
+    "evidence_ids": []
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-056",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Trả lời đúng ý chính là “Không”, nhưng phép tính và số liệu chênh lệch không khớp đáp án chuẩn. Đáp án chuẩn là 10.136.043.915.911 − 11.624.743.591.629 = −1.488.699.675.718 VNĐ, trong khi hệ thống nêu 10.242.001.818.617 và thiếu 1.382.741.773.012 VNĐ.",
+  "answer_grade": 1,
+  "context_grade": 2,
+  "abstention_correct": null,
+  "unsupported_claims": true,
+  "retrieval_evidence_at_1": [
+   "FPT-ADVANCED-TEST-056:E2"
+  ],
+  "retrieval_evidence_at_3": [
+   "FPT-ADVANCED-TEST-056:E2"
+  ],
+  "context_evidence": [
+   "FPT-ADVANCED-TEST-056:E1",
+   "FPT-ADVANCED-TEST-056:E2"
+  ],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p172:table01",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": [
+     "FPT-ADVANCED-TEST-056:E2"
+    ]
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-063",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Hệ thống đã từ chối đúng cách vì tài liệu không có dữ liệu chi tiêu thực tế năm 2035 theo từng phân khúc; không suy đoán hay đưa ra con số sai. Việc nêu thêm số liệu năm 2026 là thông tin liên quan, không làm mất tính phù hợp.",
+  "answer_grade": null,
+  "context_grade": null,
+  "abstention_correct": true,
+  "unsupported_claims": false,
+  "retrieval_evidence_at_1": [],
+  "retrieval_evidence_at_3": [],
+  "context_evidence": [],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p046:chart01",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": []
+   },
+   {
+    "id": "fpt-ar2025:p046:text01-1",
+    "supports_answer": true,
+    "source_locatable": true,
+    "evidence_ids": []
+   }
+  ]
+ },
+ {
+  "query_id": "FPT-ADVANCED-TEST-069",
+  "reviewer": "Nguyễn Văn Hải Quân",
+  "human_confirmed": true,
+  "reason": "Câu trả lời không phù hợp với đáp án chuẩn vì đã khẳng định nghĩa vụ hoàn nguyên là 0 đồng, trong khi đáp án chuẩn cho biết báo cáo không cung cấp đủ dữ liệu để xác định số tiền này. Đây là một khẳng định cụ thể không được hỗ trợ bởi đáp án chuẩn.",
+  "answer_grade": null,
+  "context_grade": null,
+  "abstention_correct": false,
+  "unsupported_claims": true,
+  "retrieval_evidence_at_1": [],
+  "retrieval_evidence_at_3": [],
+  "context_evidence": [],
+  "citations": [
+   {
+    "id": "fpt-ar2025:p184:text03-1",
+    "supports_answer": false,
+    "source_locatable": true,
+    "evidence_ids": []
+   },
+   {
+    "id": "fpt-ar2025:p217:text03-1",
+    "supports_answer": false,
+    "source_locatable": true,
+    "evidence_ids": []
+   }
+  ]
+ }
+]

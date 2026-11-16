@@ -1,7 +1,7 @@
 # Báo cáo Day 7 — Nguyễn Văn Hải Quân (2A202603994)
 
 > Số liệu dev/test dưới đây là **proxy tự động + LLM judge** (xem định nghĩa ở mục Đánh giá), dùng để chọn cấu hình.
-> Kết quả test chính thức theo `benchmark/fpt_2025/tools.py score` cần **nhãn người chấm**; chưa có tại thời điểm nộp.
+> Có nhãn người chấm cho mẫu 7 câu advanced test (mục Chấm thủ công); 63 câu còn lại chỉ có proxy.
 
 ## Dữ liệu và benchmark
 
@@ -109,6 +109,24 @@ Advanced test theo nhóm (cấu hình đã chọn B1, proxy; nhóm thiếu evide
 | **toàn bộ** | **47/70 (67.1%)** (ngưỡng bonus ≥ 63/70, cần nhãn người chấm) |
 
 B1 trên test được dựng từ trace baseline test bằng bước mở rộng citation xác định (không chạy lại model): cùng câu trả lời, so sánh theo cặp. Nhãn là proxy + LLM judge; điểm chính thức cần người chấm (`python3 benchmark/fpt_2025/tools.py review-template ...` rồi `score`).
+
+### Chấm thủ công (mẫu tối thiểu, có người chấm)
+
+Theo BENCHMARK.md, đọc tối thiểu 5 câu test có đáp án + 2 câu thiếu evidence. Mẫu 7 câu advanced test chọn ngẫu nhiên
+**seed cố định**, trải đều nhóm (004 text, 011 bảng, 031 biểu đồ, 042 sơ đồ, 056 multi-hop; 063, 069 thiếu evidence),
+chấm bằng trang review local (`src/review_page.py --sample-only`); nhãn: [report/reviews/](../reviews/), chấm bằng `tools.py score`.
+
+| Cấu hình (7 câu có người chấm) | Strict pass | Hit@1 / Hit@3 | Context đủ | Grounded 2/1/0 (TB /2) | Citation hợp lệ | Abstention đúng | Từ chối nhầm |
+|---|---|---|---|---|---|---|---|
+| Baseline | 3/7 | 4/5 · 5/5 | 5/5 | 2/3/0 (0,70) | 7/10 | 1/2 | 0/5 |
+| B1 (đã chọn) | 3/7 | 4/5 · 5/5 | 5/5 | 2/3/0 (0,70) | 7/10 | 1/2 | 0/5 |
+
+- Hai cấu hình trùng nhau trên mẫu vì 7 câu này không có citation do bước mở rộng thêm vào.
+- **Proxy khớp người chấm 6/7**; câu lệch (004) proxy cho đạt nhưng người chấm cho đáp án 1 (thiếu ý "chưa ghi nhận ≠ bằng 0")
+  → proxy có xu hướng **dễ hơn** người chấm; 47/70 proxy nên xem là cận trên.
+- Lỗi thấy trên mẫu: 042 đọc sai cấp của Ban Kiểm soát trên sơ đồ + 1 citation không hỗ trợ; 056 tính chênh lệch sai số liệu;
+  069 khẳng định "0 đồng" cho thông tin báo cáo không công bố (từ chối sai). Đây đúng các nhóm lỗi đã sửa ở vòng E2.
+- 63/70 câu advanced test còn lại **chưa có người chấm** → không xin bonus (cần chấm đủ 70/70 trên test độc lập).
 
 ### Vòng cải thiện sau chẩn đoán (E2) — post-hoc, test KHÔNG độc lập
 
