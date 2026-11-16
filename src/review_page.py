@@ -35,6 +35,7 @@ def main() -> None:
     ap.add_argument("--suite", required=True)
     ap.add_argument("--split", required=True)
     ap.add_argument("--run", required=True)
+    ap.add_argument("--sample-only", action="store_true", help="page with only the 7 minimum-sample cases")
     a = ap.parse_args()
     run_dir = ROOT / "starter" / "results" / "agent" / f"{a.suite}.{a.split}.{a.run}"
     traces = {t["query_id"]: t for t in json.loads((run_dir / "traces.json").read_text())}
@@ -112,11 +113,13 @@ def main() -> None:
     picked += rng.sample(sorted((c for c in cases if not c["answerable"]), key=lambda x: x["query_id"]), 2)
     for c in cases:
         c["in_sample"] = c in picked
+    if a.sample_only:
+        cases = [c for c in cases if c["in_sample"]]
     OUT.mkdir(parents=True, exist_ok=True)
-    title = f"Review {a.suite}/{a.split} · {a.run}"
-    data = json.dumps({"title": title, "key": f"review:{a.suite}.{a.split}.{a.run}", "cases": cases}, ensure_ascii=False)
+    title = f"Review {a.suite}/{a.split} · {a.run}" + (" · mẫu 7 câu" if a.sample_only else "")
+    data = json.dumps({"title": title, "key": f"review:{a.suite}.{a.split}.{a.run}{'.sample' if a.sample_only else ''}", "cases": cases}, ensure_ascii=False)
     page = TEMPLATE.replace("__TITLE__", html.escape(title)).replace("__DATA__", data.replace("</", "<\\/"))
-    dest = OUT / f"review.{a.suite}.{a.split}.{a.run}.html"
+    dest = OUT / f"review.{a.suite}.{a.split}.{a.run}{'.sample' if a.sample_only else ''}.html"
     dest.write_text(page, encoding="utf-8")
     print(dest)
 
