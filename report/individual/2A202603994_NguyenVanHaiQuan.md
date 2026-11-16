@@ -128,6 +128,15 @@ chấm bằng trang review local (`src/review_page.py --sample-only`); nhãn: [r
   069 khẳng định "0 đồng" cho thông tin báo cáo không công bố (từ chối sai). Đây đúng các nhóm lỗi đã sửa ở vòng E2.
 - 63/70 câu advanced test còn lại **chưa có người chấm** → không xin bonus (cần chấm đủ 70/70 trên test độc lập).
 
+**Ví dụ từng câu (advanced test, cấu hình B1, nhãn người chấm; trace: `starter/results/agent/advanced.test.chosen_B1/traces.json`)**
+
+| Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
+|---|---|---|---|---|
+| TEST-011 | bảng, có bằng chứng | 1 search (câu gốc) → top-1 `p036:table01` (lịch sử vốn điều lệ) | "05/2025 14.813.301.220.000 → 07/2025 17.035.071.210.000; tăng 2.221.769.990.000 VNĐ" [p036:table01] | **Đạt**: đáp án 2, context 2, citation đúng bảng gốc |
+| TEST-063 | biểu đồ, thiếu bằng chứng | 4 search (câu gốc, "2035", "phân khúc 2035…") → chỉ có biểu đồ chi tiêu CNTT 2026 (PDF 46) | `abstain`: báo cáo chỉ có số 2026, không có chi tiêu thực tế 2035 theo phân khúc; nêu số 2026 có nguồn [p046:chart01][p046:text01-1] | **Đạt**: từ chối đúng, không bịa số 2035 |
+| TEST-069 | multi-hop, thiếu bằng chứng | 1 search → chính sách dự phòng (PDF 184) + thuyết minh hoàn nguyên đất (PDF 217) | trả lời nghĩa vụ hoàn nguyên "0 đồng" [p184][p217] | **Lỗi**: báo cáo không công bố số này → khẳng định thiếu căn cứ, citation không hỗ trợ; đã thêm kiểm status từ chối ở prompt v4 |
+| TEST-056 | multi-hop, lỗi tính | 4 search (mã 20 LCTT…) → BCLCTT PDF 172 | "Không" đúng, nhưng tự suy dòng tiền HĐKD = 10.242.001.818.617 thay vì đọc mã 20 = 10.136.043.915.911 | **Lỗi**: đáp án 1; nguyên nhân đọc sai hàng + tính tay → thêm tool `calculate` và bước tự kiểm hàng/cột ở v4 |
+
 ### Vòng cải thiện sau chẩn đoán (E2) — post-hoc, test KHÔNG độc lập
 
 Sau khi chốt B1 và chạy test, đã đọc 23 câu advanced test trượt để chẩn đoán: 14 câu context đủ nhưng model đọc/tính sai,
